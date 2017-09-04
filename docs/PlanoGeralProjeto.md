@@ -4,6 +4,18 @@
 Este plano propõe conduzir as atividades de desenvolvimento da aplicação referente ao projeto CHEPA, assim como organizar as atividades e etapas necessárias para a realização do avanço e conclusão do projeto.
 
 ### 2. Visão Geral do Projeto
+O projeto Chepa visa produzir uma aplicação, para dispositivos móveis, que permite o auxílio do gerenciamento de compras de supermercados.
+Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de software.
+
+* Objetivos do Projeto
+* Escopo do Projeto
+* Organizações Afetadas ou Impactadas
+* Recursos Não Humanos e de Ambiente
+* Restrições do Projeto
+* Estimativas do Projeto
+* Riscos do Projeto
+* Recursos Humanos
+* Ciclo de Vida do Projeto
 
 ### 3. Objetivos do Projeto
 
