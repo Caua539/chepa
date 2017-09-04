@@ -16,7 +16,8 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 * Riscos do Projeto
 * Recursos Humanos
 * Requisitos
-* Processo
+* Processo  
+* Cronograma
 * Ferramentas
 * Ciclo de Vida do Projeto
 * Aprovação
@@ -35,11 +36,15 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 
 ### 9. Riscos do Projeto
 
-### 10. Recursos Humanos
+### 10. Recursos Humanos  
 
-### 11. Processo
+### 11. Requisitos
 
-### 12. Ferramentas
+### 12. Processo  
+
+### 13. Cronograma
+
+### 14. Ferramentas
 
 **Ferramenta de Comunicação**   
 
@@ -73,6 +78,6 @@ Bootstrap
 Bizagi  
 
   
-### 13. Ciclo de Vida do Projeto
+### 15. Ciclo de Vida do Projeto
 
-### 14. Aprovação
+### 16. Aprovação
