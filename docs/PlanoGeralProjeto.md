@@ -37,6 +37,39 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 
 ### 12. Ferramentas
 
+**Ferramenta de Comunicação**   
+
+[Slack](https://trabalhoses20172.slack.com/)    
+
+**Ferramenta para Gerência da Configuração**    
+
+Github  
+
+**Ferramenta para Gerenciamento do Projeto**  
+
+Trello  
+
+**Ferramenta para desenvolvimento**  
+
+Atom  
+React  
+
+**Bibliotecas JS**  
+
+wow.js  
+jQuery  
+
+**Bibliotecas CSS**  
+
+font-awesome.css  
+animate.css  
+Bootstrap  
+
+**Ferramentas para definição do processo**  
+Bizagi  
+
+
+  
 ### 13. Ciclo de Vida do Projeto
 
 ### 14. Aprovação
