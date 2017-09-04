@@ -35,4 +35,6 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 
 ### 11. Ciclo de Vida do Projeto
 
-### 12. Aprovação
+### 12. Ferramentas
+
+### 13. Aprovação
