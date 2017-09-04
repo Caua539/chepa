@@ -33,8 +33,10 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 
 ### 10. Recursos Humanos
 
-### 11. Ciclo de Vida do Projeto
+### 11. Processo
 
 ### 12. Ferramentas
 
-### 13. Aprovação
+### 13. Ciclo de Vida do Projeto
+
+### 14. Aprovação
