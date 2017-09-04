@@ -15,7 +15,11 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 * Estimativas do Projeto
 * Riscos do Projeto
 * Recursos Humanos
+* Requisitos
+* Processo
+* Ferramentas
 * Ciclo de Vida do Projeto
+* Aprovação
 
 ### 3. Objetivos do Projeto
 
@@ -67,7 +71,6 @@ Bootstrap
 
 **Ferramentas para definição do processo**  
 Bizagi  
-
 
   
 ### 13. Ciclo de Vida do Projeto
