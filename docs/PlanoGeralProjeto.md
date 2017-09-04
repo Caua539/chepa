@@ -1,6 +1,7 @@
 # Plano Geral do Projeto (PGP)
 
 ### 1. Sumário Executivo do Projeto
+Tralala
 
 ### 2. Visão Geral do Projeto
 
@@ -23,4 +24,3 @@
 ### 11. Ciclo de Vida do Projeto
 
 ### 12. Aprovação
-
