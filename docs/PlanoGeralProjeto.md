@@ -38,38 +38,32 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 
 ### 10. Recursos Humanos  
 
-### 11. Requisitos
+### 11. Requisitos  
+
 
 ### 12. Processo  
 
 ### 13. Cronograma
 
 ### 14. Ferramentas
-
 **Ferramenta de Comunicação**   
-
 [Slack](https://trabalhoses20172.slack.com/)    
 
 **Ferramenta para Gerência da Configuração**    
-
 [Github](https://github.com/Caua539/chepa)  
 
 **Ferramenta para Gerenciamento do Projeto**  
-
 [Trello](https://trello.com/b/b9pFj8Gq)  
 
 **Ferramenta para desenvolvimento**  
-
 Atom  
 React  
 
 **Bibliotecas JS**  
-
 wow.js  
 jQuery  
 
 **Bibliotecas CSS**  
-
 font-awesome.css  
 animate.css  
 Bootstrap  
