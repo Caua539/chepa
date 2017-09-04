@@ -43,11 +43,11 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 
 **Ferramenta para Gerência da Configuração**    
 
-Github  
+[Github](https://github.com/Caua539/chepa)  
 
 **Ferramenta para Gerenciamento do Projeto**  
 
-Trello  
+[Trello](https://trello.com/b/b9pFj8Gq)  
 
 **Ferramenta para desenvolvimento**  
 
