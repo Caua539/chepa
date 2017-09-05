@@ -8,7 +8,6 @@ O projeto Chepa visa produzir uma aplicação, para dispositivos móveis, que pe
 Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de software.
 
 * Objetivos do Projeto
-* Escopo do Projeto
 * Organizações Afetadas ou Impactadas
 * Recursos Não Humanos e de Ambiente
 * Restrições do Projeto
@@ -24,28 +23,28 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 
 ### 3. Objetivos do Projeto
 
-### 4. Escopo do Projeto
+### 4. Organizações Afetadas ou Impactadas
 
-### 5. Organizações Afetadas ou Impactadas
+### 5. Recursos Não Humanos e de Ambiente
 
-### 6. Recursos Não Humanos e de Ambiente
+### 6. Restrições do Projeto
 
-### 7. Restrições do Projeto
+### 7. Estimativas do Projeto
 
-### 8. Estimativas do Projeto
+### 8. Riscos do Projeto
 
-### 9. Riscos do Projeto
+### 9. Recursos Humanos  
 
-### 10. Recursos Humanos  
+### 10. Requisitos  
+**Requisitos Fucionais**
+* rf01.Cadastro de Usuário
+Eu, como usuário desejo
 
-### 11. Requisitos  
+### 11. Processo  
 
+### 12. Cronograma
 
-### 12. Processo  
-
-### 13. Cronograma
-
-### 14. Ferramentas
+### 13. Ferramentas
 **Ferramenta de Comunicação**   
 [Slack](https://trabalhoses20172.slack.com/)    
 
@@ -70,8 +69,7 @@ Bootstrap
 
 **Ferramentas para definição do processo**  
 Bizagi  
-
   
-### 15. Ciclo de Vida do Projeto
+### 14. Ciclo de Vida do Projeto
 
-### 16. Aprovação
+### 15. Aprovação
