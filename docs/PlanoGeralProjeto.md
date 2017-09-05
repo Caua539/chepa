@@ -37,8 +37,13 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 
 ### 10. Requisitos  
 **Requisitos Fucionais**
-* rf01.Cadastro de Usuário
-Eu, como usuário desejo
+* rf01. Cadastrar Usuário  
+* rf02. Cadastrar Lista de Compras
+* rf03. Definir prioridades de itens de compras  
+* rf04. Atualizar lista de compras
+* rf05. Atualizar orçamento  
+* rf06. Redefinir itens conforme orçamento  
+* rf07. Manter histórico de listas de compras
 
 ### 11. Processo  
 ![Page](https://github.com/Caua539/chepa/blob/master/docs/img/Processo.PNG)
