@@ -41,6 +41,7 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 Eu, como usuário desejo
 
 ### 11. Processo  
+![Page](https://github.com/Caua539/chepa/blob/master/docs/img/Processo.PNG)
 
 ### 12. Cronograma
 
