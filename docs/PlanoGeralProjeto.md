@@ -28,6 +28,25 @@ O projeto visa auxiliar o usuário em suas compras o ajudando a organizar, monit
 
 ### 5. Recursos Não Humanos e de Ambiente
 
+<table>
+  <tr>
+    <th>Recurso</th>
+    <th>Tipo</th> 
+  </tr>
+  <tr>
+    <th>Conexão à internet</th>
+    <th>Ferramenta</th> 
+  </tr>
+  <tr>
+    <th>Computadores</th>
+    <th>Ferramenta</th> 
+  </tr>
+  <tr>
+    <th>Suíte Office</th>
+    <th>Ferramenta</th> 
+  </tr>
+</table>
+
 ### 6. Restrições do Projeto
 
 ### 7. Estimativas do Projeto
