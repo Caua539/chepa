@@ -22,6 +22,7 @@ Será esclarecido as seguintes etapas abaixo no decorrer do plano de projeto de 
 * Aprovação
 
 ### 3. Objetivos do Projeto
+O projeto visa auxiliar o usuário em suas compras o ajudando a organizar, monitorar e controlar todo o processo da compra desde o momento em que o usuário percebe a necessidade de algum item até o momento em que se encontra no mercado. Com o CHEPA, as compras serão mais faceis e efetivas.
 
 ### 4. Organizações Afetadas ou Impactadas
 
