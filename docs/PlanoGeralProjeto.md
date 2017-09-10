@@ -33,6 +33,30 @@ O projeto visa auxiliar o usuário em suas compras o ajudando a organizar, monit
 ### 7. Estimativas do Projeto
 
 ### 8. Riscos do Projeto
+* Mudança de Escopo e Objetivos
+* Falta de Envolvimento Adequado dos Usuários
+* Requisitos mal entendidos ou definidos
+* Escopo e objetivos pouco claros ou equivocados
+* Prazos e tempo para tarefas mal estimados
+* Gerenciamento impróprio de mudanças
+* Volatilidade nos Requisitos
+* Custos mal estimados
+* Falta de poderes para o gerenciamento de projetos
+* Falha em Gerenciar as Expectativas Finais dos Usuários
+* Planejamento inexistente ou inadequado
+* Pessoal envolvido insuficiente ou inapropriado
+* Falta de conhecimento ou competência dos envolvidos no projeto
+* Falta de cooperação dos usuários
+* Falta de metodologia efetiva em gerenciamento de projetos
+* Controle pobre ou inexistente
+* Adoção de novo método ou tecnologia
+* Definição imprópria de papéis e responsabilidades
+* Falta de Habilidade para o gerenciamento de projetos
+* Assunto novo ou não familiar
+* Usar nova metodologia de desenvolvimento em projetos importantes
+* Falta de tecnologias maduras ou existentes
+* Deficiência de execução em tempo real
+* Versão Mobile incompatível com modelos de aparelhos
 
 ### 9. Recursos Humanos  
 
