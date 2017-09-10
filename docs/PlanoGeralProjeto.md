@@ -149,5 +149,6 @@ Bootstrap
 Bizagi  
   
 ### 14. Ciclo de Vida do Projeto
+O projeto será iniciado com o modelo iterativo e incremental até a fase de aprovação dos requisitos, uma vez aprovado, será adotado a metodologia Scrum até o seu encerramento.
 
 ### 15. Aprovação
