@@ -58,7 +58,33 @@ O projeto visa auxiliar o usuário em suas compras o ajudando a organizar, monit
 * Deficiência de execução em tempo real
 * Versão Mobile incompatível com modelos de aparelhos
 
-### 9. Recursos Humanos  
+### 9. Recursos Humanos 
+<table>
+  <tr>
+    <th>Recurso</th>
+    <th>Papel</th> 
+  </tr>
+  <tr>
+    <th>Affonso Antônio Giesel</th>
+    <th>Analista</th> 
+  </tr>
+  <tr>
+    <th>Ana Luísa Alves Burjack</th>
+    <th>Desenvolvedora</th> 
+  </tr>
+  <tr>
+    <th>Cauã Martins Pessoa</th>
+    <th>Analista</th> 
+  </tr>
+  <tr>
+    <th>João Vitor Santillo</th>
+    <th>Desenvolvedor</th> 
+  </tr>
+  <tr>
+    <th>Natália Marufuji Aoki</th>
+    <th>Analista</th> 
+  </tr>
+</table>
 
 ### 10. Requisitos  
 **Requisitos Fucionais**
