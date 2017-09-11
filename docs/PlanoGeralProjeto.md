@@ -49,7 +49,10 @@ Não foram identificadas organizações com possíveis impactos.
 </table>
 
 ### 6. Restrições do Projeto
-
+* Conhecimento técnico limitado da equipe  
+* A equipe possui horário disponível limitado  
+* A equipe está trabalhando em mais de um projeto
+  
 ### 7. Estimativas do Projeto
 
 ### 8. Riscos do Projeto
