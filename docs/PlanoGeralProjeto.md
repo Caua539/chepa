@@ -107,14 +107,143 @@ Não foram identificadas organizações com possíveis impactos.
 </table>
 
 ### 10. Requisitos  
-**Requisitos Fucionais**
-* rf01. Cadastrar Usuário  
-* rf02. Cadastrar Lista de Compras
-* rf03. Definir prioridades de itens de compras  
-* rf04. Atualizar lista de compras
-* rf05. Atualizar orçamento  
-* rf06. Redefinir itens conforme orçamento  
-* rf07. Manter histórico de listas de compras
+**Requisitos Fucionais**  
+  
+<table>
+  <tr align="left">
+    <th>1. Criar Lista de Compras</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de criar e salvar uma lista de compras, definindo um nome para a lista</th>
+  </tr>
+</table>  
+
+<table>
+  <tr align="left">
+    <th>2. Definir orçamento</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de definir um orçamento para uma lista durante a criação da lista</th>
+  </tr>
+</table>  
+
+<table>
+  <tr align="left">
+    <th>3. Manter orçamento</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de editar o orçamento da lista de compras, após esta ter sido criada</th>
+  </tr>  
+</table>  
+  
+<table>
+  <tr align="left">
+    <th>4. Adicionar itens</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de adicionar itens à lista de compra</th>
+  </tr>  
+</table>  
+  
+<table>
+  <tr align="left">
+    <th>5. Pesquisar itens</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de pesquisar itens, a base de dados deve ser itens adicionados anteriormente</th>
+  </tr>  
+</table>  
+  
+<table>
+  <tr align="left">
+    <th>6. Manter quantidades de itens de compras</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de definir e editar a quantidade de cada item adicionado à lista de compras</th>
+  </tr>  
+</table>  
+  
+<table>
+  <tr align="left">
+    <th>7. Manter prioridades de itens de compras</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de definir e editar a prioridade de cada item</th>
+  </tr>  
+</table>  
+  
+<table>
+  <tr align="left">
+    <th>8. Visualizar detalhes</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de visualizar o orçamento de cada lista de compra; o "Valor Diponível" - correspondente a quanto ainda há disponível do orçamento para a compra; o sub-total da compra; o valor unitário de cada item comprado e o produto do valor unitário com as quantidades de cada item</th>
+  </tr>  
+</table>  
+  
+<table>
+  <tr align="left">
+    <th>8. Atualizar lista de compra</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de definir quantas unidades e o valor unitário de cada item comprado, o sistema deve calcular o valor final por item, apresentá-lo ao usuário e subtrair do "Valor Disponível"</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>9. Redefinir itens conforme orçamento</th>
+  </tr>
+  <tr align="left">
+    <th>O sistema deve apresentar qual(is) item(ns) e/ou quantidade dos mesmos é indicado que o usuário retire do carrinho para se adequar ao orçamento pré-definido</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>10. Fechar lista de compras</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de fechar a lista de compras.</th>
+  </tr>  
+</table>  
+  
+<table>
+  <tr align="left">
+    <th>11. Reabrir lista de compras</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de reabrir listas de compras fechadas.</th>
+  </tr>  
+</table>
+  
+<table>
+  <tr align="left">
+    <th>12. Manter histórico de listas de compras</th>
+  </tr>
+  <tr align="left">
+    <th>Usuário deve ser capaz de vizualisar listas de compras fechadas e abertas</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>13. Excluir listas de compras</th>
+  </tr>
+  <tr align="left">
+    <th>Usuário deve ser capaz de excluir listas de compras</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>14. Copiar listas de compras</th>
+  </tr>
+  <tr align="left">
+    <th>Usuário deve ser capaz de gerar uma cópia de lista de compras, a cópia deve conter: os itens; as quantidades previstas para compra; e o orçamento iguais aos da lista original</th>
+  </tr>  
+</table>
+
 
 ### 11. Processo  
 ![Page](https://github.com/Caua539/chepa/blob/master/docs/img/Processo.PNG)
