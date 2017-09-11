@@ -263,6 +263,42 @@ Não foram identificadas organizações com possíveis impactos.
   <tr align="left">
     <th>Usuário deve ser capaz de gerar uma cópia de lista de compras, a cópia deve conter: os itens; as quantidades previstas para compra; e o orçamento iguais aos da lista original</th>
   </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>18. Definir categorias de itens</th>
+  </tr>
+  <tr align="left">
+    <th>Usuário deve ser capaz de categorizar os itens de compras entre categorias pré-apresentadas e/ou criar novas categorias - que devem permanecer salvas</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>19. Adicionar itens à dispensa</th>
+  </tr>
+  <tr align="left">
+    <th>Usuário deve ser capaz de adicionar os itens de uma lista de compras fechada à sua dispensa.</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>20. Retirar itens da dispensa</th>
+  </tr>
+  <tr align="left">
+    <th>Usuário deve ser capaz de marcar como usados intens que estão na dispensa, podendo selecionar uma ou todas as unidades disponíveis</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>21. Criar lista conforme dispensa</th>
+  </tr>
+  <tr align="left">
+    <th>Na criação de uma lista, o sistema deve disponibilizar uma tela listando os itens faltantes e presentes na dispensa, no último caso, apresentar quantas unidades de cada item está na dispensa. Usuário deve ser capaz de criar uma lista de compras a partir de uma opção selecionar todos os itens, apenas alguns ou pular esa etapa.</th>
+  </tr>  
 </table>
 
 
