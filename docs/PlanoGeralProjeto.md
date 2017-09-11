@@ -150,7 +150,7 @@ Não foram identificadas organizações com possíveis impactos.
     <th>5. Pesquisar itens</th>
   </tr>
   <tr align="left">
-    <th>O usuário deve ser capaz de pesquisar itens, a base de dados deve ser itens adicionados anteriormente</th>
+    <th>O usuário deve ser capaz de pesquisar itens, a base de dados deve ser preenchida por itens adicionados anteriormente</th>
   </tr>  
 </table>  
   
@@ -177,13 +177,13 @@ Não foram identificadas organizações com possíveis impactos.
     <th>8. Visualizar detalhes</th>
   </tr>
   <tr align="left">
-    <th>O usuário deve ser capaz de visualizar o orçamento de cada lista de compra; o "Valor Diponível" - correspondente a quanto ainda há disponível do orçamento para a compra; o sub-total da compra; o valor unitário de cada item comprado e o produto do valor unitário com as quantidades de cada item</th>
+    <th>O usuário deve ser capaz de visualizar o nome de cada lista; o supermercado definido; o orçamento de cada lista de compra; o "Valor Diponível" - correspondente a quanto ainda há disponível do orçamento para a compra; o sub-total da compra; o valor unitário de cada item comprado e o produto do valor unitário com as quantidades de cada item</th>
   </tr>  
 </table>  
   
 <table>
   <tr align="left">
-    <th>8. Atualizar lista de compra</th>
+    <th>9. Atualizar lista de compra</th>
   </tr>
   <tr align="left">
     <th>O usuário deve ser capaz de definir quantas unidades e o valor unitário de cada item comprado, o sistema deve calcular o valor final por item, apresentá-lo ao usuário e subtrair do "Valor Disponível"</th>
@@ -192,7 +192,7 @@ Não foram identificadas organizações com possíveis impactos.
 
 <table>
   <tr align="left">
-    <th>9. Redefinir itens conforme orçamento</th>
+    <th>10. Redefinir itens conforme orçamento</th>
   </tr>
   <tr align="left">
     <th>O sistema deve apresentar qual(is) item(ns) e/ou quantidade dos mesmos é indicado que o usuário retire do carrinho para se adequar ao orçamento pré-definido</th>
@@ -201,7 +201,25 @@ Não foram identificadas organizações com possíveis impactos.
 
 <table>
   <tr align="left">
-    <th>10. Fechar lista de compras</th>
+    <th>11. Definir supermercado</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de definir o supermercado para cada lista de compras</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>12. Pesquisar supermercado</th>
+  </tr>
+  <tr align="left">
+    <th>O usuário deve ser capaz de pesquisar supermercados, a base de dados deve ser preenchida por supermercados definidos anteriormente</th>
+  </tr>  
+</table>    
+
+<table>
+  <tr align="left">
+    <th>13. Fechar lista de compras</th>
   </tr>
   <tr align="left">
     <th>O usuário deve ser capaz de fechar a lista de compras.</th>
@@ -210,7 +228,7 @@ Não foram identificadas organizações com possíveis impactos.
   
 <table>
   <tr align="left">
-    <th>11. Reabrir lista de compras</th>
+    <th>14. Reabrir lista de compras</th>
   </tr>
   <tr align="left">
     <th>O usuário deve ser capaz de reabrir listas de compras fechadas.</th>
@@ -219,7 +237,7 @@ Não foram identificadas organizações com possíveis impactos.
   
 <table>
   <tr align="left">
-    <th>12. Manter histórico de listas de compras</th>
+    <th>15. Manter histórico de listas de compras</th>
   </tr>
   <tr align="left">
     <th>Usuário deve ser capaz de vizualisar listas de compras fechadas e abertas</th>
@@ -228,7 +246,7 @@ Não foram identificadas organizações com possíveis impactos.
 
 <table>
   <tr align="left">
-    <th>13. Excluir listas de compras</th>
+    <th>16. Excluir listas de compras</th>
   </tr>
   <tr align="left">
     <th>Usuário deve ser capaz de excluir listas de compras</th>
@@ -237,7 +255,7 @@ Não foram identificadas organizações com possíveis impactos.
 
 <table>
   <tr align="left">
-    <th>14. Copiar listas de compras</th>
+    <th>17. Copiar listas de compras</th>
   </tr>
   <tr align="left">
     <th>Usuário deve ser capaz de gerar uma cópia de lista de compras, a cópia deve conter: os itens; as quantidades previstas para compra; e o orçamento iguais aos da lista original</th>
