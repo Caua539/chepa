@@ -1,7 +1,7 @@
-<h2>Objetivo do documento</h2>  
+## Objetivo do documento  
 O propósito desse documento é reunir todos os requisitos e casos de uso e quaisquer outro(s) diagrama(s) relacionados. Este documento é resultado da atividade de Elicitação de Requisitos  
   
-<h2>Requisitos funcionais</h2> 
+## Requisitos funcionais 
   
 <table>
   <tr align="left">
