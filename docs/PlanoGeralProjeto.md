@@ -109,8 +109,7 @@ Não foram identificadas organizações com possíveis impactos.
 </table>
 
 ### 10. Processo  
-![Page](https://github.com/Caua539/chepa/blob/master/docs/img/Processo.PNG)
-![Page](https://github.com/Caua539/chepa/blob/master/docs/img/PlanejamentoSprint.PNG)
+ O processo se encontra com extensão .bpm no seguinte link: https://github.com/Caua539/chepa/tree/master/docs/bpm.
 
 ### 11. Cronograma
 
