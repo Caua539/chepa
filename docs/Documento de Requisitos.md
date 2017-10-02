@@ -198,3 +198,15 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
 
 ## Visão Geral do Sistema
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Fluxograma_Xepa.png)
+
+## Protótipos
+
+**Tela inicial**
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Tela%20inicial.png)
+
+**Lista**
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Lista%20de%20hortifruti.png)
+
+
