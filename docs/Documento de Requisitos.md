@@ -195,3 +195,6 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
 ## Casos de Uso
 
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Casos_De_Uso_Xepa.png)
+
+## Visão Geral do Sistema
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Fluxograma_Xepa.png)
