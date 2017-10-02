@@ -190,6 +190,8 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   <tr align="left">
     <th>Na criação de uma lista, o sistema deve disponibilizar uma tela listando os itens faltantes e presentes na dispensa, no último caso, apresentar quantas unidades de cada item está na dispensa. Usuário deve ser capaz de criar uma lista de compras a partir de uma opção selecionar todos os itens, apenas alguns ou pular esa etapa.</th>
   </tr>  
-</table>
+</table>  
+
+## Casos de Uso
 
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Casos_De_Uso_Xepa.png)
