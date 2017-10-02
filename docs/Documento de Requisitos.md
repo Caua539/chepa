@@ -192,4 +192,4 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   </tr>  
 </table>
 
-[[https://github.com/Caua539/chepa/blob/master/docs/img/Casos_De_Uso_Xepa.png]]
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Casos_De_Uso_Xepa.png)
