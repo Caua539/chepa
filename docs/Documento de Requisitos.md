@@ -1,7 +1,7 @@
-## Objetivo do documento  
+# 1. Objetivo do documento  
 O propósito desse documento é reunir todos os requisitos e casos de uso e quaisquer outro(s) diagrama(s) relacionados. Este documento é resultado da atividade de Elicitação de Requisitos  
   
-## Requisitos funcionais 
+# 2. Requisitos funcionais 
   
 <table>
   <tr align="left">
@@ -71,7 +71,7 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
     <th>8. Visualizar detalhes</th>
   </tr>
   <tr align="left">
-    <th>O usuário deve ser capaz de visualizar o nome de cada lista; o supermercado definido; o orçamento de cada lista de compra; o "Valor Diponível" - correspondente a quanto ainda há disponível do orçamento para a compra; o sub-total da compra; o valor unitário de cada item comprado e o produto do valor unitário com as quantidades de cada item</th>
+    <th>O usuário deve ser capaz de visualizar o nome de cada lista; o supermercado definido; o orçamento de cada lista de compra; o "Valor Disponível" - correspondente a quanto ainda há disponível do orçamento para a compra; o sub-total da compra; o valor unitário de cada item comprado e o produto do valor unitário com as quantidades de cada item</th>
   </tr>  
 </table>  
   
@@ -192,14 +192,38 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   </tr>  
 </table>  
 
-## Casos de Uso
+# 3. Casos de Uso
+## 3.1. Diagrama  
 
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Casos_De_Uso_Xepa.png)
 
-## Visão Geral do Sistema
+## 3.2. Detalhamento  
+  
+### [PLACEHOLDER]Código e nome do Caso de Uso  
+-  
+### Descrição do Caso de Uso  
+-  
+### Atores  
+-  
+### Pré-condições  
+-  
+### Fluxo de Eventos
+#### Fluxo Básico  
+-  
+#### Fluxo Alternativo 
+-  
+### Requerimentos Especiais  
+-  
+### Pós-Condições  
+-  
+
+  
+
+
+# 4. Visão Geral do Sistema
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Fluxograma_Xepa.png)
 
-## Protótipos
+# 5. Protótipos
 
 **Tela inicial**
 
