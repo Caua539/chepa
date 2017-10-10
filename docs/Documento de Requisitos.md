@@ -158,16 +158,7 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
 
 <table>
   <tr align="left">
-    <th>18. Definir categorias de itens</th>
-  </tr>
-  <tr align="left">
-    <th>Usuário deve ser capaz de categorizar os itens de compras entre categorias pré-apresentadas e/ou criar novas categorias - que devem permanecer salvas</th>
-  </tr>  
-</table>  
-
-<table>
-  <tr align="left">
-    <th>19. Adicionar itens à dispensa</th>
+    <th>18. Adicionar itens à dispensa</th>
   </tr>
   <tr align="left">
     <th>Usuário deve ser capaz de adicionar os itens de uma lista de compras fechada à sua dispensa.</th>
@@ -176,7 +167,7 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
 
 <table>
   <tr align="left">
-    <th>20. Retirar itens da dispensa</th>
+    <th>19. Retirar itens da dispensa</th>
   </tr>
   <tr align="left">
     <th>Usuário deve ser capaz de marcar como usados intens que estão na dispensa, podendo selecionar uma ou todas as unidades disponíveis</th>
@@ -185,7 +176,7 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
 
 <table>
   <tr align="left">
-    <th>21. Criar lista conforme dispensa</th>
+    <th>20. Criar lista conforme dispensa</th>
   </tr>
   <tr align="left">
     <th>Na criação de uma lista, o sistema deve disponibilizar uma tela listando os itens faltantes e presentes na dispensa, no último caso, apresentar quantas unidades de cada item está na dispensa. Usuário deve ser capaz de criar uma lista de compras a partir de uma opção selecionar todos os itens, apenas alguns ou pular esa etapa.</th>
@@ -354,4 +345,16 @@ Não aplicável.
 
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Exclusao.png)
 
-![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Confirma_Exclusao.png)
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Confirma_Exclusao.png)  
+
+
+# 6. Requisitos Futuros  
+
+<table>
+  <tr align="left">
+    <th>1. Definir categorias de itens</th>
+  </tr>
+  <tr align="left">
+    <th>Usuário deve ser capaz de categorizar os itens de compras entre categorias criadas por ele. O sistema deve permitir que o usuário crie novas categorias - que devem permanecer salvas, se não houver uma já criada que lhe agrade</th>
+  </tr>  
+</table>
