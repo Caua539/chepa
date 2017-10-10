@@ -190,7 +190,7 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
 
 ## 3.2. Detalhamento  
   
-### [001]Criar Lista de Compra  
+### [001]Criar Lista de Compras  
 #### Descrição do Caso de Uso  
 O usuário utiliza o app para iniciar a criação de uma lista de compras.
 #### Atores  
@@ -199,83 +199,31 @@ Usuário
 App na tela inicial.  
 #### Fluxo de Eventos
 ##### Fluxo Básico  
-1) Usuário abre o aplicativo;
-2) Aplicativo executa a tela inicial;
-3) Usuário clica no botão 'Criar Nova Lista de Compra';
-4) Aplicativo muda a tela para tela de criação de uma nova lista, onde existem outras opções;
+1) Usuário clica no botão 'Minhas listas' na tela inicial do app
+2) Usuário clica no botão 'Criar Nova Lista de Compras'
+3) Usuário fornece um nome para a lista no campo 'Nome da Lista'
+4) Usuário fornece um valor, em reais, para ser o orçamento da lista
+5) Usuário fornece um nome para o supermercado que marcará essa lista
+6) Usuário clica no '+' na parte debaixo da tela para adicionar um item para a lista
+7) Usuário fornece um nome para o item
+8) Usuário fornece uma quantidade daquele item para a lista
+9) Usuário fornece uma prioridade para o item, dentre 'Baixa, Normal e Alta'
+10) Usuário clica no símbolo de completo para finalizar a adição do item
+11) Usuário clica no botão 'As Compras!' para finalizar a criação da lista de compras e encerrar o caso de uso
 ##### Fluxo Alternativo 
-Não aplicável.
+A) Criar lista a partir de dispensa;
+  6A) Caso de Uso: Criar lista de compras a partir de dispensa.
+
+B) Escolher supermercado de uma lista ao invés de criar um novo
+  5B) Usuário clica na seta para baixo no campo supermercado e escolhe um supermercado da lista
+
+C) Escolher item de uma lista ao invés de criar novo
+  7C) Usuário clica na seta para baixo no campo 'Nome do Item' e escolhe um item da lista.
 ### Requerimentos Especiais  
 Não aplicável.  
 ### Pós-Condições  
-Aplicativo iniciou o processo de criação do caso de uso;  
+Foi criada uma lista de compras nova.  
   
-### [002]Definir Orçamento  
-#### Descrição do Caso de Uso  
-O usuário insere um valor em dinheiro para cadastrar a nova lista de compras;
-#### Atores  
-Usuário
-#### Pré-condições  
-App na tela de criação de nova lista de compras.
-#### Fluxo de Eventos
-##### Fluxo Básico  
-1) Na tela de criação de lista de compra, usuário insere um valor maior que 0 no campo disponível;
-2) Usuário clica no botão 'Próximo';
-3) Aplicativo avança para tela de adição de itens;
-##### Fluxo Alternativo 
-1) Se o usuário clicar no botão 'Voltar' do sistema operacional, o caso de uso se encerra e volta para tela inicial.
-### Requerimentos Especiais  
-Não aplicável.  
-### Pós-Condições  
-É definido um orçamento em valor monetário;
-
-### [003]Adicionar Itens 
-#### Descrição do Caso de Uso  
-O usuário adiciona itens a sua lista de compras que está criando ou editando;
-#### Atores  
-Usuário
-#### Pré-condições  
-App na tela de adição de novos itens.
-#### Fluxo de Eventos
-##### Fluxo Básico  
-1) O usuário clica no botão '+' no centro da tela;
-2) O aplicativo exibe um campo para digitar o nome do item, um campo para digitar a quantidade e um campo para a prioridade;
-3) O usuário informa o nome do item;
-4) O usuário digita quantos daquele item pretente comprar;
-5) O usuário escolhe a prioridade do item, entre as opções: 'Alta, Média, Baixa';
-6) O usuário clica no botão 'Adicionar' para concluir o caso de uso e adicionar o item à lista;
-##### Fluxo Alternativo 
-1. Se o usuário clicar no botão 'Voltar' do sistema operacional, o caso de uso se encerra e volta para a tela de definir orçamento;
-ou
-2. Se o usuário não informar quantidade e/ou prioridade para o item, os valores irão para o padrão de '1' e 'Média', respectivamente, automaticamente.
-ou
-3. O usuário clica no botão 'Próximo' para ir para tela de escolher supermercado;
-### Requerimentos Especiais  
-Não aplicável.  
-### Pós-Condições  
-Um item é adicionado a lista de compras;
-
-### [004]Definir Supermercado  
-#### Descrição do Caso de Uso  
-O usuário escolhe um supermercado dos criados ou cria um novo supermercado que servirá como guia para os preços dos produtos;
-#### Atores  
-Usuário
-#### Pré-condições  
-App na tela de definição de um supermercado;
-#### Fluxo de Eventos
-##### Fluxo Básico  
-1) Na tela de escolha de um supermecado, o usuário escolhe um supermercado de uma lista de mercados cadastrados;
-2) O usuário clica no botão 'Próximo' para prosseguir para a próxima tela;
-##### Fluxo Alternativo 
-1) Se o usuário clicar no botão 'Voltar' do sistema operacional, o caso de uso se encerra e volta para a tela de adicionar itens;
-ou
-2) Se não houverem supermercados cadastrados ou se desejar cadastrar outro, o usuário no botão '+' na tela;
-2.1) O usuário adiciona um nome para este supermercado num campo de texto;
-2.2) O usuário clica no botão adicionar para adicionar aquele supermercado à lista;
-### Requerimentos Especiais  
-Não aplicável.  
-### Pós-Condições  
-É definido o supermercado onde serão feitas as compras;
 
   
 
