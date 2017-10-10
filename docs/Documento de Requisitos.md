@@ -296,10 +296,62 @@ Não aplicável.
 
 **Tela inicial**
 
-![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Tela%20inicial.png)
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Tela_Inicial.PNG)
 
-**Lista**
+**Menu inicial**
 
-![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Lista%20de%20hortifruti.png)
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Menu_Principal.PNG)
 
+**Dispensa**
 
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Minha_Dispensa.PNG)
+
+**Adiciona item dispensa**
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Adiciona_Item_Dispensa.PNG)
+
+**Exclui item dispensa**
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Remover_Item_Dispensa.PNG)
+
+**Criação da Lista**
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Criar_Lista.png)
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Criar_Lista_Mercado.png)
+
+**Listagem das listas** 
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Minhas_Listas.PNG)
+
+**Visualizar lista específica** 
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Visualizar_Lista_Especifica.PNG)
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Visualizacao_Detalhes.png)
+
+**Adicionar item lista** 
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Adiciona_Item_Lista.PNG)
+
+**Excluir item lista** 
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Remover_Item_Lista.PNG)
+
+**Fechar lista** 
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Fechar.png)
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Confirma_Fechamento.png)
+
+**Reabrir lista** 
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Reabrir.png)
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Confirma_Reabertura.png)
+
+**Excluir lista** 
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Exclusao.png)
+
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Confirma_Exclusao.png)
