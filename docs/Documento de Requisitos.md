@@ -211,11 +211,11 @@ App na tela inicial.
 10) Usuário clica no símbolo de completo para finalizar a adição do item
 11) Usuário clica no botão 'As Compras!' para finalizar a criação da lista de compras e encerrar o caso de uso
 ##### Fluxo Alternativo  
-A) Escolher supermercado de uma lista ao invés de criar um novo  
+_A) Escolher supermercado de uma lista ao invés de criar um novo_  
   5A) Usuário clica na seta para baixo no campo supermercado e escolhe um supermercado da lista.  
   Continua o fluxo básico.  
 
-B) Escolher item de uma lista ao invés de criar novo  
+_B) Escolher item de uma lista ao invés de criar novo_  
   7B) Usuário clica na seta para baixo no campo 'Nome do Item' e escolhe um item da lista.  
   Continua o fluxo básico.  
 ### Requerimentos Especiais  
@@ -240,33 +240,33 @@ Pelo menos uma lista de compras criada anteriormente.
 6) Usuário fornece uma prioridade para o item, dentre 'Baixa, Normal e Alta'
 7) Usuário clica no símbolo de completo para finalizar a adição do item e concluir o caso de uso
 ##### Fluxo Alternativo 
-A) Remover item da lista  
+_A) Remover item da lista_  
   3A) Na nova tela para edição de listas, o usuário escolhe um item e clica no ícone de lixeira próximo a ele.  
   4A) Uma caixa de confirmação aparece, o usuário confirma que deseja remover o item  
   5A) O item é removido da lista e o caso de uso encerrado.  
 
-B) Mudar a quantidade de um item existente na lista  
+_B) Mudar a quantidade de um item existente na lista_  
   3B) Na nova tela para edição de listas, o usuário escolhe um item da lista  
   4B) O usuário aperta o botão '+' ou o botão '-' na quantidade do item escolhido para aumentar ou diminuir a quantidade do item por 1 e o caso de uso se encerra  
 
-C) Mudar nome de um item existente  
+_C) Mudar nome de um item existente_  
   3C) Na nova tela para edição de listas, o usuário escolhe um item da lista  
   4C) O usuário clicar no nome do item e nome se torna editável  
   5C) O usuário edita o nome do item  
   6C) O usuário clica no símbolo de completo para finalizar a edição do nome do item e o caso de uso se encerra.  
   
-D) Mudar orçamento da lista  
+_D) Mudar orçamento da lista_  
   3D) Na nova tela para edição de listas, o usuário clica no valor do orçamento inicial  
   4D) O valor de orçamento se torna editável  
   5D) O usuário edita o valor do orçamento  
   6D) O usuário clica no símbolo de completo para finalizar a edição do valor do orçamento e o caso de se encerra.  
   
-E) Marcar um item existente como comprado  
+_E) Marcar um item existente como comprado_  
   3E) Na nova tela para edição de listas, o usuário escolhe um item  
   4E) O usuário clica na checkbox ao lado do nome do item  
   5E) O item fica cinza e o seu valor é subtraído do orçamento para somar com o subtotal e o caso de uso se encerra.  
   
-F) Informar o valor de um item
+_F) Informar o valor de um item_
   3F) Na nova tela para edição de listas, o usuário escolhe um item
   4F) O usuário clica sobre o valor do item e valor se torna editável
   5F) O usuário edita o valor do item
@@ -284,7 +284,7 @@ O usuário utiliza o app para iniciar a criação de uma lista de compras a part
 #### Atores  
 Usuário
 #### Pré-condições  
-App na tela inicial.  
+App na tela inicial, Itens na dispensa com quantidade 0.
 #### Fluxo de Eventos
 ##### Fluxo Básico  
 1) Usuário clica no botão 'Minhas listas' na tela inicial do app
@@ -303,12 +303,148 @@ App na tela inicial.
 ##### Fluxo Alternativo 
 Não aplicável.
 ### Requerimentos Especiais  
-Itens na dispensa com quantidade 0.
+Não aplicável.
 ### Pós-Condições  
 Foi criada uma lista de compras nova. 
 
+### [004] Manter Dispensa 
+#### Descrição do Caso de Uso  
+O usuário utiliza o app para gerenciar os itens na dispensa
+#### Atores  
+Usuário
+#### Pré-condições  
+App na tela inicial.  
+#### Fluxo de Eventos
+##### Fluxo Básico  
+1) Usuário clica no botão 'Minha dispensa' na tela inicial do app
+2) Na nova tela, o Usuário clica no botão '+' para adicionar um item na dispensa
+3) Usuário fornece um nome para o item que está adicionando na dispensa
+4) Usuário fornece um valor para a quantidade desse item existe na dispensa
+5) O usuário clica no símbolo de concluído para adicionar o item a dispensa e encerrar o caso de uso.
+##### Fluxo Alternativo  
+_A) Remover um item da dispensa_  
+  2A) Na nova tela, o Usuário escolhe um item da dispensa
+  3A) O Usuário clicar no botão em formato de lixeira
+  4A) O usuário é apresentado com uma tela de confirmação
+  5A) O usuário confirma a remoção, o item é removido e o caso de uso se encerra.
   
+_B) Mudar a quantidade de um item existente na dispensa_  
+  2B) Na nova tela, o usuário escolhe um item da dispensa  
+  3B) O usuário aperta o botão '+' ou o botão '-' na quantidade do item escolhido para aumentar ou diminuir a quantidade do item por 1 e o caso de uso se encerra.  
+  
+_C) Mudar nome de um item existente_  
+  2C) Na nova tela, o usuário escolhe um item da dispensa  
+  3C) O usuário clica no nome do item e nome se torna editável  
+  4C) O usuário edita o nome do item  
+  5C) O usuário clica no símbolo de completo para finalizar a edição do nome do item e o caso de uso se encerra.  
+### Requerimentos Especiais  
+Não aplicável.  
+### Pós-Condições  
+Os itens da dispensa foram alterados, removidos ou adicionados.
 
+### [005] Manter Listas 
+#### Descrição do Caso de Uso  
+O usuário utiliza o app para gerenciar as listas de compras já criadas
+#### Atores  
+Usuário
+#### Pré-condições  
+App na tela inicial.  
+#### Fluxo de Eventos
+##### Fluxo Básico  
+1) Usuário clica no botão 'Minhas listas' na tela inicial do app
+2) Na nova tela, o Usuário escolhe uma lista de compras
+3) O Usuário adentra a lista
+4) O usuário clica no 'switch' que diz 'Aberta'
+5) O swtich muda de posição e agora indica 'Fechada'
+6) Os itens e informações da lista ficam bloqueados para edição
+7) O itens que haviam sido marcados na lista são adicionados a dispensa e o caso de uso se encerra
+##### Fluxo Alternativo  
+_A) Reabrir uma lista fechada_  
+  2A) Na nova tela, o Usuário escolhe uma lista de compras indicada como fechada
+  3A) O Usuário adentra a lista
+  4A) O usuário clica no 'switch' que diz 'Fechada'
+  5A) O switch muda de posição e agora indica 'Aberta'
+  6A) Os itens e informações da lista ficam disponíveis para edição e o caso de uso se encerra
+  
+_B) Excluir uma lista_  
+  3B) O usuário clica no botão de lixeira ao lado do nome da lista
+  4B) Uma tela de confirmação aparece
+  5B) O usuário confirma a exclusão da lista, a lista é removida e o caso de uso se encerra  
+  
+_C) Copiar uma lista_  
+  3C) O usuário clica no ícone de cópia ao lado do ícone da lixeira
+  4C) Uma tela aparece com campo de nome para a nova lista que será copiada da primeira
+  5C) O usuário informa o nome da nova lista.
+  6C) Uma nova lista de compras é criada com o novo nome, mas itens, quantidades, supermercado, orçamentos idênticos a lista original, podendo ser editados. O caso de uso se encerra.  
+  
+### Requerimentos Especiais  
+Não aplicável.  
+### Pós-Condições  
+Uma ou mais listas de compras foram fechadas, excluídas ou copiadas.
+
+### [006] Manter Itens Cadastrados
+#### Descrição do Caso de Uso  
+O sistema grava os itens que são cadastrados para serem usados novamente na adição de novos itens em listas
+#### Atores  
+Usuário
+#### Pré-condições  
+Não aplicável. 
+#### Fluxo de Eventos
+##### Fluxo Básico  
+1) Usuário executa o UC001 até o passo 10
+2) Após a adição de um item novo na lista, o sistema grava aquele item na memória
+3) É gerada uma lista de itens pré-cadastrados para rápida adição de novos itens com nomes comuns e o caso de uso se encerra.
+##### Fluxo Alternativo  
+Não aplicável.
+### Requerimentos Especiais  
+Não aplicável.  
+### Pós-Condições  
+Um ou mais itens novos são gravados em memória para uso futuro.
+
+### [007] Manter Supermercados Cadastrados
+#### Descrição do Caso de Uso  
+O sistema grava os supermercados que são cadastrados para serem usados novamente na criação de novas listas de compras
+#### Atores  
+Usuário
+#### Pré-condições  
+Não aplicável. 
+#### Fluxo de Eventos
+##### Fluxo Básico  
+1) Usuário executa o UC001 até o passo 5
+2) Após a definição de um novo supermercado para a lista, o sistema grava aquele supermercado na memória
+3) É gerada uma lista de supermercados para rápida utilização e o caso de uso se encerra.
+##### Fluxo Alternativo  
+Não aplicável.
+### Requerimentos Especiais  
+Não aplicável.  
+### Pós-Condições  
+O nome de um novo supermercado é gravado na memória do sistema para uso futuro.
+
+### [008] Sugerir redefinição dos itens
+#### Descrição do Caso de Uso  
+O sistema alerta o usuário sobre seu orçamento quando o subtotal for igual ou passar o orçamento definido  
+#### Atores  
+Usuário
+#### Pré-condições  
+Usuário na tela de uma das listas de compras; Subtotal em 100% do valor do orçamento
+#### Fluxo de Eventos
+##### Fluxo Básico  
+1) Usuário realiza uma ação que aumenta o subtotal da lista de compras
+2) O sistema gera um alerta para o usuário avisando que as compras estão quase ultrapassando o orçamento.
+3) O sistema dá a opçao ao usuário de aumentar o orçamento ou fazer a análise dos itens cadastrados
+4) O usuário escolhe fazer a análise dos itens cadastrados.  
+5) O sistema marca em vermelho itens de prioridade baixa em vermelho, indicando que estes podem ser removidos para que o subtotal fique abaixo do orçamento novamente  
+6) O usuário remove itens da lista (UC002-A).  
+7) Quando o subtotal fica abaixo do orçamento, os itens marcados voltam ao normal e o caso de uso se encerra.  
+##### Fluxo Alternativo  
+_A) Aumentar o orçamento_  
+  4A) O usuário opta por aumentar o orçamento.  
+  5A) UC002-D é executado.  
+
+### Requerimentos Especiais  
+Não aplicável.  
+### Pós-Condições  
+O nome de um novo supermercado é gravado na memória do sistema para uso futuro.
 
 # 4. Visão Geral do Sistema
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Fluxograma_Xepa.png)
