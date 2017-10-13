@@ -190,7 +190,7 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
 
 ## 3.2. Detalhamento  
   
-### [001]Criar Lista de Compras  
+### [001] Criar Lista de Compras  
 #### Descrição do Caso de Uso  
 O usuário utiliza o app para iniciar a criação de uma lista de compras.
 #### Atores  
@@ -210,21 +210,20 @@ App na tela inicial.
 9) Usuário fornece uma prioridade para o item, dentre 'Baixa, Normal e Alta'
 10) Usuário clica no símbolo de completo para finalizar a adição do item
 11) Usuário clica no botão 'As Compras!' para finalizar a criação da lista de compras e encerrar o caso de uso
-##### Fluxo Alternativo 
-A) Criar lista a partir de dispensa;
-  6A) Caso de Uso: Criar lista de compras a partir de dispensa.
+##### Fluxo Alternativo  
+A) Escolher supermercado de uma lista ao invés de criar um novo  
+  5A) Usuário clica na seta para baixo no campo supermercado e escolhe um supermercado da lista.  
+  Continua o fluxo básico.  
 
-B) Escolher supermercado de uma lista ao invés de criar um novo
-  5B) Usuário clica na seta para baixo no campo supermercado e escolhe um supermercado da lista
-
-C) Escolher item de uma lista ao invés de criar novo
-  7C) Usuário clica na seta para baixo no campo 'Nome do Item' e escolhe um item da lista.
+B) Escolher item de uma lista ao invés de criar novo  
+  7B) Usuário clica na seta para baixo no campo 'Nome do Item' e escolhe um item da lista.  
+  Continua o fluxo básico.  
 ### Requerimentos Especiais  
 Não aplicável.  
 ### Pós-Condições  
 Foi criada uma lista de compras nova.  
 
-### [002]Editar Lista Específica  
+### [002] Editar Lista Específica  
 #### Descrição do Caso de Uso  
 O usuário utiliza o app para controlar sua lista de compra, adicionar ou retirar itens e mudar valores/nomes etc.
 #### Atores  
@@ -241,36 +240,72 @@ Pelo menos uma lista de compras criada anteriormente.
 6) Usuário fornece uma prioridade para o item, dentre 'Baixa, Normal e Alta'
 7) Usuário clica no símbolo de completo para finalizar a adição do item e concluir o caso de uso
 ##### Fluxo Alternativo 
-A) Remover item da lista
-  3A) Na nova tela para edição de listas, o usuário escolhe um item e clica no ícone de lixeira próximo a ele.
-  4A) Uma caixa de confirmação aparece, o usuário confirma que deseja remover o item
-  5A) O item é removido da lista e o caso de uso encerrado.
+A) Remover item da lista  
+  3A) Na nova tela para edição de listas, o usuário escolhe um item e clica no ícone de lixeira próximo a ele.  
+  4A) Uma caixa de confirmação aparece, o usuário confirma que deseja remover o item  
+  5A) O item é removido da lista e o caso de uso encerrado.  
 
-B) Mudar a quantidade de um item existente na lista
-  3B) Na nova tela para edição de listas, o usuário escolhe um item da lista
-  4B) O usuário aperta a seta para cima ou para baixo na quantidade do item escolhido para aumentar ou diminuir a quantidade do item por 1 e o caso de uso se encerra
+B) Mudar a quantidade de um item existente na lista  
+  3B) Na nova tela para edição de listas, o usuário escolhe um item da lista  
+  4B) O usuário aperta o botão '+' ou o botão '-' na quantidade do item escolhido para aumentar ou diminuir a quantidade do item por 1 e o caso de uso se encerra  
 
-C) Mudar nome de um item existente
-  3C) Na nova tela para edição de listas, o usuário escolhe um item da lista
-  4C) O usuário clicar no nome do item e nome se torna editável
-  5C) O usuário edita o nome do item
-  6C) O usuário clica no símbolo de completo para finalizar a edição do nome do item e o caso de uso se encerra.
+C) Mudar nome de um item existente  
+  3C) Na nova tela para edição de listas, o usuário escolhe um item da lista  
+  4C) O usuário clicar no nome do item e nome se torna editável  
+  5C) O usuário edita o nome do item  
+  6C) O usuário clica no símbolo de completo para finalizar a edição do nome do item e o caso de uso se encerra.  
   
-D) Mudar orçamento da lista 
-  3D) Na nova tela para edição de listas, o usuário clica no valor do orçamento inicial
-  4D) O valor de orçamento se torna editável
-  5D) O usuário edita o valor do orçamento
-  6D) O usuário clica no símbolo de completo para finalizar a edição do valor do orçamento e o caso de se encerra.
+D) Mudar orçamento da lista  
+  3D) Na nova tela para edição de listas, o usuário clica no valor do orçamento inicial  
+  4D) O valor de orçamento se torna editável  
+  5D) O usuário edita o valor do orçamento  
+  6D) O usuário clica no símbolo de completo para finalizar a edição do valor do orçamento e o caso de se encerra.  
   
-E) Marcar um item existente como comprado
-  3E) Na nova tela para edição de listas, o usuário escolhe um item
-  4E) O usuário clica na checkbox ao lado do nome do item
-  5E) O item fica cinza e o seu valor é subtraído do orçamento para somar com o subtotal e o caso de uso se encerra.
+E) Marcar um item existente como comprado  
+  3E) Na nova tela para edição de listas, o usuário escolhe um item  
+  4E) O usuário clica na checkbox ao lado do nome do item  
+  5E) O item fica cinza e o seu valor é subtraído do orçamento para somar com o subtotal e o caso de uso se encerra.  
+  
+F) Informar o valor de um item
+  3F) Na nova tela para edição de listas, o usuário escolhe um item
+  4F) O usuário clica sobre o valor do item e valor se torna editável
+  5F) O usuário edita o valor do item
+  6F) O usuário clica no símbolo de concluído para terminar a edição
+  7F) O subtotal da lista se altera refletindo o novo do item somado aos outros e o caso de uso se encerra.
 
 ### Requerimentos Especiais  
 Ao menos uma lista de compras criada.
 ### Pós-Condições  
+Uma lista tem seus dados modificados
+
+### [003] Criar Lista de Compras a partir de dispensa
+#### Descrição do Caso de Uso  
+O usuário utiliza o app para iniciar a criação de uma lista de compras a partir do itens que possui na dispensa
+#### Atores  
+Usuário
+#### Pré-condições  
+App na tela inicial.  
+#### Fluxo de Eventos
+##### Fluxo Básico  
+1) Usuário clica no botão 'Minhas listas' na tela inicial do app
+2) Usuário clica no botão 'Criar Nova Lista de Compras'
+3) Usuário fornece um nome para a lista no campo 'Nome da Lista'
+4) Usuário fornece um valor, em reais, para ser o orçamento da lista
+5) Usuário fornece um nome para o supermercado que marcará essa lista
+6) Usuário clica no botão 'Dispensa' logo abaixo
+7) Uma tela abre com todos os itens cadastrados na dispensa que estão com quantidade 0
+8) O usuário marca checkboxes com os itens que deseja adicionar a nova lista de compras
+9) O usuário clica no botão 'Concluído'
+10) O sistema retorna para a tela de criação de lista com os itens adicionados
+11) Usuário escolhe um item e fornece uma quantidade daquele item para a lista
+12) Usuário escolhe um item e fornece uma prioridade para o item, dentre 'Baixa, Normal e Alta'
+13) Usuário clica no botão 'As Compras!' para finalizar a criação da lista de compras e encerrar o caso de uso
+##### Fluxo Alternativo 
 Não aplicável.
+### Requerimentos Especiais  
+Itens na dispensa com quantidade 0.
+### Pós-Condições  
+Foi criada uma lista de compras nova. 
 
   
 
