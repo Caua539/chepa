@@ -183,6 +183,15 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   </tr>  
 </table>  
 
+<table>
+  <tr align="left">
+    <th>21. Tela Inicial</th>
+  </tr>
+  <tr align="left">
+    <th>O sistema deve fornecer uma tela inicial de boas-vindas na primeira vez que o usuário abre o aplicativo, após a instalação do mesmo. A tela deve conter um textinho sobre o sistema e seu funcionamento, a logo do sistema e um botão que permite que o usuário acesse o aplicativo.</th>
+  </tr>  
+</table>
+
 # 3. Requisitos Não-Funcionais
 
 <table>
@@ -230,7 +239,6 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   </tr>  
 </table>
 
-
 <table>
   <tr align="left">
     <th>6. Ambiente</th>
@@ -248,6 +256,51 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   </tr>
   <tr align="left">
     <th>Usuário deve ser capaz de categorizar os itens de compras entre categorias criadas por ele. O sistema deve permitir que o usuário crie novas categorias - que devem permanecer salvas, se não houver uma já criada que lhe agrade</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>2. Tutorial</th>
+  </tr>
+  <tr align="left">
+      <th>O sistema deve prover um tutorial interativo de uso do sistema na primeira vez que o usuário abrir o aplicativo após a instalação.</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>3. Conexão com Internet</th>
+  </tr>
+  <tr align="left">
+    <th>O sistema deve ser capaz se conectar à internet</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>4. Login</th>
+  </tr>
+  <tr align="left">
+    <th>Usuário deve ser capaz de se cadastrar com um usuário e senha, podendo ser a partir de logins pré-existentes de plataformas como Google+.</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>5. Armazenamento em nuvem</th>
+  </tr>
+  <tr align="left">
+    <th>O sistema deve armazenar em nuvem os dados e listas para que o usuário possa acessá-los mesmo que em outros dispositivos</th>
+  </tr>  
+</table>  
+
+<table>
+  <tr align="left">
+    <th>6. Compartilhamento e edição online</th>
+  </tr>
+  <tr align="left">
+    <th>Usuário deve ser capaz de compartilhar as listas para que outro usuário, também logado no aplicativo, mas, em outro dispositivo, possa editar e manter a lista de compras</th>
   </tr>  
 </table>
 
