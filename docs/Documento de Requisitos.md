@@ -183,12 +183,62 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   </tr>  
 </table>  
 
-# 3. Casos de Uso
-## 3.1. Diagrama  
+# 3. Requisitos Não-Funcionais
+
+<table>
+  <tr align="left">
+    <th>1. Campo orçamento</th>
+  </tr>
+  <tr align="left">
+    <th>O campo orçamento deverá permitir apenas caracteres numéricos</th>
+  </tr>  
+</table>
+
+<table>
+  <tr align="left">
+    <th>2. Campo valor unitário</th>
+  </tr>
+  <tr align="left">
+    <th>O campo valor unitário dos itens adicionados a lista deverá permitir apenas caracteres numéricos</th>
+  </tr>  
+</table>
+
+<table>
+  <tr align="left">
+    <th>3. Campos da lista</th>
+  </tr>
+  <tr align="left">
+    <th>Os campos 'item' e 'valor unitário' presentes na visualização da lista não serão editáveis. Sendo editável apenas a quantidade de itens</th>
+  </tr>  
+</table>
+
+<table>
+  <tr align="left">
+    <th>4. Campos de confirmação</th>
+  </tr>
+  <tr align="left">
+    <th>No momento em que os campos de confirmação de exclusão, fechamento e reabertura da lista forem acionados, os demais campos deverão permanecer não editáveis</th>
+  </tr>  
+</table>
+
+# 4. Requisitos Futuros  
+
+<table>
+  <tr align="left">
+    <th>1. Definir categorias de itens</th>
+  </tr>
+  <tr align="left">
+    <th>Usuário deve ser capaz de categorizar os itens de compras entre categorias criadas por ele. O sistema deve permitir que o usuário crie novas categorias - que devem permanecer salvas, se não houver uma já criada que lhe agrade</th>
+  </tr>  
+</table>
+
+
+# 5. Casos de Uso
+## 5.1. Diagrama  
 
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Casos_De_Uso_Xepa.png)
 
-## 3.2. Detalhamento  
+## 5.2. Detalhamento  
   
 ### [001] Criar Lista de Compras  
 #### Descrição do Caso de Uso  
@@ -446,10 +496,10 @@ Não aplicável.
 ### Pós-Condições  
 O nome de um novo supermercado é gravado na memória do sistema para uso futuro.
 
-# 4. Visão Geral do Sistema
+# 6. Visão Geral do Sistema
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Fluxograma_Xepa.png)
 
-# 5. Protótipos
+# 7. Protótipos
 
 **Tela inicial**
 
@@ -513,18 +563,5 @@ O nome de um novo supermercado é gravado na memória do sistema para uso futuro
 
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Confirma_Exclusao.png)  
 
-
-# 6. Requisitos Futuros  
-
-<table>
-  <tr align="left">
-    <th>1. Definir categorias de itens</th>
-  </tr>
-  <tr align="left">
-    <th>Usuário deve ser capaz de categorizar os itens de compras entre categorias criadas por ele. O sistema deve permitir que o usuário crie novas categorias - que devem permanecer salvas, se não houver uma já criada que lhe agrade</th>
-  </tr>  
-</table>
-
-
-# 7. Matriz Rastreabilidade
+# 8. Matriz Rastreabilidade
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Matriz_Rastreablidade.png)
