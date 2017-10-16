@@ -188,7 +188,7 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
     <th>21. Tela Inicial</th>
   </tr>
   <tr align="left">
-    <th>O sistema deve fornecer uma tela inicial de boas-vindas na primeira vez que o usuário abre o aplicativo, após a instalação do mesmo. A tela deve conter um pequeno texto sobre o sistema e seu funcionamento, a logo do sistema e um botão que permite que o usuário acesse o aplicativo.</th>
+    <th>O sistema deve fornecer uma tela inicial de boas-vindas na primeira vez que o usuário abre o aplicativo, após a instalação do mesmo. A tela deve conter um pequeno texto introdutório sobre o sistema e seu funcionamento; a logo do sistema e um botão que permite que o usuário acesse o aplicativo.</th>
   </tr>  
 </table>
 
