@@ -208,7 +208,7 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
     <th>3. Campos da lista</th>
   </tr>
   <tr align="left">
-    <th>Os campos 'item' e 'valor unitário' presentes na visualização da lista não serão editáveis. Sendo editável apenas a quantidade de itens</th>
+    <th>O campos 'item' presente na visualização da lista não será editável. Sendo editável apenas a 'quantidade de itens' e o 'valor unitário'</th>
   </tr>  
 </table>
 
