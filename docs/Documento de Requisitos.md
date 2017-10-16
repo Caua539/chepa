@@ -524,3 +524,7 @@ O nome de um novo supermercado é gravado na memória do sistema para uso futuro
     <th>Usuário deve ser capaz de categorizar os itens de compras entre categorias criadas por ele. O sistema deve permitir que o usuário crie novas categorias - que devem permanecer salvas, se não houver uma já criada que lhe agrade</th>
   </tr>  
 </table>
+
+
+# 7. Matriz Rastreabilidade
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Matriz_Rastreablidade.png)
