@@ -221,6 +221,25 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   </tr>  
 </table>
 
+<table>
+  <tr align="left">
+    <th>5. Adição de itens</th>
+  </tr>
+  <tr align="left">
+    <th>no momento de adição de itens, apenas os campos da adição deverão ficar editáveis, sendo os demais campos presentes na tela não editáveis</th>
+  </tr>  
+</table>
+
+
+<table>
+  <tr align="left">
+    <th>6. Ambiente</th>
+  </tr>
+  <tr align="left">
+    <th>O aplicativo será disponibilizado apenas para mobile</th>
+  </tr>  
+</table>
+
 # 4. Requisitos Futuros  
 
 <table>
