@@ -568,6 +568,25 @@ Não aplicável.
 ### Pós-Condições  
 O nome de um novo supermercado é gravado na memória do sistema para uso futuro.
 
+### [009] Sugerir redefinição dos itens
+#### Descrição do Caso de Uso  
+O sistema mostra ao usuário uma tela inicial de boas-vindas. 
+#### Atores  
+Usuário
+#### Pré-condições  
+Usuário necessita ter o aplicativo em seu celular.
+Usuário não deve ter entrado no aplicativo nenhuma vez.
+#### Fluxo de Eventos
+##### Fluxo Básico  
+1) Usuário entra no aplicativo pela primeira vez 
+##### Fluxo Alternativo  
+Não se aplica.
+
+### Requerimentos Especiais  
+Não aplicável.  
+### Pós-Condições  
+A tela de boas-vindas ao aplicativo mostrada ao usuário.
+
 # 6. Visão Geral do Sistema
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Fluxograma_Xepa.png)
 
