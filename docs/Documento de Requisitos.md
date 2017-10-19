@@ -654,5 +654,8 @@ A tela de boas-vindas ao aplicativo mostrada ao usuário.
 
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Confirma_Exclusao.png)  
 
-# 8. Matriz Rastreabilidade
-![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Matriz_Rastreablidade.png)
+# 8. Matriz Rastreabilidade (Requisitos x Requisitos)
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Matrz_Rastreabilidade.PNG)
+
+# 9. Matriz Rastreabilidade (Requisitos x Casos de Uso)
+![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Matriz_Rastreabilidade_UC.PNG)
