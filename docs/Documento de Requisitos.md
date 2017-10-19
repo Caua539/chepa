@@ -1,7 +1,12 @@
 # 1. Objetivo do documento  
 O propósito desse documento é reunir todos os requisitos e casos de uso e quaisquer outro(s) diagrama(s) relacionados. Este documento é resultado da atividade de Elicitação de Requisitos  
+
+# 2. Stakeholders
+- Usuários que realizam compras em supermercados
+- Patrocinador
+- Equipe técnica
   
-# 2. Requisitos funcionais 
+# 3. Requisitos funcionais 
   
 <table>
   <tr align="left">
@@ -192,7 +197,7 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   </tr>  
 </table>
 
-# 3. Requisitos Não-Funcionais
+# 4. Requisitos Não-Funcionais
 
 <table>
   <tr align="left">
@@ -248,7 +253,7 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   </tr>  
 </table>
 
-# 4. Requisitos Futuros  
+# 5. Requisitos Futuros  
 
 <table>
   <tr align="left">
@@ -304,13 +309,21 @@ O propósito desse documento é reunir todos os requisitos e casos de uso e quai
   </tr>  
 </table>
 
+# 5. Erros
+O usuário será notificado com mensagens tratadas de maneira não tornar a experiência do usuário desagradável em casos de erros desconhecidos devido a falha de sistema, sobrecarga de sistema, busca e tratamento de dados, etc. 
 
-# 5. Casos de Uso
-## 5.1. Diagrama  
+# 6. Restrições
+- O aplicativo será executado em apenas aparelhos celulares (mobile)
+- O aplicativo não faz uso de internet
+- O aplicativo não terá um tutorial inicial de uso
+- Os dados pertencentes as listas, dispensas, usuario não poderão ser compartilhados entre contas
+
+# 7. Casos de Uso
+## 7.1. Diagrama  
 
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Casos_De_Uso_Xepa.png)
 
-## 5.2. Detalhamento  
+## 7.2. Detalhamento  
   
 ### [001] Criar Lista de Compras  
 #### Descrição do Caso de Uso  
@@ -587,10 +600,10 @@ Não aplicável.
 ### Pós-Condições  
 A tela de boas-vindas ao aplicativo mostrada ao usuário.
 
-# 6. Visão Geral do Sistema
+# 8. Visão Geral do Sistema
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Fluxograma_Xepa.png)
 
-# 7. Protótipos
+# 9. Protótipos
 
 **Tela inicial**
 
@@ -654,8 +667,8 @@ A tela de boas-vindas ao aplicativo mostrada ao usuário.
 
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Prototipos/Prototipos_Img/Lista_Confirma_Exclusao.png)  
 
-# 8. Matriz Rastreabilidade (Requisitos x Requisitos)
+# 10. Matriz Rastreabilidade (Requisitos x Requisitos)
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Matrz_Rastreabilidade.PNG)
 
-# 9. Matriz Rastreabilidade (Requisitos x Casos de Uso)
+# 11. Matriz Rastreabilidade (Requisitos x Casos de Uso)
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Matriz_Rastreabilidade_UC.PNG)
