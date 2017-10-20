@@ -672,3 +672,27 @@ A tela de boas-vindas ao aplicativo mostrada ao usuário.
 
 # 11. Matriz Rastreabilidade (Requisitos x Casos de Uso)
 ![Alt text](https://github.com/Caua539/chepa/blob/master/docs/img/Matriz_Rastreabilidade_UC.PNG)
+
+# 12. Aprovações
+<table>
+  <tr align="left">
+    <th>Aprovador</th>
+    <th>Data</th>
+    <th>Versão</th>
+  </tr>
+    <tr align="left">
+    <th>Cauã Martins</th>
+    <th>19/10/2017</th>
+    <th>1.0</th>
+  </tr>
+  <tr align="left">
+    <th>Ana Luísa Burjack</th>
+    <th>19/10/2017</th>
+    <th>1.0</th>
+  </tr>
+    <tr align="left">
+    <th>Ana Luísa Burjack</th>
+    <th>20/10/2017</th>
+      <th>2.0</th>
+  </tr>
+</table> 
