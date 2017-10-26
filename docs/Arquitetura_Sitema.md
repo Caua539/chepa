@@ -25,8 +25,18 @@ Existem alguns requisitos fundamentais e as limitações do sistema que têm 
 <b>Diagrama de Camadas</b>  
 ![alt](https://github.com/Caua539/chepa/blob/master/docs/img/UC1_Xepa.png)  
   
-<b>Diagrama de Sequência</b>    
+<b>Diagrama de Sequência</b>  
+- Dispensa  
+![alt](https://github.com/Caua539/chepa/blob/master/docs/img/Sequence_Diagram_Dispensa.png)    
+    
+- Listagem  
+![alt](https://github.com/Caua539/chepa/blob/master/docs/img/Sequence_Diagram_Lista.png)   
+  
+- Criação da Lista  
 
+![alt](https://github.com/Caua539/chepa/blob/master/docs/img/Sequence_Diagram_CriaLista.png)  
+  
+  
 # 7. Visão de Implementação
 
 # 8. Qualidade
