@@ -35,11 +35,8 @@ Existem alguns requisitos fundamentais e as limitações do sistema que têm 
 - Criação da Lista  
 
 ![alt](https://github.com/Caua539/chepa/blob/master/docs/img/Sequence_Diagram_CriaLista.png)  
-  
-  
-# 7. Visão de Implementação
 
-# 8. Qualidade  
+# 7. Qualidade  
 A arquitetura de software suporta os requisitos de qualidade.
 - O Xepa deve possuir uma vida útil significativa e, portanto, deve oferecer mecanismos para a sua evolução.  
 - O Xepa deve ser "fácil de usar e aprender".  
