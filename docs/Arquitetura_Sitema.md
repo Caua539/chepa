@@ -13,21 +13,21 @@ Existem alguns requisitos fundamentais e as limitações do sistema que têm 
 - Não haverá conexão com a internet.
 - Não haverá compartilhamento de dados entre usuários.\
 
-# 5. Visões de Contexto  
-
-Diagrama de Camadas
-
-Diagrama de Sequências
-
-# 6. Visões de Casos de Uso
+# 5. Visões de Casos de Uso
   Uma descrição da visão de casos de uso da arquitetura de software. A Visão de Casos de Uso é uma entrada importante para a seleção do conjunto de cenários e/ou casos de uso que são o foco de uma iteração. Ela descreve o conjunto de cenários e/ou os casos de uso que representam alguma funcionalidade central e significativa. Também descreve o conjunto de cenários e/ou casos de uso que possuem cobertura arquitetural substancial (que experimenta vários elementos de arquitetura) ou que enfatizam ou ilustram um determinado ponto complexo da arquitetura.
 
 <b>Caso de uso Geral</b>  
 ![alt](https://github.com/Caua539/chepa/blob/master/docs/img/Casos_De_Uso_Xepa.png)
 
-# 7. Visão Lógica
+# 6. Visão Lógica
+  Descreve as classes mais importantes, sua organização em pacotes e subsistemas de serviço, e a organização desses subsistemas em camadas. Descreve também as realizações de caso de uso mais importantes como, por exemplo, os aspectos dinâmicos da arquitetura.  
 
-# 8. Visão de Implementação
+<b>Diagrama de Camadas</b>  
+![alt](https://github.com/Caua539/chepa/blob/master/docs/img/UC1_Xepa.png)  
+  
+<b>Diagrama de Sequência</b>    
 
-# 9. Qualidade
+# 7. Visão de Implementação
+
+# 8. Qualidade
 
