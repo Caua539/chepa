@@ -7,9 +7,12 @@ import {
   Text,
   TouchableOpacity,
   Alert,
-  StyleSheet
+  StyleSheet,
+  Dimensions
 } from 'react-native';
 
+const width = Dimensions.get('screen').width;
+const height = Dimensions.get('screen').height;
 
 //Classe principal: ("Main")
 export default class App extends Component<{}> {
@@ -116,6 +119,7 @@ const Estilo = StyleSheet.create({
   },
 
   textoMenor: {
+    textAlign: 'center',
     color: '#01161E',
     fontSize: 15,
     fontFamily: 'sans-serif',
