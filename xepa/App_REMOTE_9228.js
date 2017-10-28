@@ -1,7 +1,7 @@
 //Importações
 import { AppRegistry, View, Image, Text, TouchableOpacity, Alert } from 'react-native';
 import React, { Component } from 'react';
-import BarraNav from './/src//components//BarraNav';
+
 //Formatações:
 
 export const Estilo = {
@@ -58,10 +58,6 @@ export const Estilo = {
     justifyContent: 'center'
   },
 
-  principal2: {
-    flex: 1
-  },
-
   viewBotoes: {
     justifyContent: 'space-around',
     alignItems: 'flex-start',
@@ -84,9 +80,6 @@ export const Estilo = {
 };
 
 const botaoApertado = () => {
-<<<<<<< HEAD
-  var numeroAleatorio = Math.random() * 4;
-=======
 
 <<<<<<< HEAD
   var numeroAleatorio = Math.random()*4;
@@ -94,9 +87,10 @@ const botaoApertado = () => {
   var numeroAleatorio = Math.random() * 4;
 >>>>>>> 7701290e092f039a767534ef98ec3458a63dc372
 
->>>>>>> d968ff7c07ca13bba223baad034041ab0a43e823
   numeroAleatorio = Math.round(numeroAleatorio);
+
   var frases = ["Com a xepa, você vai ter controle sobre o seu dinheiro", "Economize já", "Em desenvolvimento", "Vai perder essa?", "Não há dia para economia!"];
+
   Alert.alert(frases[numeroAleatorio]);
 };
 
@@ -107,14 +101,11 @@ export default class App extends Component {
   }
   render() {
     return (
-      <View style ={Estilo.principal2}>
-        <View style={Estilo.principal}>
-          <ImagemPrincipal></ImagemPrincipal>
-          <TextoBoasVindas></TextoBoasVindas>
-          <Botao></Botao>
-        </View>
+      <View style={Estilo.principal}>
+        <ImagemPrincipal></ImagemPrincipal>
+        <TextoBoasVindas></TextoBoasVindas>
+        <Botao></Botao>
       </View>
-      
     );
   }
 };
