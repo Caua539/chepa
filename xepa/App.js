@@ -159,11 +159,6 @@ const Estilo = StyleSheet.create({
 
 const botaoApertado = () => {
   var numeroAleatorio = Math.random() * 4;
-
-  var numeroAleatorio = Math.random()*4;
-  var numeroAleatorio = Math.random() * 4;
-
-
   numeroAleatorio = Math.round(numeroAleatorio);
   var frases = ["Com a xepa, você vai ter controle sobre o seu dinheiro", "Economize já", "Em desenvolvimento", "Vai perder essa?", "Não há dia para economia!"];
   Alert.alert(frases[numeroAleatorio]);
@@ -228,13 +223,6 @@ export class ImagemPrincipal extends Component {
                     </TouchableOpacity>
                   </View>
               </View>
-    );
-  }
-};
-
-      <Image source={{ uri: 'https://warpzone.me/loja/wp-content/uploads/2016/05/icon-ecommerce-app.png' }}
-        style={{ width: 200, height: 200 }}
-      />
     );
   }
 };
