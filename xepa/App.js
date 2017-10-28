@@ -1,10 +1,4 @@
 //Importações
-<<<<<<< HEAD
-import { AppRegistry, View, Image, Text, TouchableOpacity, Alert } from 'react-native';
-import React, { Component } from 'react';
-import BarraNav from './/src//components//BarraNav';
-//Formatações:
-=======
 import React, {Component} from 'react';
 import {
   AppRegistry,
@@ -13,9 +7,12 @@ import {
   Text,
   TouchableOpacity,
   Alert,
-  StyleSheet
+  StyleSheet,
+  Dimensions
 } from 'react-native';
 
+const width = Dimensions.get('screen').width;
+const height = Dimensions.get('screen').height;
 
 //Classe principal: ("Main")
 export default class App extends Component<{}> {
@@ -29,7 +26,6 @@ export default class App extends Component<{}> {
     );
   }
 };
->>>>>>> refs/remotes/origin/xepa-dsv
 
 export class ImagemPrincipal extends Component<{}> {
   render() {
@@ -123,6 +119,7 @@ const Estilo = StyleSheet.create({
   },
 
   textoMenor: {
+    textAlign: 'center',
     color: '#01161E',
     fontSize: 15,
     fontFamily: 'sans-serif',
@@ -161,23 +158,16 @@ const Estilo = StyleSheet.create({
 });
 
 const botaoApertado = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   var numeroAleatorio = Math.random() * 4;
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> refs/remotes/origin/xepa-dsv
   var numeroAleatorio = Math.random()*4;
   var numeroAleatorio = Math.random() * 4;
 
->>>>>>> d968ff7c07ca13bba223baad034041ab0a43e823
+
   numeroAleatorio = Math.round(numeroAleatorio);
   var frases = ["Com a xepa, você vai ter controle sobre o seu dinheiro", "Economize já", "Em desenvolvimento", "Vai perder essa?", "Não há dia para economia!"];
   Alert.alert(frases[numeroAleatorio]);
 };
-<<<<<<< HEAD
 
 //Classe principal: ("Main")
 export default class App extends Component {
@@ -201,7 +191,6 @@ export default class App extends Component {
 export class ImagemPrincipal extends Component {
   render() {
     return (
-<<<<<<< HEAD
               <View style = {Estilo.principal}>
                   <Image source = {{uri:'https://warpzone.me/loja/wp-content/uploads/2016/05/icon-ecommerce-app.png'}}
                          style = {{width: 200, height: 200}}
@@ -242,7 +231,7 @@ export class ImagemPrincipal extends Component {
     );
   }
 };
-=======
+
       <Image source={{ uri: 'https://warpzone.me/loja/wp-content/uploads/2016/05/icon-ecommerce-app.png' }}
         style={{ width: 200, height: 200 }}
       />
@@ -275,11 +264,3 @@ export class Botao extends Component {
     );
   }
 };
-
-
-
-
-
->>>>>>> 7701290e092f039a767534ef98ec3458a63dc372
-=======
->>>>>>> refs/remotes/origin/xepa-dsv
