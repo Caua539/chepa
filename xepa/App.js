@@ -13,18 +13,18 @@ export const Estilo = {
     borderRadius: 5,
     shadowColor: '#fff',
     shadowOffset: {width:2, height:0},
-    shadowOpacity: 0.4, 
+    shadowOpacity: 0.4,
     marginTop: 20,
     marginHorizontal: 10,
     flexDirection: 'row',
-    paddingVertical: 10, 
+    paddingVertical: 10,
     paddingHorizontal: 30
-    
 
-  }, 
+
+  },
 
   botaoTexto: {
-    color: 'white' 
+    color: 'white'
   },
 
   texto: {
@@ -32,7 +32,7 @@ export const Estilo = {
     fontSize: 30,
     fontFamily: 'sans-serif',
     fontWeight: 'bold',
-    alignSelf: 'center', 
+    alignSelf: 'center',
     paddingTop: 15
 
   },
@@ -41,7 +41,7 @@ export const Estilo = {
     color: '#01161E',
     fontSize: 15,
     fontFamily: 'sans-serif',
-    alignSelf: 'center', 
+    alignSelf: 'center',
     paddingTop: 15,
     paddingHorizontal: 20
 
@@ -49,14 +49,14 @@ export const Estilo = {
 
   principal: {
     backgroundColor: '#D4D2D5',
-    flex: 1, 
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
-  }, 
+  },
 
   viewBotoes: {
     justifyContent: 'space-around',
-    alignItems: 'flex-start', 
+    alignItems: 'flex-start',
     flexDirection: 'column'
   },
 
@@ -76,7 +76,7 @@ export const Estilo = {
 };
 
 const botaoApertado = () => {
-  
+
   var numeroAleatorio = Math.random()*4;
 
   numeroAleatorio = Math.round(numeroAleatorio);
@@ -96,41 +96,40 @@ export default class App extends Component {
               <View style = {Estilo.principal}>
                   <Image source = {{uri:'https://warpzone.me/loja/wp-content/uploads/2016/05/icon-ecommerce-app.png'}}
                          style = {{width: 200, height: 200}}
-                  />  
-                  
+                  />
+
                   <Text style = {Estilo.texto}>Bem vindo a chepa! </Text>
-                  <Text style = {Estilo.textoMenor}>Selecione uma lista recente ou clique em "+" 
+                  <Text style = {Estilo.textoMenor}>Selecione uma lista recente ou clique em "+"
                   para começar a aeconomizar </Text>
-  
-                  
-                  <View style = {Estilo.viewBotoes}> 
-                        <TouchableOpacity onPress = {botaoApertado} 
+
+
+                  <View style = {Estilo.viewBotoes}>
+                        <TouchableOpacity onPress = {botaoApertado}
                                     style = {Estilo.botao}
-                                    
+
                         >
                                 <Text style = {Estilo.botaoTexto}>Lista 1</Text>
-  
+
                         </TouchableOpacity>
-  
-                        <TouchableOpacity onPress = {botaoApertado} 
-                                    style = {Estilo.botao}        
+
+                        <TouchableOpacity onPress = {botaoApertado}
+                                    style = {Estilo.botao}
                         >
-                                <Text style = {Estilo.botaoTexto}>Lista 2</Text>   
+                                <Text style = {Estilo.botaoTexto}>Lista 2</Text>
                         </TouchableOpacity>
                   </View>
                   <View style = {Estilo.viewBotoes}>
-                    <TouchableOpacity onPress = {botaoApertado} 
+                    <TouchableOpacity onPress = {botaoApertado}
                                       style = {Estilo.botaoAdd}
-                                    
+
                     >
                           <Image source = {{uri:'https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-128.png'}}
-                                 style = {{width: 30, height: 30}}                        
+                                 style = {{width: 30, height: 30}}
                           />
-  
+
                     </TouchableOpacity>
-                  </View>  
+                  </View>
               </View>
     );
   }
 };
-
