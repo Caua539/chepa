@@ -1,7 +1,7 @@
 //Importações
 import { AppRegistry, View, Image, Text, TouchableOpacity, Alert } from 'react-native';
 import React, { Component } from 'react';
-
+import BarraNav from './/src//components//BarraNav';
 //Formatações:
 
 export const Estilo = {
@@ -54,6 +54,10 @@ export const Estilo = {
     justifyContent: 'center'
   },
 
+  principal2: {
+    flex: 1
+  },
+
   viewBotoes: {
     justifyContent: 'space-around',
     alignItems: 'flex-start',
@@ -76,13 +80,9 @@ export const Estilo = {
 };
 
 const botaoApertado = () => {
-
   var numeroAleatorio = Math.random() * 4;
-
   numeroAleatorio = Math.round(numeroAleatorio);
-
   var frases = ["Com a xepa, você vai ter controle sobre o seu dinheiro", "Economize já", "Em desenvolvimento", "Vai perder essa?", "Não há dia para economia!"];
-
   Alert.alert(frases[numeroAleatorio]);
 };
 
@@ -93,11 +93,14 @@ export default class App extends Component {
   }
   render() {
     return (
-      <View style={Estilo.principal}>
-        <ImagemPrincipal></ImagemPrincipal>
-        <TextoBoasVindas></TextoBoasVindas>
-        <Botao></Botao>
+      <View style ={Estilo.principal2}>
+        <View style={Estilo.principal}>
+          <ImagemPrincipal></ImagemPrincipal>
+          <TextoBoasVindas></TextoBoasVindas>
+          <Botao></Botao>
+        </View>
       </View>
+      
     );
   }
 };
