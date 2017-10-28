@@ -1,30 +1,105 @@
 //Importações
-import { AppRegistry, View, Image, Text, TouchableOpacity, Alert } from 'react-native';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import {
+  AppRegistry,
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+  Alert,
+  StyleSheet
+} from 'react-native';
+
+
+//Classe principal: ("Main")
+export default class App extends Component<{}> {
+  render() {
+    return (
+      <View style={Estilo.principal}>
+        <ImagemPrincipal></ImagemPrincipal>
+        <TextoBoasVindas></TextoBoasVindas>
+        <Botao></Botao>
+      </View>
+    );
+  }
+};
+
+export class ImagemPrincipal extends Component<{}> {
+  render() {
+    return (
+      <View style = {Estilo.principal}>
+          <Image source = {require('./resources/img/iconeTeste.png')}
+                 style = {{width: 200, height: 200}}/>
+
+          <Text style = {Estilo.texto}>Bem vindo ao Xepa!</Text>
+          <Text style = {Estilo.textoMenor}>Selecione uma lista recente
+            ou clique em "+" para começar a economizar</Text>
+
+          <View style = {Estilo.viewBotoes}>
+            <TouchableOpacity onPress = {botaoApertado}
+              style = {Estilo.botao}>
+                <Text style = {Estilo.botaoTexto}>Lista 1</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress = {botaoApertado}
+              style = {Estilo.botao}>
+                <Text style = {Estilo.botaoTexto}>Lista 2</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style = {Estilo.viewBotoes}>
+            <TouchableOpacity onPress = {botaoApertado}
+              style = {Estilo.botaoAdd}>
+                <Image source = {require('./resources/img/sinal+.png')}
+                  style = {{width: 30, height: 30}}/>
+            </TouchableOpacity>
+          </View>
+      </View>
+    );
+  }
+};
+
+export class TextoBoasVindas extends Component {
+  render() {
+    return (
+      <View>
+        <Text style={Estilo.texto}>Bem vindo a xepa!</Text>
+      </View>
+    );
+  }
+};
+
+export class Botao extends Component {
+  render() {
+    return (
+      <View>
+            <View style={Estilo.viewBotoes}>
+              <TouchableOpacity onPress={botaoApertado}
+                style={Estilo.botao}>
+                  <Text style={Estilo.botaoTexto}>Comece a economizar já!</Text>
+              </TouchableOpacity>
+            </View>
+      </View>
+    );
+  }
+};
 
 //Formatações:
-
-export const Estilo = {
-
+const Estilo = StyleSheet.create({
   botao: {
     backgroundColor: '#342E37',
     borderColor: '#FAFFFD',
     borderWidth: 2,
     borderRadius: 5,
     shadowColor: '#fff',
-<<<<<<< HEAD
     shadowOffset: {width:2, height:0},
-=======
     shadowOffset: { width: 2, height: 0 },
->>>>>>> 7701290e092f039a767534ef98ec3458a63dc372
     shadowOpacity: 0.4,
     marginTop: 20,
     marginHorizontal: 10,
     flexDirection: 'row',
     paddingVertical: 10,
     paddingHorizontal: 30
-
-
   },
 
   botaoTexto: {
@@ -38,7 +113,6 @@ export const Estilo = {
     fontWeight: 'bold',
     alignSelf: 'center',
     paddingTop: 15
-
   },
 
   textoMenor: {
@@ -48,7 +122,6 @@ export const Estilo = {
     alignSelf: 'center',
     paddingTop: 15,
     paddingHorizontal: 20
-
   },
 
   principal: {
@@ -68,24 +141,17 @@ export const Estilo = {
     paddingTop: 40,
     width: 400,
     height: 400
-
   },
 
   botaoAdd: {
     paddingTop: 50,
     alignItems: 'center'
-
   }
-
-};
+});
 
 const botaoApertado = () => {
-
-<<<<<<< HEAD
   var numeroAleatorio = Math.random()*4;
-=======
   var numeroAleatorio = Math.random() * 4;
->>>>>>> 7701290e092f039a767534ef98ec3458a63dc372
 
   numeroAleatorio = Math.round(numeroAleatorio);
 
@@ -93,103 +159,3 @@ const botaoApertado = () => {
 
   Alert.alert(frases[numeroAleatorio]);
 };
-
-//Classe principal: ("Main")
-export default class App extends Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return (
-      <View style={Estilo.principal}>
-        <ImagemPrincipal></ImagemPrincipal>
-        <TextoBoasVindas></TextoBoasVindas>
-        <Botao></Botao>
-      </View>
-    );
-  }
-};
-
-export class ImagemPrincipal extends Component {
-  render() {
-    return (
-<<<<<<< HEAD
-              <View style = {Estilo.principal}>
-                  <Image source = {{uri:'https://warpzone.me/loja/wp-content/uploads/2016/05/icon-ecommerce-app.png'}}
-                         style = {{width: 200, height: 200}}
-                  />
-
-                  <Text style = {Estilo.texto}>Bem vindo a chepa! </Text>
-                  <Text style = {Estilo.textoMenor}>Selecione uma lista recente ou clique em "+"
-                  para começar a aeconomizar </Text>
-
-
-                  <View style = {Estilo.viewBotoes}>
-                        <TouchableOpacity onPress = {botaoApertado}
-                                    style = {Estilo.botao}
-
-                        >
-                                <Text style = {Estilo.botaoTexto}>Lista 1</Text>
-
-                        </TouchableOpacity>
-
-                        <TouchableOpacity onPress = {botaoApertado}
-                                    style = {Estilo.botao}
-                        >
-                                <Text style = {Estilo.botaoTexto}>Lista 2</Text>
-                        </TouchableOpacity>
-                  </View>
-                  <View style = {Estilo.viewBotoes}>
-                    <TouchableOpacity onPress = {botaoApertado}
-                                      style = {Estilo.botaoAdd}
-
-                    >
-                          <Image source = {{uri:'https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-128.png'}}
-                                 style = {{width: 30, height: 30}}
-                          />
-
-                    </TouchableOpacity>
-                  </View>
-              </View>
-    );
-  }
-};
-=======
-      <Image source={{ uri: 'https://warpzone.me/loja/wp-content/uploads/2016/05/icon-ecommerce-app.png' }}
-        style={{ width: 200, height: 200 }}
-      />
-    );
-  }
-};
-
-export class TextoBoasVindas extends Component {
-  render() {
-    return (
-      <View>
-        <Text style={Estilo.texto}>Bem vindo a xepa! </Text>
-      </View>
-    );
-  }
-};
-
-export class Botao extends Component {
-  render() {
-    return (
-      <View> 
-            <View style={Estilo.viewBotoes}>
-              <TouchableOpacity onPress={botaoApertado}
-                style={Estilo.botao}
-              >
-                <Text style={Estilo.botaoTexto}>Comece a economizar já!</Text>
-              </TouchableOpacity>
-            </View>
-      </View>
-    );
-  }
-};
-
-
-
-
-
->>>>>>> 7701290e092f039a767534ef98ec3458a63dc372
