@@ -27,36 +27,12 @@ export default class App extends Component<{}> {
   }
 };
 
-export class ImagemPrincipal extends Component<{}> {
+export class ImagemPrincipal extends Component {
   render() {
     return (
-      <View style = {Estilo.principal}>
+      <View style = {Estilo.imagem}>
           <Image source = {require('./resources/img/iconeTeste.png')}
                  style = {{width: 200, height: 200}}/>
-
-          <Text style = {Estilo.texto}>Bem vindo ao Xepa!</Text>
-          <Text style = {Estilo.textoMenor}>Selecione uma lista recente
-            ou clique em "+" para começar a economizar</Text>
-
-          <View style = {Estilo.viewBotoes}>
-            <TouchableOpacity onPress = {botaoApertado}
-              style = {Estilo.botao}>
-                <Text style = {Estilo.botaoTexto}>Lista 1</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress = {botaoApertado}
-              style = {Estilo.botao}>
-                <Text style = {Estilo.botaoTexto}>Lista 2</Text>
-            </TouchableOpacity>
-          </View>
-
-          <View style = {Estilo.viewBotoes}>
-            <TouchableOpacity onPress = {botaoApertado}
-              style = {Estilo.botaoAdd}>
-                <Image source = {require('./resources/img/sinal+.png')}
-                  style = {{width: 30, height: 30}}/>
-            </TouchableOpacity>
-          </View>
       </View>
     );
   }
@@ -79,7 +55,11 @@ export class Botao extends Component {
             <View style={Estilo.viewBotoes}>
               <TouchableOpacity onPress={botaoApertado}
                 style={Estilo.botao}>
-                  <Text style={Estilo.botaoTexto}>Comece a economizar já!</Text>
+                  <Text style={Estilo.botaoTexto}>Minhas Listas</Text>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={botaoApertado}
+                style={Estilo.botao}>
+                  <Text style={Estilo.botaoTexto}>Minha dispensa</Text>
               </TouchableOpacity>
             </View>
       </View>
@@ -115,7 +95,7 @@ const Estilo = StyleSheet.create({
     fontFamily: 'sans-serif',
     fontWeight: 'bold',
     alignSelf: 'center',
-    paddingTop: 15
+    //paddingTop: 15
   },
 
   textoMenor: {
@@ -142,13 +122,14 @@ const Estilo = StyleSheet.create({
   viewBotoes: {
     justifyContent: 'space-around',
     alignItems: 'flex-start',
-    flexDirection: 'column'
+    flexDirection: 'row'
   },
 
   imagem: {
-    paddingTop: 40,
-    width: 400,
-    height: 400
+    paddingTop: 20,
+    alignItems: 'center',
+    width: 250,
+    height: 250
   },
 
   botaoAdd: {
@@ -164,91 +145,3 @@ const botaoApertado = () => {
   Alert.alert(frases[numeroAleatorio]);
 };
 
-//Classe principal: ("Main")
-export default class App extends Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return (
-      <View style ={Estilo.principal2}>
-        <View style={Estilo.principal}>
-          <ImagemPrincipal></ImagemPrincipal>
-          <TextoBoasVindas></TextoBoasVindas>
-          <Botao></Botao>
-        </View>
-      </View>
-      
-    );
-  }
-};
-
-export class ImagemPrincipal extends Component {
-  render() {
-    return (
-              <View style = {Estilo.principal}>
-                  <Image source = {{uri:'https://warpzone.me/loja/wp-content/uploads/2016/05/icon-ecommerce-app.png'}}
-                         style = {{width: 200, height: 200}}
-                  />
-
-                  <Text style = {Estilo.texto}>Bem vindo a chepa! </Text>
-                  <Text style = {Estilo.textoMenor}>Selecione uma lista recente ou clique em "+"
-                  para começar a aeconomizar </Text>
-
-
-                  <View style = {Estilo.viewBotoes}>
-                        <TouchableOpacity onPress = {botaoApertado}
-                                    style = {Estilo.botao}
-
-                        >
-                                <Text style = {Estilo.botaoTexto}>Lista 1</Text>
-
-                        </TouchableOpacity>
-
-                        <TouchableOpacity onPress = {botaoApertado}
-                                    style = {Estilo.botao}
-                        >
-                                <Text style = {Estilo.botaoTexto}>Lista 2</Text>
-                        </TouchableOpacity>
-                  </View>
-                  <View style = {Estilo.viewBotoes}>
-                    <TouchableOpacity onPress = {botaoApertado}
-                                      style = {Estilo.botaoAdd}
-
-                    >
-                          <Image source = {{uri:'https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-128.png'}}
-                                 style = {{width: 30, height: 30}}
-                          />
-
-                    </TouchableOpacity>
-                  </View>
-              </View>
-    );
-  }
-};
-
-export class TextoBoasVindas extends Component {
-  render() {
-    return (
-      <View>
-        <Text style={Estilo.texto}>Bem vindo a xepa! </Text>
-      </View>
-    );
-  }
-};
-
-export class Botao extends Component {
-  render() {
-    return (
-      <View> 
-            <View style={Estilo.viewBotoes}>
-              <TouchableOpacity onPress={botaoApertado}
-                style={Estilo.botao}
-              >
-                <Text style={Estilo.botaoTexto}>Comece a economizar já!</Text>
-              </TouchableOpacity>
-            </View>
-      </View>
-    );
-  }
-};
