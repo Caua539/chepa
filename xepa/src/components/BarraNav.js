@@ -5,7 +5,9 @@ export default class BarraNav extends Component{
     render(){
         return(
             <View style = {estilo.barraTitulo}>
-                <Button title = "Teste"></Button>
+                <Button 
+                onPress = { () => {this.props.navigator.pop()}}
+                title = "Voltar"></Button>
                 <Text style ={estilo.estiloTexto}>Economize já!</Text>
             </View>
         );

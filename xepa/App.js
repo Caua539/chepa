@@ -11,14 +11,14 @@ import ViewListas from './/src//components//ViewListas';
 export default class App extends Component {
   render() {
     return (
-      <Navigator
+      <Navigator style = {{flex: 1}}
         initialRoute = {{id: 'principal'}} //Serve para definir a View inicial
         renderScene = {(route, navigator) => { //Lógica que realiza a transição entre Views
             if(route.id === 'principal'){
-              return(<ViewPrincipal prop1 = {navigator}/>);
+              return(<ViewPrincipal navigator = {navigator}/>);
             }
             if(route.id === 'listas'){
-              return(<ViewListas/>);
+              return(<ViewListas navigator = {navigator}/>);
             }
         }}
       />

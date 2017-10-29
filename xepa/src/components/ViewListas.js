@@ -14,7 +14,7 @@ export default class ViewListas extends Component{
               <StatusBar
                 hidden
               /> 
-              <BarraNav/> 
+              <BarraNav navigator = {this.props.navigator}/> 
             </View>
         );
     };

@@ -63,10 +63,10 @@ export class Botao extends Component {
   }
   render() {
     return (
-      <View>
+      <View style = {{flex: 1}}>
         <View style={Estilo.viewBotoes}>
           <TouchableHighlight onPress={() => {
-             this.props.prop1.push('listas')
+             this.props.prop1.push({id: 'listas'})
             }}>
             <View>
             <Image source={require('xepa/resources/img/iconeLista.png')}
@@ -143,7 +143,8 @@ const Estilo = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
-    marginTop: 20
+    marginTop: 20,
+    flex: 1
   },
 
   imagem: {
