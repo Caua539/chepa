@@ -1,11 +1,12 @@
 import React, {Component} from 'React';
 import {Text,View, StyleSheet,Button} from 'react-native';
+import PropTypes from 'prop-types';
 
 export default class BarraNav extends Component{
     render(){
         return(
             <View style = {estilo.barraTitulo}>
-                <Button 
+                <Button
                 onPress = { () => {this.props.navigator.pop()}}
                 title = "Voltar"></Button>
                 <Text style ={estilo.estiloTexto}>Economize já!</Text>

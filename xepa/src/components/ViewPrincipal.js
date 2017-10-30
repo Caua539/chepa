@@ -10,6 +10,7 @@ import {
   Dimensions,
   StatusBar
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 import {
   StackNavigator,
@@ -23,7 +24,7 @@ const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
 
 export default class ViewPrincipal extends Component {
- 
+
   render() {
     return (
       <View style={Estilo.principal}>
@@ -165,4 +166,3 @@ const botaoApertado = () => {
   var frases = ["Com a xepa, você vai ter controle sobre o seu dinheiro", "Economize já", "Em desenvolvimento", "Vai perder essa?", "Não há dia para economia!"];
   Alert.alert(frases[numeroAleatorio]);
 };
-
