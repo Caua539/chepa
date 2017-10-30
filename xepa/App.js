@@ -6,6 +6,7 @@ import {
 import { Navigator } from 'react-native-deprecated-custom-components';
 import ViewPrincipal from './/src//components//ViewPrincipal';
 import ViewListas from './/src//components//ViewListas';
+import ViewListasAdd from './/src//components//ViewListasAdd'
 
 
 export default class App extends Component {
@@ -19,6 +20,9 @@ export default class App extends Component {
             }
             if(route.id === 'listas'){
               return(<ViewListas navigator = {navigator}/>);
+            }
+            if(route.id === 'listasAdd'){
+              return(<ViewListasAdd navigator = {navigator}/>)
             }
         }}
       />
