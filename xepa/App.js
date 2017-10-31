@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {
   View
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { Navigator } from 'react-native-deprecated-custom-components';
 import ViewPrincipal from './/src//components//ViewPrincipal';

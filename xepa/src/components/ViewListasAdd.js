@@ -21,6 +21,20 @@ export default class ViewListasAdd extends Component{
                          };
       }
     
+    persistirLista(nomeLista, valorOrcamento, supermercado) {
+        try{
+            AsyncStorage.setItem("nomeLista", nomeLista);
+            AsyncStorage.setItem("valorOrcamento", valorOrcamento);
+            AsyncStorage.setItem("supermercado", supermercado);
+            Alert.alert("Lista salva com sucesso!");
+        } 
+        
+        catch (error) {
+            Alert.alert("Houve um erro ao salvar a lista");
+        }
+
+    }
+    
     render(){
         return(
             <View style = {{flex: 1}}>
@@ -44,23 +58,20 @@ export default class ViewListasAdd extends Component{
                     onChangeText={(text) => this.setState({text})}
                     />
               <Button title = "Salvar lista"
-                      onPress = {adicionaLista(this.state.nomeLista, this.state.valorOrcamento, this.state.supermercado)}
+                      onPress = {() => {
+                          this.persistirLista(this.state.nomeLista, this.state.valorOrcamento, 
+                          this.state.supermercado)
+                          
+                          this.props.navigator.pop();
+                          
+                          }}
 
               /> 
             </View>
+
+            
         );
     };
-}
-
-const adicionaLista = async (nomeLista, valorOrcamento, supermercado ) =>  {
-    try {
-        await AsyncStorage.setItem('nomeLista', nomeLista);
-        await AsyncStorage.setItem('valorOrcamento', valorOrcamento);
-        await AsyncStorage.setItem('supermercado', supermercado);
-      
-    } catch (error) {
-        Alert.alert("Houve um erro ao salvar os dados");
-      }
 }
 
 const Estilo = StyleSheet.create({
