@@ -18,20 +18,8 @@ export default class ViewListasAdd extends Component {
         this.state = {
             nomeLista: '',
             valorOrcamento: '',
-            supermercado: ''
+            supermercado:''
         };
-    }
-
-    persistirLista(numlista, nomeLista, valorOrcamento, supermercado) {
-        try {
-            var array = [nomeLista, valorOrcamento, supermercado];
-            AsyncStorage.setItem(numLista, JSON.stringify(array));
-            Alert.alert("Lista salva com sucesso!");
-        }
-        catch (error) {
-            Alert.alert("Houve um erro ao salvar a lista");
-        }
-
     }
 
     ID() { // Geração de ID que identifica unicamente uma lista 
@@ -39,6 +27,7 @@ export default class ViewListasAdd extends Component {
     }
 
     render() {
+        var id_lista;
         return (
             <View style={{ flex: 1 }}>
                 <StatusBar
@@ -62,16 +51,10 @@ export default class ViewListasAdd extends Component {
                     onChangeText={(supermercado) => this.setState({ supermercado: supermercado })}
                 />
                 <Button title="Salvar lista"
-                    onPress={() => /*{
-                        var numLista = this.ID()
-                        this.setState({numLista: numLista })
-                        this.persistirLista(this.state.numLista,this.state.nomeLista, this.state.valorOrcamento,
-                            this.state.supermercado)
-                        
-                    }*/ {
-                        var id = this.ID();
+                    onPress={() => {
+                        id_lista = this.ID();   
                         storage.save({
-                            key: id,   // Note: Do not use underscore("_") in key!
+                            key: id_lista,   // Note: Do not use underscore("_") in key!
                             data: {
                                 nomeLista: this.state.nomeLista,
                                 valorOrcamento: this.state.valorOrcamento,
@@ -79,7 +62,7 @@ export default class ViewListasAdd extends Component {
                             }
                         });
 
-                        this.props.navigator.push({ id: 'listas', data: id });
+                        this.props.navigator.push({ id: 'listas', data: id_lista});
                     }
                     }
 

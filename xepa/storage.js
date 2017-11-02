@@ -21,4 +21,10 @@ var storage = new Storage({
 	// the latest data.
 })
 
+var ids = [];
+var listas_armazenadas = [];
+
+
 global.storage = storage;
+global.listas = ids;
+global.listas_armazenadas = listas_armazenadas;

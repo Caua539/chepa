@@ -16,14 +16,11 @@ export default class ViewListas extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      nomeLista: '',
-      valorOrcamento: '',
-      supermercado: '',
-    };
+    this.qtd_listas = 0;
   }
 
-  componentDidMount() {
+  componentWillMount() { //Método chamado antes da renderização
+    
     if (this.props.data !== null && this.props.data !== undefined) {
       storage.load({
         key: this.props.data,
@@ -37,10 +34,24 @@ export default class ViewListas extends Component {
         // It can be set to false to always return data provided by sync method when expired.(Of course it's slower)
         syncInBackground: true
 
-      }).then(ret => {
-        this.setState({ nomeLista: ret.nomeLista });
-        this.setState({ valorOrcamento: ret.valorOrcamento });
-        this.setState({ supermercado: ret.supermercado });
+      }).then((ret) => {
+        listas_armazenadas.push([ret.nomeLista, ret.valorOrcamento, ret.supermercado]);
+
+        this.qtd_listas = listas_armazenadas.length;
+        
+            if (this.qtd_listas !== 0) {
+              exibicaoListas = listas_armazenadas.map(
+                function (array_interno) {
+                  return array_interno.map(function (elemento) {
+                    return <Text>{elemento}</Text>
+                  })
+                })
+                this.forceUpdate();
+            } else {
+              console.log("Caiu no else");
+              exibicaoListas = <Text>Não há listas cadastradas! Que tal adicionar uma agora?</Text>
+            }
+
       }).catch(err => {
         console.warn(err.message);
         switch (err.name) {
@@ -54,18 +65,25 @@ export default class ViewListas extends Component {
       })
     }
 
-
+   
+    console.log("WillMount executado");
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return (nextState.nomeLista !== this.state.nomeLista ||
-      nextState.valorOrcamento !== this.valorOrcamento ||
-      nextState.supermercado !== this.supermercado)
-
+  componentWillReceiveProps(nextProps) {
+    if (this.props.data !== nextProps.data) {
+      this.setState({
+        atualizar: true
+      })
+    }
+    console.log("WillReceiveProps executado");
   }
 
 
   render() {
+    if(this.qtd_listas == 0){
+      exibicaoListas = <Text>Não há listas cadastradas! Que tal adicionar uma agora?</Text>
+    }
+    console.log("Render iniciado");
     return (
       <View style={{ flex: 1 }}>
         <StatusBar
@@ -76,9 +94,7 @@ export default class ViewListas extends Component {
           onPress={() => { this.props.navigator.push({ id: 'listasAdd' }) }}
           title="Adicionar lista">
         </Button>
-        <Text> Nome: {this.state.nomeLista}</Text>
-        <Text> Orçamento: {this.state.valorOrcamento}</Text>
-        <Text> Local da compra: {this.state.supermercado}</Text>
+        {exibicaoListas}
       </View>
     );
   };
