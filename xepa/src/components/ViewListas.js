@@ -20,7 +20,7 @@ export default class ViewListas extends Component {
   }
 
   componentWillMount() { //Método chamado antes da renderização
-    
+
     if (this.props.data !== null && this.props.data !== undefined) {
       storage.load({
         key: this.props.data,
@@ -35,23 +35,11 @@ export default class ViewListas extends Component {
         syncInBackground: true
 
       }).then((ret) => {
-        listas_armazenadas.push([ret.nomeLista, ret.valorOrcamento, ret.supermercado]);
-
+        listas_armazenadas[this.props.data] = [ret.nomeLista, ret.valorOrcamento, ret.supermercado];
+        listas_armazenadas.length = listas_armazenadas.length + 1;
         this.qtd_listas = listas_armazenadas.length;
-        
-            if (this.qtd_listas !== 0) {
-              exibicaoListas = listas_armazenadas.map(
-                function (array_interno) {
-                  return array_interno.map(function (elemento) {
-                    return <Text>{elemento}</Text>
-                  })
-                })
-                this.forceUpdate();
-            } else {
-              console.log("Caiu no else");
-              exibicaoListas = <Text>Não há listas cadastradas! Que tal adicionar uma agora?</Text>
-            }
-
+        listas.push(this.props.data);
+        this.forceUpdate();
       }).catch(err => {
         console.warn(err.message);
         switch (err.name) {
@@ -65,7 +53,7 @@ export default class ViewListas extends Component {
       })
     }
 
-   
+
     console.log("WillMount executado");
   }
 
@@ -79,11 +67,26 @@ export default class ViewListas extends Component {
   }
 
 
+  listagemListas(id) {
+  if (this.qtd_listas !== 0) {
+              return <View>
+                        <Text>Nome da lista: {listas_armazenadas[id][0]}</Text>
+                        <Text>Orçamento: {listas_armazenadas[id][1]}</Text>
+                        <Text>Supermercado: {listas_armazenadas[id][2]}</Text>
+                      </View>
+    
+  } else {
+    return <Text>Não há listas cadastradas! Que tal adicionar uma agora?</Text>
+  }
+}
+
   render() {
-    if(this.qtd_listas == 0){
-      exibicaoListas = <Text>Não há listas cadastradas! Que tal adicionar uma agora?</Text>
-    }
-    console.log("Render iniciado");
+  var exibicaoListas = [];
+
+  for (var i = 0; i < listas.length; i++) {
+    exibicaoListas[i] = this.listagemListas(listas[i]);
+  } 
+
     return (
       <View style={{ flex: 1 }}>
         <StatusBar
