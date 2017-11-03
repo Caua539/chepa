@@ -52,9 +52,6 @@ export default class ViewListas extends Component {
         }
       })
     }
-
-
-    console.log("WillMount executado");
   }
 
   componentWillReceiveProps(nextProps) {
@@ -63,7 +60,6 @@ export default class ViewListas extends Component {
         atualizar: true
       })
     }
-    console.log("WillReceiveProps executado");
   }
 
 
@@ -72,7 +68,7 @@ export default class ViewListas extends Component {
               return <View>
                         <Text>Nome da lista: {listas_armazenadas[id][0]}</Text>
                         <Text>Orçamento: {listas_armazenadas[id][1]}</Text>
-                        <Text>Supermercado: {listas_armazenadas[id][2]}</Text>
+                        <Text style = {{marginBottom: 10}}>Supermercado: {listas_armazenadas[id][2]}</Text>
                       </View>
     
   } else {
