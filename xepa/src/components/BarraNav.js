@@ -1,17 +1,34 @@
-import React, {Component} from 'React';
+import React, {Component} from 'react';
 import {Text,View, StyleSheet,Button} from 'react-native';
 import PropTypes from 'prop-types';
 
 export default class BarraNav extends Component{
+    constructor(props){
+       super(props);
+    }
+    
+  
+    
     render(){
-        return(
-            <View style = {estilo.barraTitulo}>
-                <Button
-                onPress = { () => {this.props.navigator.pop()}}
-                title = "Voltar"></Button>
-                <Text style ={estilo.estiloTexto}>Economize já!</Text>
-            </View>
-        );
+        if(this.props.view == "listasAdd"){
+            return(
+                <View style = {estilo.barraTitulo}>
+                    <Button
+                    onPress = { () => { this.props.navigator.push({ id: 'listasAdd' }) }}
+                    title = "Adicionar lista"></Button>
+                </View>
+            );
+        } else{
+            return(
+                <View style = {estilo.barraTitulo}>
+                    <Button
+                    onPress = { () => {this.props.navigator.pop()}}
+                    title = "Voltar"></Button>
+                    <Text style ={estilo.estiloTexto}>Economize já!</Text>
+                </View>
+            );
+        }
+        
     };
 }
 

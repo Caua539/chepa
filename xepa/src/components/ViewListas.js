@@ -2,14 +2,25 @@ import React, { Component } from 'react';
 import {
   View,
   StatusBar,
-  Button,
   StyleSheet,
   AsyncStorage,
-  Text
+  Text,
+  ScrollView
 } from 'react-native';
 
 import PropTypes from 'prop-types';
 import BarraNav from './/BarraNav';
+
+import Button from 'apsl-react-native-button';
+
+import {
+  Card,
+  CardImage,
+  CardTitle,
+  CardContent,
+  CardAction
+} from 'react-native-card-view';
+
 
 
 export default class ViewListas extends Component {
@@ -65,12 +76,23 @@ export default class ViewListas extends Component {
 
   listagemListas(id) {
   if (this.qtd_listas !== 0) {
-              return <View>
-                        <Text>Nome da lista: {listas_armazenadas[id][0]}</Text>
-                        <Text>Orçamento: {listas_armazenadas[id][1]}</Text>
-                        <Text style = {{marginBottom: 10}}>Supermercado: {listas_armazenadas[id][2]}</Text>
-                      </View>
-    
+    return <Card>
+              <CardTitle>
+                  <Text style={styles.title}>{listas_armazenadas[id][0]}</Text>
+              </CardTitle>
+              <CardContent>
+                  <Text style = {styles.orcamentoTexto}>Orçamento: R${listas_armazenadas[id][1]}</Text>
+                  <Text>Supermercado: {listas_armazenadas[id][2]}</Text>
+              </CardContent>
+              <CardAction>
+                    <Button onPress = {() => {}} style={styles.button}>
+                      Ver
+                    </Button>
+                    <Button onPress = {() => {}} style={styles.button}>
+                      Excluir
+                    </Button>
+              </CardAction>
+            </Card>
   } else {
     return <Text>Não há listas cadastradas! Que tal adicionar uma agora?</Text>
   }
@@ -84,19 +106,31 @@ export default class ViewListas extends Component {
   } 
 
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor:'#FFF' }}>
         <StatusBar
           hidden
         />
-        <BarraNav navigator={this.props.navigator} />
-        <Button
-          onPress={() => { this.props.navigator.push({ id: 'listasAdd' }) }}
-          title="Adicionar lista">
-        </Button>
-        {exibicaoListas}
+        <ScrollView>
+          {exibicaoListas}
+        </ScrollView>
+        <BarraNav navigator={this.props.navigator} view = "listasAdd" />
       </View>
     );
   };
 }
 
-const Estilo = StyleSheet.create({})
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 38,
+    backgroundColor: 'transparent'
+  },
+  orcamentoTexto:{
+    fontSize: 20,
+    backgroundColor: 'transparent'
+  },
+  button: {
+    marginRight: 10,
+    width: 75,
+    backgroundColor: '#056B05'
+  }
+});

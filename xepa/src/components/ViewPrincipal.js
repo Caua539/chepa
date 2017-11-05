@@ -8,16 +8,10 @@ import {
   Alert,
   StyleSheet,
   Dimensions,
-  StatusBar
+  StatusBar,
 } from 'react-native';
 
-import PropTypes from 'prop-types';
-
-import {
-  StackNavigator,
-} from 'react-navigation';
-
-import { NavigationActions } from 'react-navigation';
+import PropTypes from 'react';
 
 import ViewListas from './/ViewListas'
 
@@ -145,7 +139,6 @@ const Estilo = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
-    marginTop: 20,
     flex: 1
   },
 

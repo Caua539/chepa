@@ -29,7 +29,7 @@ export default class ViewListasAdd extends Component {
     render() {
         var id_lista;
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1 , backgroundColor: '#fff'}}>
                 <StatusBar
                     hidden
                 />
