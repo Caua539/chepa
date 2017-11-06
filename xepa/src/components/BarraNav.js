@@ -15,8 +15,26 @@ export default class BarraNav extends Component{
                 <View style = {estilo.barraTitulo}>
                     <Button
                     onPress = { () => { this.props.navigator.push({ id: 'listasAdd' }) }}
-                    title = "Adicionar lista"></Button>
+                    title = "Adicionar lista">
+                    </Button>
+                    <Button
+                    onPress = { () => { this.props.navigator.push({ id: 'principal' }) }}
+                    title = "Home">
+                    </Button>
                 </View>
+            );
+        }else if(this.props.view == "dispensa"){
+            return(
+            <View style={estilo.barraTitulo}>
+                <Button
+                    onPress={() => { this.props.navigator.push({ id: 'dispensaAdd' }) }}
+                    title="Adicionar item">
+                </Button>
+                <Button
+                    onPress={() => { this.props.navigator.push({ id: 'principal' }) }}
+                    title="Home">
+                </Button>
+            </View>
             );
         } else{
             return(
@@ -34,7 +52,7 @@ export default class BarraNav extends Component{
 
 const estilo = StyleSheet.create({
     barraTitulo: {
-        backgroundColor: '#ccc',
+        backgroundColor: '#fff',
         height: 50,
         width:360,
         flexDirection: 'row',

@@ -13,13 +13,12 @@ import {
 
 import BarraNav from './/BarraNav';
 
-export default class ViewListasAdd extends Component {
+export default class ViewDispensaAdd extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            nomeLista: '',
-            valorOrcamento: '',
-            supermercado:''
+            nomeItem: '',
+            quantidade: ''
         };
     }
 
@@ -28,43 +27,37 @@ export default class ViewListasAdd extends Component {
     }
 
     render() {
-        var id_lista;
+        var id_item;
         return (
-            <View style={{ flex: 1, backgroundColor: '#fff', justifyContent: 'space-between', paddingTop: 20 }}>
+            <View style={{ flex: 1, backgroundColor: '#fff', justifyContent: 'space-between' }}>
                 <StatusBar
                     hidden
                 />
                 <View style={{ flex: 1, backgroundColor: '#fff' }}>
+                    <Text>Informe o nome do item:</Text>
                     <TextInput
                         style={Estilo.texto}
-                        placeholder="Nome da lista"
-                        onChangeText={(nomeLista) => this.setState({ nomeLista: nomeLista })}
+                        onChangeText={(nomeItem) => this.setState({ nomeItem: nomeItem })}
                     />
+                    <Text>Informe a quantidade de itens:</Text>
                     <TextInput keyboardType={'numeric'}
                         style={Estilo.texto}
-                        placeholder= "Valor do orçamento"
-                        onChangeText={(valorOrcamento) => this.setState(
-                            { valorOrcamento: valorOrcamento })}
-                    />
-                    <TextInput
-                        style={Estilo.texto}
-                        placeholder="Supermercado"
-                        onChangeText={(supermercado) => this.setState({ supermercado: supermercado })}
+                        onChangeText={(quantidade) => this.setState(
+                            { quantidade: quantidade })}
                     />
                     <View style ={{marginTop: 10}}>
-                        <Button title="Salvar lista"
+                        <Button title="Salvar item"
                             onPress={() => {
-                                id_lista = this.ID();
+                                id_item = this.ID();
                                 storage.save({
-                                    key: id_lista,   // Note: Do not use underscore("_") in key!
+                                    key: id_item,   // Note: Do not use underscore("_") in key!
                                     data: {
-                                        nomeLista: this.state.nomeLista,
-                                        valorOrcamento: this.state.valorOrcamento,
-                                        supermercado: this.state.supermercado
+                                        nomeItem: this.state.nomeItem,
+                                        quantidade: this.state.quantidade    
                                     }
                                 });
                                 Keyboard.dismiss();
-                                this.props.navigator.push({ id: 'listas', data: id_lista });
+                                this.props.navigator.push({ id: 'dispensa', data:  id_item });
                             }
                             }
                         />

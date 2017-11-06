@@ -23,11 +23,11 @@ import {
 
 
 
-export default class ViewListas extends Component {
+export default class ViewDispensa extends Component {
 
   constructor(props) {
     super(props);
-    this.qtd_listas = 0;
+    this.qtd_itens = 0;
   }
 
   componentWillMount() { //Método chamado antes da renderização
@@ -46,10 +46,10 @@ export default class ViewListas extends Component {
         syncInBackground: true
 
       }).then((ret) => {
-        listas_armazenadas[this.props.data] = [ret.nomeLista, ret.valorOrcamento, ret.supermercado];
-        listas_armazenadas.length = listas_armazenadas.length + 1;
-        this.qtd_listas = listas_armazenadas.length;
-        listas.push(this.props.data);
+        itens_dispensa[this.props.data] = [ret.nomeItem, ret.quantidade];
+        itens_dispensa.length = itens_dispensa.length + 1;
+        this.qtd_itens = itens_dispensa.length;
+        itens.push(this.props.data);
         this.forceUpdate();
       }).catch(err => {
         console.warn(err.message);
@@ -65,59 +65,62 @@ export default class ViewListas extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+ /* componentWillReceiveProps(nextProps) {
     if (this.props.data !== nextProps.data) {
       this.setState({
         atualizar: true
       })
     }
-  }
+  } */
 
 
-  listagemListas(id) {
+  listagemItems(id) {
     return <Card styles={{ card: { backgroundColor: '#FFF' }}}>
               <CardTitle>
-                  <Text style={styles.title}>{listas_armazenadas[id][0]}</Text>
+                  <Text style={styles.title}>{itens_dispensa[id][0]}</Text>
               </CardTitle>
               <CardContent>
-                  <Text style = {styles.orcamentoTexto}>Orçamento: R${listas_armazenadas[id][1]}</Text>
-                  <Text>Supermercado: {listas_armazenadas[id][2]}</Text>
+                  <Text style = {styles.orcamentoTexto}>Quantidade: {itens_dispensa[id][1]}</Text>
               </CardContent>
               <CardAction>
-                    <Button onPress = {() => {}} style={styles.button} isDisabled = 'true' >
-                      Ver
+                    <Button onPress = {() => {}} style={styles.button}>
+                      Editar
                     </Button>
-                    <Button onPress = {() => {}} style={styles.button} isDisabled = 'true'>
+                    <Button onPress = {(id) => {this.excluirItem(id)}} style={styles.button}>
                       Excluir
                     </Button>
               </CardAction>
             </Card>
 }
 
-  render() {
-  var exibicaoListas = [];
+excluirItem(id){
+    storage.remove({
+        key: id
+    });
+}
 
-  if(listas.length !== 0){
-    for (var i = 0; i < listas.length; i++) {
-      exibicaoListas[i] = this.listagemListas(listas[i]);
+render() {
+  var exibicaoItens = [];
+    console.log("Chamou render");
+  if(itens.length !== 0){
+    for (let item of itens) {
+        exibicaoItens.push(this.listagemItems(item));
     } 
   } else{
-    exibicaoListas[0] = 
+    exibicaoItens[0] = 
     <View style = {styles.semlistasView}> 
-    <Text style = {styles.semlistas}>Não há listas cadastradas! Que tal adicionar uma agora?</Text>
+        <Text style = {styles.semlistas}>Não há itens na dispensa! Que tal adicionar os itens agora?</Text>
     </View>
   }
-  
-
     return (
       <View style={{ flex: 1, backgroundColor:'#CCC' }}>
         <StatusBar
           hidden
         />
         <ScrollView>
-          {exibicaoListas}
+          {exibicaoItens}
         </ScrollView>
-        <BarraNav navigator={this.props.navigator} view = "listasAdd" />
+        <BarraNav navigator={this.props.navigator} view = "dispensa" />
       </View>
     );
   };
@@ -141,12 +144,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: 18,
-    marginTop: 250,
-    width: 200
+    marginTop: 250 
   },
   semlistasView:{
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: 'row',
   }
 });

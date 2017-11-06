@@ -65,16 +65,14 @@ export class Botao extends Component {
              this.props.prop1.push({id: 'listas'})
             }}>
             <View>
-            <Image source={require('xepa/resources/img/iconeLista.png')}
-                   style={{width: 100, height: 100}} />
-            <Text style = {Estilo.textoMenor}>Minhas listas</Text>
+                <Image source={require('xepa/resources/img/iconeLista.png')}
+                      style={{width: 120, height: 100}} />
             </View>
           </TouchableHighlight>
-          <TouchableHighlight onPress={botaoApertado}>
+          <TouchableHighlight onPress={() => this.props.prop1.push({id: 'dispensa'})}>
           <View>
             <Image source={require('xepa/resources/img/iconeDispensa.png')}
-                   style={{width: 100, height: 100}} />
-            <Text style = {Estilo.textoMenor}>Minha dispensa</Text>
+                   style={{width: 120, height: 100}} />
           </View>
           </TouchableHighlight>
         </View>
@@ -108,10 +106,12 @@ const Estilo = StyleSheet.create({
   texto: {
     color: '#01161E',
     fontSize: 30,
-    fontFamily: 'sans-serif',
+    fontFamily: 'sans-serif-light',
+    fontStyle:'italic',
     fontWeight: 'bold',
     alignSelf: 'center',
-    paddingTop: 15
+    textShadowColor: '#FFF',
+    paddingTop: 50
   },
 
   textoMenor: {
@@ -120,15 +120,14 @@ const Estilo = StyleSheet.create({
     fontSize: 15,
     fontFamily: 'sans-serif',
     alignSelf: 'center',
-    paddingTop: 15,
-    paddingHorizontal: 20
+    paddingTop: 10  
   },
 
   principal: {
     backgroundColor: '#D4D2D5',
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'space-between'
   },
 
   principal2: {
@@ -143,20 +142,8 @@ const Estilo = StyleSheet.create({
   },
 
   imagem: {
-    paddingTop: 20,
-    width: 75,
-    height: 100
-  },
-
-  botaoAdd: {
-    paddingTop: 50,
-    alignItems: 'center'
+    marginTop: 150,
+    flexDirection: 'row',
+    width: 120
   }
 });
-
-const botaoApertado = () => {
-  var numeroAleatorio = Math.random() * 4;
-  numeroAleatorio = Math.round(numeroAleatorio);
-  var frases = ["Com a xepa, você vai ter controle sobre o seu dinheiro", "Economize já", "Em desenvolvimento", "Vai perder essa?", "Não há dia para economia!"];
-  Alert.alert(frases[numeroAleatorio]);
-};
