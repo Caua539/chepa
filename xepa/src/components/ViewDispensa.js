@@ -83,25 +83,42 @@ export default class ViewDispensa extends Component {
                   <Text style = {styles.orcamentoTexto}>Quantidade: {itens_dispensa[id][1]}</Text>
               </CardContent>
               <CardAction>
-                    <Button onPress = {() => {}} style={styles.button}>
+                    <Button onPress = {(id) => {}} style={styles.button}>
                       Editar
                     </Button>
-                    <Button onPress = {(id) => {this.excluirItem(id)}} style={styles.button}>
+                    <Button onPress = {()=> {
+                        this.forceUpdate();
+                        for (let item of itens) {
+                            if(item == id){
+                              storage.remove({
+                                key: id
+                              }).then((ret) => {
+                                var i = itens.indexOf(id);
+                                itens.splice(i,1);
+                                var j = itens_dispensa.indexOf(id);
+                                itens_dispensa.splice(j,1);
+                                this.forceUpdate();
+                              }).catch(err => {
+                                console.warn(err.message);
+                                switch (err.name) {
+                                  case 'NotFoundError':
+                                    Alert.alert("Não foi possível excluir");
+                                    break;
+                                }
+                              })
+                            }
+                        } 
+                    }} style={styles.button}>
                       Excluir
                     </Button>
               </CardAction>
             </Card>
 }
 
-excluirItem(id){
-    storage.remove({
-        key: id
-    });
-}
+
 
 render() {
   var exibicaoItens = [];
-    console.log("Chamou render");
   if(itens.length !== 0){
     for (let item of itens) {
         exibicaoItens.push(this.listagemItems(item));

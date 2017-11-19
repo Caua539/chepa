@@ -22,7 +22,6 @@ import {
 } from 'react-native-card-view';
 
 
-
 export default class ViewListas extends Component {
 
   constructor(props) {

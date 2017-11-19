@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert } from 'react-native';
+import { Alert, AsyncStorage} from 'react-native';
 import AppIntro from 'react-native-app-intro';
 
 export default class ViewInicial extends Component {
@@ -44,6 +44,7 @@ export default class ViewInicial extends Component {
       fontColor: '#fff',
       level: 10,
     }];
+
     return (
       <AppIntro
         onNextBtnClick={this.nextBtnHandle}
