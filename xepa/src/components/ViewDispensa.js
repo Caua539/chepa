@@ -65,55 +65,68 @@ export default class ViewDispensa extends Component {
     }
   }
 
- /* componentWillReceiveProps(nextProps) {
-    if (this.props.data !== nextProps.data) {
-      this.setState({
-        atualizar: true
-      })
-    }
-  } */
-
 
   listagemItems(id) {
-    return <Card styles={{ card: { backgroundColor: '#FFF' }}}>
-              <CardTitle>
-                  <Text style={styles.title}>{itens_dispensa[id][0]}</Text>
-              </CardTitle>
-              <CardContent>
-                  <Text style = {styles.orcamentoTexto}>Quantidade: {itens_dispensa[id][1]}</Text>
-              </CardContent>
-              <CardAction>
-                    <Button onPress = {(id) => {}} style={styles.button}>
-                      Editar
-                    </Button>
-                    <Button onPress = {()=> {
-                        this.forceUpdate();
-                        for (let item of itens) {
-                            if(item == id){
-                              storage.remove({
-                                key: id
-                              }).then((ret) => {
-                                var i = itens.indexOf(id);
-                                itens.splice(i,1);
-                                var j = itens_dispensa.indexOf(id);
-                                itens_dispensa.splice(j,1);
-                                this.forceUpdate();
-                              }).catch(err => {
-                                console.warn(err.message);
-                                switch (err.name) {
-                                  case 'NotFoundError':
-                                    Alert.alert("Não foi possível excluir");
-                                    break;
-                                }
-                              })
-                            }
-                        } 
-                    }} style={styles.button}>
-                      Excluir
-                    </Button>
-              </CardAction>
-            </Card>
-}
+    return <Card styles={{ card: { backgroundColor: '#FFF' } }}>
+      <CardTitle>
+        <Text style={styles.title}>{itens_dispensa[id][0]}</Text>
+      </CardTitle>
+      <CardContent>
+        <Text style={styles.orcamentoTexto}>Quantidade: {itens_dispensa[id][1]}</Text>
+      </CardContent>
+      <CardAction>
+        <View style = {styles.botoesItem}>
+          <Button onPress={() => {
+            for (let item of itens) {
+              if (item == id) {
+                itens_dispensa[id][1]++;
+              }
+            }
+            this.forceUpdate();
+          }} style={styles.button}>
+            +
+          </Button>
+
+          <Button onPress={() => {
+            this.forceUpdate();
+            for (let item of itens) {
+              if (item == id) {
+                storage.remove({
+                  key: id
+                }).then((ret) => {
+                  var i = itens.indexOf(id);
+                  itens.splice(i, 1);
+                  var j = itens_dispensa.indexOf(id);
+                  itens_dispensa.splice(j, 1);
+                  this.forceUpdate();
+                }).catch(err => {
+                  console.warn(err.message);
+                  switch (err.name) {
+                    case 'NotFoundError':
+                      Alert.alert("Não foi possível excluir");
+                      break;
+                  }
+                })
+              }
+            }
+          }} style={styles.button}>
+            Excluir
+          </Button>
+
+          <Button onPress={() => {
+            for (let item of itens) {
+              if (item == id) {
+                itens_dispensa[id][1] = itens_dispensa[id][1] - 1
+              }
+            }
+            this.forceUpdate();
+          }} style={styles.button}>
+            -
+          </Button>
+        </View>
+      </CardAction>
+    </Card>
+  }
 
 
 
@@ -166,5 +179,9 @@ const styles = StyleSheet.create({
   semlistasView:{
     flex: 1,
     flexDirection: 'row',
+  },
+  botoesItem: {
+      flexDirection: 'row',
+      justifyContent: 'space-between'
   }
 });
