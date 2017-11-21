@@ -79,12 +79,12 @@ export default class ViewDispensa extends Component {
           <Button onPress={() => {
             for (let item of itens) {
               if (item == id) {
-                itens_dispensa[id][1]++;
+                itens_dispensa[id][1]--;
               }
             }
             this.forceUpdate();
           }} style={styles.button}>
-            +
+            -
           </Button>
 
           <Button onPress={() => {
@@ -116,12 +116,12 @@ export default class ViewDispensa extends Component {
           <Button onPress={() => {
             for (let item of itens) {
               if (item == id) {
-                itens_dispensa[id][1] = itens_dispensa[id][1] - 1
+                itens_dispensa[id][1]++;
               }
             }
             this.forceUpdate();
           }} style={styles.button}>
-            -
+            +
           </Button>
         </View>
       </CardAction>

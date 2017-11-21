@@ -83,10 +83,32 @@ export default class ViewListas extends Component {
                   <Text>Supermercado: {listas_armazenadas[id][2]}</Text>
               </CardContent>
               <CardAction>
-                    <Button onPress = {() => {}} style={styles.button} isDisabled = 'true' >
+                    <Button onPress = {() => {}} style={styles.button}>
                       Ver
                     </Button>
-                    <Button onPress = {() => {}} style={styles.button} isDisabled = 'true'>
+                    <Button onPress = {() => {
+                        //this.forceUpdate();
+                        for (let lista of listas) {
+                          if (lista == id) {
+                            storage.remove({
+                              key: id
+                            }).then((ret) => {
+                              var i = listas.indexOf(id);
+                              listas.splice(i, 1);
+                              var j = itens_dispensa.indexOf(id);
+                              listas_armazenadas.splice(j, 1);
+                              this.forceUpdate();
+                            }).catch(err => {
+                              console.warn(err.message);
+                              switch (err.name) {
+                                case 'NotFoundError':
+                                  Alert.alert("Não foi possível excluir");
+                                  break;
+                              }
+                            })
+                          }
+                        }
+                    }} style={styles.button} >
                       Excluir
                     </Button>
               </CardAction>
