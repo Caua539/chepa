@@ -13,15 +13,6 @@ import BarraNav from './/BarraNav';
 
 import Button from 'apsl-react-native-button';
 
-import {
-  Card,
-  CardImage,
-  CardTitle,
-  CardContent,
-  CardAction
-} from 'react-native-card-view';
-
-
 export default class ViewListas extends Component {
 
   constructor(props) {

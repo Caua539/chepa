@@ -58,6 +58,8 @@ export default class App extends Component {
                 return(<ViewPrincipal navigator = {navigator} data={route.data}/>);
               case 'listas' :
                 return(<ViewListas navigator = {navigator} data={route.data}/>);
+              case 'lista_individual' :
+                return(<ViewListaIndividual navigator = {navigator} data={route.data}/>);  
               case 'listasAdd' :
                 return(<ViewListasAdd navigator = {navigator} data={route.data}/>);
               case 'dispensa' :
