@@ -117,39 +117,3 @@
     <th>Itens adicionados a dispensa.</th> 
   </tr>
 </table>
-
-**CT-004**
-<table>
-  <tr>
-    <th>Seção</th>
-    <th>Descrição</th> 
-  </tr>
-  <tr>
-    <th>Nome</th>
-    <th>Ferramenta</th> 
-  </tr>
-  <tr>
-    <th>Resumo</th>
-    <th>Ferramenta</th> 
-  </tr>
-  <tr>
-    <th>Pré-condições</th>
-    <th>Ferramenta</th> 
-  </tr>
-  <tr>
-    <th>Entradas</th>
-    <th>Ferramenta</th> 
-  </tr>
-  <tr>
-    <th>Ação</th>
-    <th>Ferramenta</th> 
-  </tr>
-  <tr>
-    <th>Resultados esperados</th>
-    <th>Ferramenta</th> 
-  </tr>
-  <tr>
-    <th>Pós-condições</th>
-    <th>Ferramenta</th> 
-  </tr>
-</table>
