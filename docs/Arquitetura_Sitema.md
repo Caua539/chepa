@@ -23,7 +23,8 @@ Existem alguns requisitos fundamentais e as limitações do sistema que têm 
   Descreve as classes mais importantes, sua organização em pacotes e subsistemas de serviço, e a organização desses subsistemas em camadas. Descreve também as realizações de caso de uso mais importantes como, por exemplo, os aspectos dinâmicos da arquitetura.  
 
 <b>Diagrama de Camadas</b>  
-![alt](https://github.com/Caua539/chepa/blob/master/docs/img/UC1_Xepa.png)  
+![alt](https://www.logicroom.co/react-native-architecture-explained/images/3_image.png)  
+*Fonte: https://www.logicroom.co/react-native-architecture-explained/*
   
 <b>Diagrama de Sequência</b>  
 - Dispensa  
