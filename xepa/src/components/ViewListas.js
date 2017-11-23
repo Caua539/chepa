@@ -84,7 +84,7 @@ export default class ViewListas extends Component {
               </CardContent>
               <CardAction>
                     <Button onPress = {() => {
-                      this.props.navigator.push({ id: 'listas', data: id_lista });
+                      this.props.navigator.push({ id: 'listas'});
                     }} style={styles.button}>
                       Ver
                     </Button>
