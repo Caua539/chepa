@@ -57,19 +57,19 @@ export default class App extends Component {
               case 'inicial':
                 return(<ViewInicial navigator = {navigator} data ={route.data} isFirstTime = {false}/>);
               case 'principal':
-                return(<ViewPrincipal navigator = {navigator} data={route.data}/>);
+                return(<ViewPrincipal navigator = {navigator} data={route.data}  valorOrcamento = {route.valorOrcamento}/>);
               case 'listas' :
-                return(<ViewListas navigator = {navigator} data={route.data}/>);
+                return(<ViewListas navigator = {navigator} data={route.data}  valorOrcamento = {route.valorOrcamento}/>);
               case 'lista_individual' :
-                return(<ViewListaIndividual navigator = {navigator} data={route.data}/>);
+                return(<ViewListaIndividual navigator = {navigator} data={route.data} valorOrcamento = {route.valorOrcamento}/>);
               case 'add_itens_lista':
-                return(<ViewItensAdd navigator = {navigator} data={route.data}/>);
+                return(<ViewItensAdd navigator = {navigator} data={route.data} valorOrcamento = {route.valorOrcamento}/>);
               case 'listasAdd' :
-                return(<ViewListasAdd navigator = {navigator} data={route.data}/>);
+                return(<ViewListasAdd navigator = {navigator} data={route.data} valorOrcamento = {route.valorOrcamento}/>);
               case 'dispensa' :
-                return(<ViewDispensa navigator = {navigator} data={route.data}/>);
+                return(<ViewDispensa navigator = {navigator} data={route.data}  valorOrcamento = {route.valorOrcamento}/>);
               case 'dispensaAdd':
-                return(<ViewDispensaAdd navigator = {navigator} data={route.data}/>);
+                return(<ViewDispensaAdd navigator = {navigator} data={route.data}  valorOrcamento = {route.valorOrcamento}/>);
             }
         }}
       />

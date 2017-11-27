@@ -135,15 +135,15 @@ export default class ViewListaIndividual extends Component {
 
   render() {
   var exibicaoItens = [];
-  var somaTotal = 0;
+  var orcamento = this.props.valorOrcamento;
 
   if(ids_itens_lista.length !== 0){
     for (var i = 0; i < ids_itens_lista.length; i++) {
       exibicaoItens[i] = this.listagemItens(ids_itens_lista[i]);
-      if (somaTotal >= this.props.valorOrcamento){
-        Alert.alert("O orçamento foi estourado! Por favor, exclua um item ou diminua a quantidade de um item")
+      if (orcamento <= 0 ){
+        Alert.alert("Orçamento estourado! Diminua a quantidade de alguns itens ou retire algum item. ")
       } else{
-        somaTotal = parseInt(somaTotal) + parseInt(itens_lista[ids_itens_lista[i]][2] * 
+        orcamento = parseInt(orcamento) - parseInt(itens_lista[ids_itens_lista[i]][2] * 
           itens_lista[ids_itens_lista[i]][1]);
       }
     } 
@@ -163,7 +163,7 @@ export default class ViewListaIndividual extends Component {
           {exibicaoItens}
         </ScrollView>
         <BarraNav navigator={this.props.navigator} view = "add_itens_lista" 
-        soma_total_itens = {this.props.valorOrcamento} />
+        valorOrcamento = {orcamento} />
       </View>
     );
   };

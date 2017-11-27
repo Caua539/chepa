@@ -74,18 +74,17 @@ export default class ViewListas extends Component {
 
 
   listagemListas(id) {
-    var orcamento = listas_armazenadas[id][1];
     return <Card styles={{ card: { backgroundColor: '#FFF' }}}>
               <CardTitle>
                   <Text style={styles.title}>{listas_armazenadas[id][0]}</Text>
               </CardTitle>
               <CardContent>
-                  <Text style = {styles.orcamentoTexto}>Orçamento: R${orcamento}</Text>
+                  <Text style = {styles.orcamentoTexto}>Orçamento: R${listas_armazenadas[id][1]}</Text>
                   <Text>Supermercado: {listas_armazenadas[id][2]}</Text>
               </CardContent>
               <CardAction>
                     <Button onPress = {() => {
-                      this.props.navigator.push({ id: 'lista_individual', valorOrcamento: {orcamento} });
+                      this.props.navigator.push({ id: 'lista_individual', valorOrcamento: listas_armazenadas[id][1]});
                     }} style={styles.button}>
                       Ver
                     </Button>

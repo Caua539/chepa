@@ -40,10 +40,10 @@ export default class BarraNav extends Component{
             return(
                 <View style={estilo.barraTitulo}>
                     <Button
-                        onPress={() => { this.props.navigator.push({ id: 'add_itens_lista' }) }}
+                        onPress={() => { this.props.navigator.push({ id: 'add_itens_lista', valorOrcamento: this.props.valorOrcamento}) }}
                         title="Adicionar item">
                     </Button>
-                    <Text>R${this.props.soma_total_itens}</Text>
+                    <Text>R${this.props.valorOrcamento}</Text>
                     <Button
                         onPress={() => { this.props.navigator.push({ id: 'principal' }) }}
                         title="Home">
