@@ -79,6 +79,7 @@ export default class ViewListaIndividual extends Component {
     </CardTitle>
     <CardContent>
         <Text style = {styles.orcamentoTexto}>Valor unitário: R$ {itens_lista[id][2]} </Text>
+        <Text style = {styles.orcamentoTexto}>Valor total: R$ {itens_lista[id][2] * itens_lista[id][1]} </Text>
     </CardContent>
     <CardAction>
     <View style = {styles.botoesItem}>
@@ -136,22 +137,29 @@ export default class ViewListaIndividual extends Component {
   render() {
   var exibicaoItens = [];
   var orcamento = this.props.valorOrcamento;
+  var subTotal = 0;
+  var historico_orcamento = [];
 
   if(ids_itens_lista.length !== 0){
     for (var i = 0; i < ids_itens_lista.length; i++) {
       exibicaoItens[i] = this.listagemItens(ids_itens_lista[i]);
+      historico_orcamento[i] = this.props.valorOrcamento;
       if (orcamento <= 0 ){
         Alert.alert("Orçamento estourado! Diminua a quantidade de alguns itens ou retire algum item. ")
       } else{
-        orcamento = parseInt(orcamento) - parseInt(itens_lista[ids_itens_lista[i]][2] * 
-          itens_lista[ids_itens_lista[i]][1]);
+        subTotal = parseInt(itens_lista[ids_itens_lista[i]][2] * itens_lista[ids_itens_lista[i]][1]);
+        orcamento = parseInt(orcamento) - subTotal;
       }
     } 
   } else{
+    
+    historico_orcamento[0] = this.props.valorOrcamento;
+    
     exibicaoItens[0] = 
     <View style = {styles.semlistasView}> 
     <Text style = {styles.semlistas}>Não há itens na lista! Que tal adicionar agora?</Text>
     </View>
+
   }
   
     return (
@@ -163,7 +171,7 @@ export default class ViewListaIndividual extends Component {
           {exibicaoItens}
         </ScrollView>
         <BarraNav navigator={this.props.navigator} view = "add_itens_lista" 
-        valorOrcamento = {orcamento} />
+        valorOrcamento = {orcamento} subTotal = {subTotal}/>
       </View>
     );
   };

@@ -44,6 +44,7 @@ export default class BarraNav extends Component{
                         title="Adicionar item">
                     </Button>
                     <Text>R${this.props.valorOrcamento}</Text>
+                    <Text>Subtotal: R${this.props.subTotal}</Text>
                     <Button
                         onPress={() => { this.props.navigator.push({ id: 'principal' }) }}
                         title="Home">
