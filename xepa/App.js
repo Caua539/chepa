@@ -10,9 +10,11 @@ import PropTypes from 'prop-types';
 import ViewPrincipal from './/src//components//ViewPrincipal';
 import ViewListas from './/src//components//ViewListas';
 import ViewListasAdd from './/src//components//ViewListasAdd';
+import ViewListaIndividual from './/src//components//ViewListaIndividual'
+import ViewItensAdd from './/src//components//ViewItensAdd'
 import ViewDispensa from './/src//components//ViewDispensa';
 import ViewDispensaAdd from './/src//components//ViewDispensaAdd';
-import ViewInicial from './/src//components//ViewInicial'
+import ViewInicial from './/src//components//ViewInicial';
 import './storage.js';
 
 var rota;
@@ -59,7 +61,9 @@ export default class App extends Component {
               case 'listas' :
                 return(<ViewListas navigator = {navigator} data={route.data}/>);
               case 'lista_individual' :
-                return(<ViewListaIndividual navigator = {navigator} data={route.data}/>);  
+                return(<ViewListaIndividual navigator = {navigator} data={route.data}/>);
+              case 'add_itens_lista':
+                return(<ViewItensAdd navigator = {navigator} data={route.data}/>);
               case 'listasAdd' :
                 return(<ViewListasAdd navigator = {navigator} data={route.data}/>);
               case 'dispensa' :

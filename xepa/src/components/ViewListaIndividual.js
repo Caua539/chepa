@@ -5,15 +5,23 @@ import {
   StyleSheet,
   AsyncStorage,
   Text,
-  ScrollView
+  ScrollView,
+  Alert
 } from 'react-native';
 
 import PropTypes from 'prop-types';
 import BarraNav from './/BarraNav';
-
 import Button from 'apsl-react-native-button';
+import {
+  Card,
+  CardImage,
+  CardTitle,
+  CardContent,
+  CardAction
+} from 'react-native-card-view';
 
-export default class ViewListas extends Component {
+
+export default class ViewListaIndividual extends Component {
 
   constructor(props) {
     super(props);
@@ -36,10 +44,10 @@ export default class ViewListas extends Component {
         syncInBackground: true
 
       }).then((ret) => {
-        listas_armazenadas[this.props.data] = [ret.nomeLista, ret.valorOrcamento, ret.supermercado];
-        listas_armazenadas.length = listas_armazenadas.length + 1;
-        this.qtd_listas = listas_armazenadas.length;
-        listas.push(this.props.data);
+        itens_lista[this.props.data] = [ret.nomeItem, ret.quantidade, ret.valorUnitario];
+        itens_lista.length = itens_lista.length + 1;
+        this.qtd_itens = itens_lista.length;
+        ids_itens_lista.push(this.props.data);
         this.forceUpdate();
       }).catch(err => {
         console.warn(err.message);
@@ -64,74 +72,98 @@ export default class ViewListas extends Component {
   }
 
 
-  listagemListas(id) {
+  listagemItens(id) {
     return <Card styles={{ card: { backgroundColor: '#FFF' }}}>
-              <CardTitle>
-                  <Text style={styles.title}>{listas_armazenadas[id][0]}</Text>
-              </CardTitle>
-              <CardContent>
-                  <Text style = {styles.orcamentoTexto}>Orçamento: R${listas_armazenadas[id][1]}</Text>
-                  <Text>Supermercado: {listas_armazenadas[id][2]}</Text>
-              </CardContent>
-              <CardAction>
-                    <Button onPress = {() => {
-                      this.props.navigator.push({ id: 'listas' });
-                    }} style={styles.button}>
-                      Ver
-                    </Button>
-                    <Button onPress = {() => {
-                        //this.forceUpdate();
-                        for (let lista of listas) {
-                          if (lista == id) {
-                            storage.remove({
-                              key: id
-                            }).then((ret) => {
-                              var i = listas.indexOf(id);
-                              listas.splice(i, 1);
-                              var j = itens_dispensa.indexOf(id);
-                              listas_armazenadas.splice(j, 1);
-                              this.forceUpdate();
-                            }).catch(err => {
-                              console.warn(err.message);
-                              switch (err.name) {
-                                case 'NotFoundError':
-                                  Alert.alert("Não foi possível excluir");
-                                  break;
-                              }
-                            })
-                          }
-                        }
-                    }} style={styles.button} >
-                      Excluir
-                    </Button>
-              </CardAction>
-            </Card>
+    <CardTitle>
+        <Text style={styles.title}>{itens_lista[id][0]} x {itens_lista[id][1]}</Text>
+    </CardTitle>
+    <CardContent>
+        <Text style = {styles.orcamentoTexto}>Valor unitário: R$ {itens_lista[id][2]} </Text>
+    </CardContent>
+    <CardAction>
+    <View style = {styles.botoesItem}>
+          <Button onPress={() => {
+            for (let item of ids_itens_lista){
+              if (item == id){
+                itens_lista[id][1]--;
+              }
+            }
+            this.forceUpdate();
+          }} style={styles.button}>
+            -
+          </Button>
+          <Button onPress={() => {
+            this.forceUpdate();
+            for (let item of ids_itens_lista) {
+              if (item == id) {
+                storage.remove({
+                  key: id
+                }).then((ret) => {
+                  var i = ids_itens_lista.indexOf(id);
+                  ids_itens_lista.splice(i, 1);
+                  var j = itens_lista.indexOf(id);
+                  itens_lista.splice(j, 1);
+                  this.forceUpdate();
+                }).catch(err => {
+                  console.warn(err.message);
+                  switch (err.name) {
+                    case 'NotFoundError':
+                      Alert.alert("Não foi possível excluir");
+                      break;
+                  }
+                })
+              }
+            }
+          }} style={styles.button}>
+            Excluir
+          </Button>
+
+          <Button onPress={() => {
+            for (let item of ids_itens_lista) {
+              if (item == id) {
+                itens_lista[id][1]++;
+              }
+            }
+            this.forceUpdate();
+          }} style={styles.button}>
+            +
+          </Button>
+        </View>
+    </CardAction>
+  </Card>
 }
 
   render() {
-  var exibicaoListas = [];
+  var exibicaoItens = [];
+  var somaTotal = 0;
 
-  if(listas.length !== 0){
-    for (var i = 0; i < listas.length; i++) {
-      exibicaoListas[i] = this.listagemListas(listas[i]);
+  if(ids_itens_lista.length !== 0){
+    for (var i = 0; i < ids_itens_lista.length; i++) {
+      exibicaoItens[i] = this.listagemItens(ids_itens_lista[i]);
+      if (somaTotal >= this.props.valorOrcamento){
+        Alert.alert("O orçamento foi estourado! Por favor, exclua um item ou diminua a quantidade de um item")
+      } else{
+        somaTotal = parseInt(somaTotal) + parseInt(itens_lista[ids_itens_lista[i]][2] * 
+          itens_lista[ids_itens_lista[i]][1]);
+      }
     } 
   } else{
-    exibicaoListas[0] = 
+    exibicaoItens[0] = 
     <View style = {styles.semlistasView}> 
-    <Text style = {styles.semlistas}>Não há listas cadastradas! Que tal adicionar uma agora?</Text>
+    <Text style = {styles.semlistas}>Não há itens na lista! Que tal adicionar agora?</Text>
     </View>
   }
   
-
     return (
       <View style={{ flex: 1, backgroundColor:'#CCC' }}>
         <StatusBar
           hidden
         />
         <ScrollView>
-          {exibicaoListas}
+          {exibicaoItens}
         </ScrollView>
-        <BarraNav navigator={this.props.navigator} view = "listasAdd" />
+        <BarraNav navigator={this.props.navigator} view = "add_itens_lista" 
+        soma_total_itens = {this.props.valorOrcamento} />
       </View>
     );
   };
@@ -139,7 +171,7 @@ export default class ViewListas extends Component {
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 38,
+    fontSize: 25,
     backgroundColor: 'transparent'
   },
   orcamentoTexto:{
@@ -162,5 +194,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
+  botoesItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+}
 });

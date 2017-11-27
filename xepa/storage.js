@@ -24,11 +24,15 @@ var storage = new Storage({
 var ids_listas= [];
 var ids_itens = [];
 var listas_armazenadas = [];
+var itens_lista = [];
+var ids_itens_lista = [];
 var itens_dispensa = [];
 
 
 global.storage = storage;
 global.listas = ids_listas;
+global.itens_lista = itens_lista;
+global.ids_itens_lista = ids_itens_lista;
 global.listas_armazenadas = listas_armazenadas;
 global.itens_dispensa = itens_dispensa;
 global.itens = ids_itens;

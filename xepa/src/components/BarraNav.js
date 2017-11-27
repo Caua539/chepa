@@ -36,6 +36,20 @@ export default class BarraNav extends Component{
                 </Button>
             </View>
             );
+        } else if(this.props.view == "add_itens_lista"){
+            return(
+                <View style={estilo.barraTitulo}>
+                    <Button
+                        onPress={() => { this.props.navigator.push({ id: 'add_itens_lista' }) }}
+                        title="Adicionar item">
+                    </Button>
+                    <Text>R${this.props.soma_total_itens}</Text>
+                    <Button
+                        onPress={() => { this.props.navigator.push({ id: 'principal' }) }}
+                        title="Home">
+                    </Button>
+                </View>
+                );
         } else{
             return(
                 <View style = {estilo.barraTitulo}>
