@@ -89,6 +89,12 @@ export default class ViewListas extends Component {
                       Ver
                     </Button>
                     <Button onPress = {() => {
+                      this.props.navigator.push({ id: 'lista_editar', id_lista: id, nomeLista: listas_armazenadas[id][0], 
+                      valorOrcamento: listas_armazenadas[id][1], supermercado: listas_armazenadas[id][2]});
+                    }} style={styles.button}>
+                      Editar
+                    </Button>
+                    <Button onPress = {() => {
                         //this.forceUpdate();
                         for (let lista of listas) {
                           if (lista == id) {

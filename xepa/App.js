@@ -10,8 +10,9 @@ import PropTypes from 'prop-types';
 import ViewPrincipal from './/src//components//ViewPrincipal';
 import ViewListas from './/src//components//ViewListas';
 import ViewListasAdd from './/src//components//ViewListasAdd';
-import ViewListaIndividual from './/src//components//ViewListaIndividual'
-import ViewItensAdd from './/src//components//ViewItensAdd'
+import ViewListaIndividual from './/src//components//ViewListaIndividual';
+import ViewListasEdit from './/src//components//ViewListasEdit';
+import ViewItensAdd from './/src//components//ViewItensAdd';
 import ViewDispensa from './/src//components//ViewDispensa';
 import ViewDispensaAdd from './/src//components//ViewDispensaAdd';
 import ViewInicial from './/src//components//ViewInicial';
@@ -62,6 +63,9 @@ export default class App extends Component {
                 return(<ViewListas navigator = {navigator} data={route.data}  valorOrcamento = {route.valorOrcamento}/>);
               case 'lista_individual' :
                 return(<ViewListaIndividual navigator = {navigator} data={route.data} valorOrcamento = {route.valorOrcamento}/>);
+              case 'lista_editar':
+                return(<ViewListasEdit navigator = {navigator} data={route.data} valorOrcamento = {route.valorOrcamento} 
+                nomeLista = {route.nomeLista} supermercado = {route.supermercado} id_lista = {route.id_lista}/>);
               case 'add_itens_lista':
                 return(<ViewItensAdd navigator = {navigator} data={route.data} valorOrcamento = {route.valorOrcamento}/>);
               case 'listasAdd' :
