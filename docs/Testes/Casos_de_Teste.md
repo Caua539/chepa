@@ -117,3 +117,121 @@
     <th>Itens adicionados a dispensa.</th> 
   </tr>
 </table>
+
+
+**CT-004**
+<table>
+  <tr>
+    <th>Seção</th>
+    <th>Descrição</th> 
+  </tr>
+  <tr>
+    <th>Nome</th>
+    <th>Remoção de itens da Dispensa</th> 
+  </tr>
+  <tr>
+    <th>Resumo</th>
+    <th>Tem o objetivo de verificar o funcionamento correto da remoção de itens da dispensa.</th> 
+  </tr>
+  <tr>
+    <th>Pré-condições</th>
+    <th>1- item disponível para ser removido na dispensa.</th> 
+  </tr>
+  <tr>
+    <th>Entradas</th>
+    <th>1-Item a ser removido da Dispensa
+         2-Quantidade de itens a ser removida
+</th> 
+  </tr>
+  <tr>
+    <th>Ação</th>
+    <th>1- Selecionar o item na Dispensa a ser removido</br>
+        2- Clicar no botão correspondente a exclusão do item
+         3- Selecionar a quantidade de itens a ser excluída
+  </th> 
+  </tr>
+  <tr>
+    <th>Resultados esperados</th>
+    <th>Itens selecionados seram excluídos da Dispensa</th> 
+  </tr>
+  <tr>
+    <th>Pós-condições</th>
+    <th>Sistema volta ao passo inicial</th> 
+  </tr>
+</table>
+
+**CT-005**
+<table>
+  <tr>
+    <th>Seção</th>
+    <th>Descrição</th> 
+  </tr>
+  <tr>
+    <th>Nome</th>
+    <th>Atualização da quantidade de itens da dispensa</th> 
+  </tr>
+  <tr>
+    <th>Resumo</th>
+    <th>Tem o objetivo de verificar o funcionamento correto da atualização itens da dispensa após alguma alteração.</th> 
+  </tr>
+  <tr>
+    <th>Pré-condições</th>
+    <th>1- Alterações nas quantidades de itens da dispensa.</th> 
+  </tr>
+  <tr>
+    <th>Entradas</th>
+    <th>Nenhuma
+</th> 
+  </tr>
+  <tr>
+    <th>Ação</th>
+    <th>      1- O sistema verificará alterações na quantidade de itens.
+        2- O sistema atualizará a quantidade de itens na dispensa.</th> 
+  </tr>
+  <tr>
+    <th>Resultados esperados</th>
+    <th>A quantidade de itens atual será mostrada na dispensa.</th> 
+  </tr>
+  <tr>
+    <th>Pós-condições</th>
+    <th>O sistema volta ao passo inicial.</th> 
+  </tr>
+</table>
+
+**CT-006**
+<table>
+  <tr>
+    <th>Seção</th>
+   <th>Descrição</th> 
+  </tr>
+  <tr>
+    <th>Nome</th>
+    <th>Tela de Boas Vindas</th> 
+  </tr>
+  <tr>
+    <th>Resumo</th>
+    <th>Tem o objetivo de verificar o funcionamento correto da tela de boas vindas inicial da aplicação.</th> 
+  </tr>
+  <tr>
+    <th>Pré-condições</th>
+    <th>1- A iniciação do aplicativo.</th> 
+  </tr>
+  <tr>
+    <th>Entradas</th>
+    <th>Nenhuma</th> 
+  </tr>
+  <tr>
+    <th>Ação</th>
+    1- O usuário deverá iniciar a aplicação.
+    <th>
+</th> 
+  </tr>
+  <tr>
+    <th>Resultados esperados</th>
+    <th>A correta abertura da tela de boas vindas inicial ao usuário.</th> 
+  </tr>
+  <tr>
+    <th>Pós-condições</th>
+    <th>A tela inicial de boas vindas ser mostrada ao usuário.</th> 
+  </tr>
+</table>
