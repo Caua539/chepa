@@ -8,7 +8,8 @@ import {
     TextInput,
     Alert,
     AsyncStorage,
-    Keyboard
+    Keyboard, 
+    Picker
 } from 'react-native';
 
 import BarraNav from './/BarraNav';
@@ -19,7 +20,8 @@ export default class ViewItensAdd extends Component {
         this.state = {
             nomeItem: '',
             valorUnitario: '',
-            quantidade: ''
+            quantidade: '',
+            prioridade: ''
         };
     }
 
@@ -52,6 +54,16 @@ export default class ViewItensAdd extends Component {
                         onChangeText={(valorUnitario) => this.setState(
                             { valorUnitario: valorUnitario })}
                     />
+                    <Text>Qual a prioridade do item?</Text>
+                    <Picker
+                        selectedValue={this.state.prioridade}
+                        onValueChange={(itemValue, itemIndex) => this.setState({prioridade: itemValue})}>
+                        <Picker.Item label="Muito alta" value="8" />
+                        <Picker.Item label="Alta" value="6" />
+                        <Picker.Item label="Médio" value="4" />
+                        <Picker.Item label="Baixa" value="2" />
+                        <Picker.Item label="Muito baixa" value="0" />
+                    </Picker>
                     <View style ={{marginTop: 10}}>
                         <Button title="Salvar item na lista"
                             onPress={() => {
@@ -61,7 +73,8 @@ export default class ViewItensAdd extends Component {
                                     data: {
                                         nomeItem: this.state.nomeItem,
                                         quantidade: this.state.quantidade,
-                                        valorUnitario: this.state.valorUnitario    
+                                        valorUnitario: this.state.valorUnitario,
+                                        prioridade: this.state.prioridade    
                                     }
                                 });
                                 Keyboard.dismiss();

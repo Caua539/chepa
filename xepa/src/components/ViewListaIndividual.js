@@ -44,10 +44,32 @@ export default class ViewListaIndividual extends Component {
         syncInBackground: true
 
       }).then((ret) => {
-        itens_lista[this.props.data] = [ret.nomeItem, ret.quantidade, ret.valorUnitario];
+        itens_lista[this.props.data] = [ret.nomeItem, ret.quantidade, ret.valorUnitario, ret.prioridade];
         itens_lista.length = itens_lista.length + 1;
         this.qtd_itens = itens_lista.length;
-        ids_itens_lista.push(this.props.data);
+        
+        switch(ret.prioridade){
+          case '8':
+            prioridade_muito_alta.push(this.props.data);
+            break;
+          case '6':
+            prioridade_alta.push(this.props.data);
+            break;
+          case '4':
+            prioridade_media.push(this.props.data);
+            break;
+          case '2':
+            prioridade_baixa.push(this.props.data);
+            break;
+          case '0':
+            prioridade_muito_baixa.push(this.props.data);
+            break;
+        }
+
+        ids_itens_lista = ids_itens_lista.concat(prioridade_muito_alta, prioridade_alta, prioridade_media, 
+          prioridade_baixa, prioridade_muito_baixa);
+
+        console.log(ids_itens_lista);
         this.forceUpdate();
       }).catch(err => {
         console.warn(err.message);
@@ -71,8 +93,7 @@ export default class ViewListaIndividual extends Component {
     }
   }
 
-
-  listagemItens(id) {
+listagemItens(id) {
     return <Card styles={{ card: { backgroundColor: '#FFF' }}}>
     <CardTitle>
         <Text style={styles.title}>{itens_lista[id][0]} x {itens_lista[id][1]}</Text>
@@ -94,7 +115,6 @@ export default class ViewListaIndividual extends Component {
             -
           </Button>
           <Button onPress={() => {
-            this.forceUpdate();
             for (let item of ids_itens_lista) {
               if (item == id) {
                 storage.remove({
@@ -134,7 +154,7 @@ export default class ViewListaIndividual extends Component {
   </Card>
 }
 
-  render() {
+render() {
   var exibicaoItens = [];
   var orcamento = this.props.valorOrcamento;
   var subTotal = 0;
@@ -147,19 +167,16 @@ export default class ViewListaIndividual extends Component {
       if (orcamento <= 0 ){
         Alert.alert("Orçamento estourado! Diminua a quantidade de alguns itens ou retire algum item. ")
       } else{
-        subTotal = parseInt(itens_lista[ids_itens_lista[i]][2] * itens_lista[ids_itens_lista[i]][1]);
-        orcamento = parseInt(orcamento) - subTotal;
+        subTotal = parseInt(subTotal) + parseInt(itens_lista[ids_itens_lista[i]][2] * itens_lista[ids_itens_lista[i]][1]);
+        orcamento = parseInt(orcamento) - parseInt(subTotal);
       }
     } 
-  } else{
-    
+  } else {
     historico_orcamento[0] = this.props.valorOrcamento;
-    
     exibicaoItens[0] = 
     <View style = {styles.semlistasView}> 
     <Text style = {styles.semlistas}>Não há itens na lista! Que tal adicionar agora?</Text>
     </View>
-
   }
   
     return (

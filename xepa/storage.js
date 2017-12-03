@@ -27,6 +27,11 @@ var listas_armazenadas = [];
 var itens_lista = [];
 var ids_itens_lista = [];
 var itens_dispensa = [];
+var prioridade_muito_alta = [];
+var prioridade_alta = [];
+var prioridade_media = [];
+var prioridade_baixa = [];
+var prioridade_muito_baixa = [];
 
 
 global.storage = storage;
@@ -36,3 +41,8 @@ global.ids_itens_lista = ids_itens_lista;
 global.listas_armazenadas = listas_armazenadas;
 global.itens_dispensa = itens_dispensa;
 global.itens = ids_itens;
+global.prioridade_muito_alta = prioridade_muito_alta;
+global.prioridade_alta = prioridade_alta;
+global.prioridade_media = prioridade_media;
+global.prioridade_baixa = prioridade_baixa;
+global.prioridade_muito_baixa = prioridade_muito_baixa;
