@@ -222,8 +222,8 @@
   </tr>
   <tr>
     <th>Ação</th>
-    1- O usuário deverá iniciar a aplicação.
-    <th>
+  <th>
+1- O usuário deverá iniciar a aplicação.
 </th> 
   </tr>
   <tr>
