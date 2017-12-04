@@ -47,8 +47,8 @@ export default class ViewListaIndividual extends Component {
         itens_lista[this.props.data] = [ret.nomeItem, ret.quantidade, ret.valorUnitario, ret.prioridade];
         itens_lista.length = itens_lista.length + 1;
         this.qtd_itens = itens_lista.length;
-        
-        switch(ret.prioridade){
+        ids_itens_lista.push(this.props.data);
+        /*switch(ret.prioridade){
           case '8':
             prioridade_muito_alta.push(this.props.data);
             break;
@@ -69,7 +69,9 @@ export default class ViewListaIndividual extends Component {
         ids_itens_lista = ids_itens_lista.concat(prioridade_muito_alta, prioridade_alta, prioridade_media, 
           prioridade_baixa, prioridade_muito_baixa);
 
-        console.log(ids_itens_lista);
+        console.log(ids_itens_lista); */
+
+
         this.forceUpdate();
       }).catch(err => {
         console.warn(err.message);
