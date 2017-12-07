@@ -15,11 +15,13 @@ export default class BarraNav extends Component{
                 <View style = {estilo.barraTitulo}>
                     <Button
                     onPress = { () => { this.props.navigator.push({ id: 'listasAdd' }) }}
-                    title = "Adicionar lista">
+                    title = "Adicionar lista"
+                    style={estilo.botao}>
                     </Button>
                     <Button
                     onPress = { () => { this.props.navigator.push({ id: 'principal' }) }}
-                    title = "Home">
+                    title = "Inicio"
+                    style={estilo.botao}>
                     </Button>
                 </View>
             );
@@ -32,7 +34,7 @@ export default class BarraNav extends Component{
                 </Button>
                 <Button
                     onPress={() => { this.props.navigator.push({ id: 'principal' }) }}
-                    title="Home">
+                    title="Inicio">
                 </Button>
             </View>
             );
@@ -41,13 +43,14 @@ export default class BarraNav extends Component{
                 <View style={estilo.barraTitulo}>
                     <Button
                         onPress={() => { this.props.navigator.push({ id: 'add_itens_lista', valorOrcamento: this.props.valorOrcamento}) }}
-                        title="Adicionar item">
+                        title="Adicionar item"
+                        style={estilo.botao}>
                     </Button>
                     <Text>R${this.props.valorOrcamento}</Text>
                     <Text>Subtotal: R${this.props.subTotal}</Text>
                     <Button
                         onPress={() => { this.props.navigator.push({ id: 'principal' }) }}
-                        title="Home">
+                        title="Inicio">
                     </Button>
                 </View>
                 );

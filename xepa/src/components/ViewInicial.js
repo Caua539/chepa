@@ -26,14 +26,21 @@ export default class ViewInicial extends Component {
       description: 'Se organize de maneira mais fácil e mais prática para suas compras',
       img: require('xepa/resources/img/Ativo5.png'),
       imgStyle: {
-        width: 130 * 2.5,
+        height: 60 * 2,
+        width: 130 * 2
       },
+      backgroundColor: '#056B05',
+      fontColor: 'white',
       level: 10,
     }, {
       title: 'Comece a utilizar o app já e veja suas economias durarem mais!',
       description: 'Controle a sua dispensa, suas listas de compras e seu orçamento com o Xepa!',
+      img: require('xepa/resources/img/ativo1.png'),
       imgStyle: {
+        height: 54 * 2.5,
+        width: 73.5 * 2.5,
       },
+      backgroundColor: '#033B03',
       fontColor: '#fff',
       level: 10,
     }];
