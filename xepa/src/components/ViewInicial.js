@@ -24,7 +24,7 @@ export default class ViewInicial extends Component {
     const pageArray = [{
       title: 'Bem-vindo ao xepa!',
       description: 'Aqui é economia de VERDADE!',
-      img: require('xepa/resources/img/CARRINHO.png'),
+      img: require('xepa/resources/img/Ativo5.png'),
       imgStyle: {
         height: 50 * 2.5,
         width: 130 * 2.5,

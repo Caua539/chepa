@@ -8,12 +8,13 @@ import {
   Alert,
   StyleSheet,
   Dimensions,
+  Icon,
   StatusBar,
 } from 'react-native';
 
 import PropTypes from 'react';
 
-import ViewListas from './/ViewListas'
+import ViewListas from './ViewListas'
 
 const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
@@ -25,7 +26,6 @@ export default class ViewPrincipal extends Component {
       <View style={Estilo.principal}>
         <StatusBar hidden></StatusBar>
         <ImagemPrincipal></ImagemPrincipal>
-        <TextoBoasVindas></TextoBoasVindas>
         <Botao prop1 = {this.props.navigator}></Botao>
       </View>
     );
@@ -36,18 +36,8 @@ export class ImagemPrincipal extends Component {
   render() {
     return (
       <View style={Estilo.imagem}>
-        <Image source={require('xepa/resources/img/Principal.png')}
+        <Image source={require('xepa/resources/img/Top_Image_3.png')}
         />
-      </View>
-    );
-  }
-};
-
-export class TextoBoasVindas extends Component {
-  render() {
-    return (
-      <View>
-        <Text style={Estilo.texto}>Bem vindo a xepa!</Text>
       </View>
     );
   }
@@ -59,20 +49,23 @@ export class Botao extends Component {
   }
   render() {
     return (
-      <View style = {{flex: 1}}>
-        <View style={Estilo.viewBotoes}>
-          <TouchableHighlight onPress={() => {
+      <View>
+        <View>
+          <TouchableHighlight 
+             onPress={() => {
              this.props.prop1.push({id: 'listas'})
             }}>
-            <View>
-                <Image source={require('xepa/resources/img/iconeLista.png')}
-                      style={{width: 120, height: 100}} />
-            </View>
+            <View style={Estilo.navBarLeftButton} >
+                <Image source={require('xepa/resources/img/Bulleted-List-icon.png')}
+                   style={{width: 70, height: 70}} />
+                <Text style={Estilo.label}>Minhas Listas</Text>   
+            </View>     
           </TouchableHighlight>
           <TouchableHighlight onPress={() => this.props.prop1.push({id: 'dispensa'})}>
-          <View>
-            <Image source={require('xepa/resources/img/iconeDispensa.png')}
-                   style={{width: 120, height: 100}} />
+          <View style={Estilo.navBarLeftButton} >
+            <Image source={require('xepa/resources/img/closet.png')}
+                   style={{width: 70, height: 70}} />
+            <Text style={Estilo.label}>Minha Dipensa</Text> 
           </View>
           </TouchableHighlight>
         </View>
@@ -92,7 +85,7 @@ const Estilo = StyleSheet.create({
     shadowOffset: { width: 2, height: 0 },
     shadowOffset: { width: 2, height: 0 },
     shadowOpacity: 0.4,
-    marginTop: 20,
+    marginTop: 5,
     marginHorizontal: 10,
     flexDirection: 'row',
     paddingVertical: 10,
@@ -103,15 +96,30 @@ const Estilo = StyleSheet.create({
     color: 'white'
   },
 
-  texto: {
+navBarLeftButton: {
+    backgroundColor: '#B9B9B9',
+    borderColor: '#5C5C5C',
+    borderWidth: 2,
+    borderRadius: 5,
+    shadowColor: '#fff',
+    marginTop: 0,
+    marginBottom: 20,
+    shadowOffset: { width: 2, height: 0 },
+    shadowOffset: { width: 2, height: 0 },
+    shadowOpacity: 0.4,
+    flexDirection: 'row',
+    paddingVertical: 3,
+    paddingHorizontal: 60,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+},
+  label: {
     color: '#01161E',
-    fontSize: 30,
+    fontSize: 20,
     fontFamily: 'sans-serif-light',
-    fontStyle:'italic',
     fontWeight: 'bold',
     alignSelf: 'center',
-    textShadowColor: '#FFF',
-    paddingTop: 50
+    textShadowColor: '#FFF'
   },
 
   textoMenor: {
@@ -126,8 +134,7 @@ const Estilo = StyleSheet.create({
   principal: {
     backgroundColor: '#D4D2D5',
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'space-between'
+    alignItems: 'center'
   },
 
   principal2: {
@@ -142,8 +149,7 @@ const Estilo = StyleSheet.create({
   },
 
   imagem: {
-    marginTop: 150,
-    flexDirection: 'row',
-    width: 120
+    marginTop: 0,
+    marginBottom: 50
   }
 });
