@@ -4,6 +4,7 @@ import {
   StatusBar,
   StyleSheet,
   AsyncStorage,
+  TouchableHighlight,
   Text,
   ScrollView
 } from 'react-native';
@@ -140,13 +141,17 @@ export default class ViewListas extends Component {
 
     return (
       <View style={{ flex: 1, backgroundColor:'#CCC' }}>
+        <BarraNav navigator={this.props.navigator} view = "listasAdd" />
         <StatusBar
           hidden
         />
         <ScrollView>
           {exibicaoListas}
         </ScrollView>
-        <BarraNav navigator={this.props.navigator} view = "listasAdd" />
+        <Button
+        onPress = { () => { this.props.navigator.push({ id: 'principal' }) }}
+        title = "Add">
+        </Button>
       </View>
     );
   };

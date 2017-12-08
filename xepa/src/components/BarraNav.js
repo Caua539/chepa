@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text,View, StyleSheet,Button} from 'react-native';
+import {Text,View, StyleSheet,Button, Image, TouchableHighlight} from 'react-native';
 import PropTypes from 'prop-types';
 
 export default class BarraNav extends Component{
@@ -12,18 +12,15 @@ export default class BarraNav extends Component{
     render(){
         if(this.props.view == "listasAdd"){
             return(
-                <View style = {estilo.barraTitulo}>
-                    <Button
-                    onPress = { () => { this.props.navigator.push({ id: 'listasAdd' }) }}
-                    title = "Adicionar lista"
-                    style={estilo.botao}>
-                    </Button>
-                    <Button
-                    onPress = { () => { this.props.navigator.push({ id: 'principal' }) }}
-                    title = "Inicio"
-                    style={estilo.botao}>
-                    </Button>
-                </View>
+            <TouchableHighlight 
+             onPress={() => {
+             this.props.navigator.push({ id: 'principal' })
+            }}>
+            <View>
+                <Image source={require('xepa/resources/img/arrow-back.png')}
+                   style={{width: 50, height: 50}} /> 
+            </View>     
+          </TouchableHighlight>
             );
         }else if(this.props.view == "dispensa"){
             return(
@@ -80,5 +77,8 @@ const estilo = StyleSheet.create({
         paddingTop: 10,
         margin: 5,
         textAlign: 'center'
+    },
+    botao: {
+        width: '180'
     }
 })
