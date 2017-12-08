@@ -36,6 +36,7 @@ export default class ViewItensAdd extends Component {
                 <StatusBar
                     hidden
                 />
+                <BarraNav navigator={this.props.navigator} />
                 <View style={{ flex: 1, backgroundColor: '#fff' }}>
                     <Text>Nome do item:</Text>
                     <TextInput
@@ -85,7 +86,6 @@ export default class ViewItensAdd extends Component {
                     </View>
                    
                 </View>
-                <BarraNav navigator={this.props.navigator} />
             </View>
 
 
