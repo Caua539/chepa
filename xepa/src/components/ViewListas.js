@@ -80,48 +80,7 @@ export default class ViewListas extends Component {
               <CardTitle>
                   <Text style={styles.title}>{listas_armazenadas[id][0]}</Text>
               </CardTitle>
-              <CardContent>
-                  <Text style = {styles.orcamentoTexto}>Orçamento: R${listas_armazenadas[id][1]}</Text>
-                  <Text>Supermercado: {listas_armazenadas[id][2]}</Text>
-              </CardContent>
-              <CardAction>
-                    <Button onPress = {() => {
-                      this.props.navigator.push({ id: 'lista_individual', valorOrcamento: listas_armazenadas[id][1]});
-                    }} style={styles.button}>
-                      Ver
-                    </Button>
-                    <Button onPress = {() => {
-                      this.props.navigator.push({ id: 'lista_editar', id_lista: id, nomeLista: listas_armazenadas[id][0], 
-                      valorOrcamento: listas_armazenadas[id][1], supermercado: listas_armazenadas[id][2]});
-                    }} style={styles.button}>
-                      Editar
-                    </Button>
-                    <Button onPress = {() => {
-                        //this.forceUpdate();
-                        for (let lista of listas) {
-                          if (lista == id) {
-                            storage.remove({
-                              key: id
-                            }).then((ret) => {
-                              var i = listas.indexOf(id);
-                              listas.splice(i, 1);
-                              var j = itens_dispensa.indexOf(id);
-                              listas_armazenadas.splice(j, 1);
-                              this.forceUpdate();
-                            }).catch(err => {
-                              console.warn(err.message);
-                              switch (err.name) {
-                                case 'NotFoundError':
-                                  Alert.alert("Não foi possível excluir");
-                                  break;
-                              }
-                            })
-                          }
-                        }
-                    }} style={styles.button} >
-                      Excluir
-                    </Button>
-              </CardAction>
+
             </Card>
 }
 
@@ -157,7 +116,8 @@ export default class ViewListas extends Component {
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 38,
+    fontSize: 20,
+    marginLeft: 0,
     backgroundColor: 'transparent'
   },
   orcamentoTexto:{

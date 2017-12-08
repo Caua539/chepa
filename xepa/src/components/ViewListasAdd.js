@@ -34,6 +34,7 @@ export default class ViewListasAdd extends Component {
                 <StatusBar
                     hidden
                 />
+                <BarraNav navigator={this.props.navigator} />
                 <View style={{ flex: 1, backgroundColor: '#fff' }}>
                     <TextInput
                         style={Estilo.texto}
@@ -71,7 +72,6 @@ export default class ViewListasAdd extends Component {
                     </View>
                    
                 </View>
-                <BarraNav navigator={this.props.navigator} />
             </View>
 
 

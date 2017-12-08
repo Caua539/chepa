@@ -66,12 +66,13 @@ export default class BarraNav extends Component{
                 );
         } else{
             return(
-                <View style = {estilo.barraTitulo}>
-                    <Button
-                    onPress = { () => {this.props.navigator.pop()}}
-                    title = "Voltar"></Button>
-                    <Text style ={estilo.estiloTexto}>Economize já!</Text>
-                </View>
+            <TouchableHighlight 
+                onPress = { () => {this.props.navigator.pop()}}>
+                <View>
+                    <Image source={require('xepa/resources/img/arrow-back.png')}
+                    style={{width: 40, height: 40}} /> 
+                </View>     
+            </TouchableHighlight>
             );
         }
         
