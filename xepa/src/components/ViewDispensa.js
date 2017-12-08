@@ -144,6 +144,7 @@ render() {
   }
     return (
       <View style={{ flex: 1, backgroundColor:'#CCC' }}>
+        <BarraNav navigator={this.props.navigator} view = "principal" />
         <StatusBar
           hidden
         />

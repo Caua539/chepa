@@ -37,16 +37,16 @@ export default class BarraNav extends Component{
             );
         }else if(this.props.view == "dispensa"){
             return(
-            <View style={estilo.barraTitulo}>
-                <Button
-                    onPress={() => { this.props.navigator.push({ id: 'dispensaAdd' }) }}
-                    title="Adicionar item">
-                </Button>
-                <Button
-                    onPress={() => { this.props.navigator.push({ id: 'principal' }) }}
-                    title="Inicio">
-                </Button>
-            </View>
+            <TouchableHighlight 
+             onPress={() => {
+             this.props.navigator.push({ id: 'dispensaAdd' })
+            }}>
+            <View style={estilo.navBarLeftButton}>
+                <Image source={require('xepa/resources/img/add-icon.png')}
+                   style={{width: 40, height: 40}} /> 
+                <Text style ={estilo.botaoTexto}>Adicionar item</Text>  
+            </View>     
+          </TouchableHighlight>
             );
         } else if(this.props.view == "add_itens_lista"){
             return(
