@@ -33,6 +33,7 @@ export default class ViewDispensaAdd extends Component {
                 <StatusBar
                     hidden
                 />
+                <BarraNav navigator={this.props.navigator} />
                 <View style={{ flex: 1, backgroundColor: '#fff' }}>
                     <Text>Informe o nome do item:</Text>
                     <TextInput
@@ -64,7 +65,6 @@ export default class ViewDispensaAdd extends Component {
                     </View>
                    
                 </View>
-                <BarraNav navigator={this.props.navigator} />
             </View>
 
 
