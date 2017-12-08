@@ -80,7 +80,19 @@ export default class ViewListas extends Component {
               <CardTitle>
                   <Text style={styles.title}>{listas_armazenadas[id][0]}</Text>
               </CardTitle>
-
+              <CardAction>
+                    <Button onPress = {() => {
+                      this.props.navigator.push({ id: 'lista_individual', valorOrcamento: listas_armazenadas[id][1]});
+                    }} style={styles.button}>
+                      Ver
+                    </Button>
+                    <Button onPress = {() => {
+                      this.props.navigator.push({ id: 'lista_editar', id_lista: id, nomeLista: listas_armazenadas[id][0], 
+                      valorOrcamento: listas_armazenadas[id][1], supermercado: listas_armazenadas[id][2]});
+                    }} style={styles.button}>
+                      Editar
+                    </Button>
+              </CardAction>
             </Card>
 }
 

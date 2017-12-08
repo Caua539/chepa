@@ -7,6 +7,7 @@ import {
     Text,
     TextInput,
     Alert,
+    Picker,
     AsyncStorage,
     Keyboard
 } from 'react-native';
@@ -20,7 +21,8 @@ export default class ViewListasEdit extends Component {
             id: this.props.id_lista,
             nomeLista: this.props.nomeLista,
             valorOrcamento: this.props.valorOrcamento,
-            supermercado: this.props.supermercado
+            supermercado: this.props.supermercado,
+            status: this.props.status
         };
     }
 
@@ -53,6 +55,12 @@ export default class ViewListasEdit extends Component {
                         placeholder={this.state.supermercado}
                         onChangeText={(supermercado) => this.setState({ supermercado: supermercado })}
                     />
+                    <Picker
+                        selectedValue={this.state.status}
+                        onValueChange={(itemValue, itemIndex) => this.setState({status: itemValue})}>
+                        <Picker.Item label="Aberta" value="aberta" />
+                        <Picker.Item label="Fechada" value="fechada" />
+                    </Picker>
                     <View style ={{marginTop: 10}}>
                         <Button title="Salvar edições"
                             onPress={() => {

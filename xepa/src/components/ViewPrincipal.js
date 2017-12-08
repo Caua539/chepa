@@ -111,7 +111,7 @@ navBarLeftButton: {
     paddingVertical: 3,
     paddingHorizontal: 60,
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'center'
 },
   label: {
     color: '#01161E',

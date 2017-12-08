@@ -19,7 +19,8 @@ export default class ViewListasAdd extends Component {
         this.state = {
             nomeLista: '',
             valorOrcamento: '',
-            supermercado:''
+            supermercado:'',
+            status: ''
         };
     }
 
@@ -70,7 +71,6 @@ export default class ViewListasAdd extends Component {
                             }
                         />
                     </View>
-                   
                 </View>
             </View>
 
