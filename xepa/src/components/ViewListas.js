@@ -78,21 +78,21 @@ export default class ViewListas extends Component {
 
   listagemListas(id) {
     return <Card styles={{ card: { backgroundColor: '#FFF' }}}>
-              <CardTitle>
-                  <Text style={styles.title}>{listas_armazenadas[id][0]}</Text>
-              </CardTitle>
               <CardAction>
-                    <Button onPress = {() => {
-                      this.props.navigator.push({ id: 'lista_individual', valorOrcamento: listas_armazenadas[id][1]});
-                    }} style={styles.button}>
-                      Ver
-                    </Button>
-                    <Button onPress = {() => {
+                <Text style={styles.title}>{listas_armazenadas[id][0]}</Text>
+                    
+                <Text style={styles.title}>{listas_armazenadas[id][3]}</Text>
+                <TouchableHighlight 
+                    style={{width: 40, height: 40}}
+                      onPress = {() => {
                       this.props.navigator.push({ id: 'lista_editar', id_lista: id, nomeLista: listas_armazenadas[id][0], 
                       valorOrcamento: listas_armazenadas[id][1], supermercado: listas_armazenadas[id][2], status: listas_armazenadas[id][3]});
-                    }} style={styles.button}>
-                      Editar
-                    </Button>
+                      }}>
+                      <View >
+                          <Image source={require('xepa/resources/img/forward-arrow-icon.png')}
+                       style={{width: 40, height: 40}} />   
+                      </View>     
+                    </TouchableHighlight>
               </CardAction>
             </Card>
 }
@@ -130,7 +130,7 @@ export default class ViewListas extends Component {
 const styles = StyleSheet.create({
   title: {
     fontSize: 20,
-    marginLeft: 0,
+    marginLeft: 50,
     backgroundColor: 'transparent'
   },
   orcamentoTexto:{
