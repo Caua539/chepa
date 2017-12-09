@@ -7,6 +7,7 @@ import {
   TouchableHighlight,
   Image,
   Text,
+  Alert,
   ScrollView
 } from 'react-native';
 
@@ -88,7 +89,7 @@ export default class ViewListas extends Component {
                     </Button>
                     <Button onPress = {() => {
                       this.props.navigator.push({ id: 'lista_editar', id_lista: id, nomeLista: listas_armazenadas[id][0], 
-                      valorOrcamento: listas_armazenadas[id][1], supermercado: listas_armazenadas[id][2]});
+                      valorOrcamento: listas_armazenadas[id][1], supermercado: listas_armazenadas[id][2], status: listas_armazenadas[id][3]});
                     }} style={styles.button}>
                       Editar
                     </Button>

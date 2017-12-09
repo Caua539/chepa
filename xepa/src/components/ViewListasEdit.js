@@ -57,26 +57,53 @@ export default class ViewListasEdit extends Component {
                     />
                     <Picker
                         selectedValue={this.state.status}
-                        onValueChange={(itemValue, itemIndex) => this.setState({status: itemValue})}>
+                        onValueChange={(status, itemIndex) => this.setState({status: status})}>
                         <Picker.Item label="Aberta" value="aberta" />
                         <Picker.Item label="Fechada" value="fechada" />
                     </Picker>
                     <View style ={{marginTop: 10}}>
                         <Button title="Salvar edições"
                             onPress={() => {
-                                id_lista = this.state.id
-                                var i = listas.indexOf(id_lista);
-                                listas.splice(i, 1);
-                                storage.save({
-                                    key: id_lista,   // Note: Do not use underscore("_") in key!
-                                    data: {
-                                        nomeLista: this.state.nomeLista,
-                                        valorOrcamento: this.state.valorOrcamento,
-                                        supermercado: this.state.supermercado
-                                    }
-                                });
-                                Keyboard.dismiss();
-                                this.props.navigator.push({ id: 'listas', data: id_lista });
+                                if(this.state.status == "fechada"){
+                                    Alert.alert(
+                                    'Atenção',
+                                    'A lista será fechada, com isso, seus dados não poderão ser mais editados até sua abertura. Deseja prosseguir?',
+                                    [
+                                        {text: 'Cancel', onPress: () => {
+                                            this.props.navigator.push({ id: 'lista_editar', id_lista: id_lista, nomeLista: listas_armazenadas[id_lista][0], 
+                                            valorOrcamento: listas_armazenadas[id_lista][1], supermercado: listas_armazenadas[id_lista][2]});
+                                        }, style: 'cancel'},
+                                        {text: 'Sim', onPress: () => {
+                                            id_lista = this.state.id
+                                            var i = listas.indexOf(id_lista);
+                                            listas.splice(i, 1);
+                                            storage.save({
+                                                key: id_lista,   // Note: Do not use underscore("_") in key!
+                                                data: {
+                                                    nomeLista: this.state.nomeLista,
+                                                    valorOrcamento: this.state.valorOrcamento,
+                                                    supermercado: this.state.supermercado,
+                                                    status: this.state.status
+                                                }
+                                            });
+                                        }}])
+                                }else{
+                                    id_lista = this.state.id
+                                    var i = listas.indexOf(id_lista);
+                                    listas.splice(i, 1);
+                                    storage.save({
+                                        key: id_lista,   // Note: Do not use underscore("_") in key!
+                                        data: {
+                                            nomeLista: this.state.nomeLista,
+                                            valorOrcamento: this.state.valorOrcamento,
+                                            supermercado: this.state.supermercado,
+                                            status: this.state.status
+                                        }
+                                    });
+                                     
+                                    Keyboard.dismiss();
+                                    this.props.navigator.push({ id: 'listas', data: id_lista });
+                                }
                             }
                             }
                         />
@@ -94,7 +121,7 @@ export default class ViewListasEdit extends Component {
                             [
                                 {text: 'Cancel', onPress: () => {
                                     this.props.navigator.push({ id: 'lista_editar', id_lista: id_lista, nomeLista: listas_armazenadas[id_lista][0], 
-                                    valorOrcamento: listas_armazenadas[id_lista][1], supermercado: listas_armazenadas[id_lista][2]});
+                                    valorOrcamento: listas_armazenadas[id_lista][1], supermercado: listas_armazenadas[id_lista][2], status: listas_armazenadas[id_lista][3]});
                                 }, style: 'cancel'},
                                 {text: 'OK', onPress: () => {
                                     storage.remove({

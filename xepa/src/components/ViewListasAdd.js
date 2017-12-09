@@ -20,7 +20,7 @@ export default class ViewListasAdd extends Component {
             nomeLista: '',
             valorOrcamento: '',
             supermercado:'',
-            status: 'aberta'
+            status: ''
         };
     }
 
@@ -62,7 +62,8 @@ export default class ViewListasAdd extends Component {
                                     data: {
                                         nomeLista: this.state.nomeLista,
                                         valorOrcamento: this.state.valorOrcamento,
-                                        supermercado: this.state.supermercado
+                                        supermercado: this.state.supermercado,
+                                        status: 'aberta'
                                     }
                                 });
                                 Keyboard.dismiss();
