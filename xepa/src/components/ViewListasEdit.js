@@ -81,7 +81,44 @@ export default class ViewListasEdit extends Component {
                             }
                         />
                     </View>
-                   
+                     <View style ={{marginTop: 100, width: 230, marginLeft: 140}}>
+                        <Button
+                            color='#ff5c5c'
+                            title="Excluir Lista"
+                            onPress = {() => {
+                            //this.forceUpdate();
+                            id_lista = this.state.id
+                            Alert.alert(
+                            'Atenção',
+                            'Deseja confirmar exclusão da lista?',
+                            [
+                                {text: 'Cancel', onPress: () => {
+                                    this.props.navigator.push({ id: 'lista_editar', id_lista: id_lista, nomeLista: listas_armazenadas[id_lista][0], 
+                                    valorOrcamento: listas_armazenadas[id_lista][1], supermercado: listas_armazenadas[id_lista][2]});
+                                }, style: 'cancel'},
+                                {text: 'OK', onPress: () => {
+                                    storage.remove({
+                                    key: id_lista
+                                    }).then((ret) => {
+                                    var i = listas.indexOf(id_lista);
+                                    listas.splice(i, 1);
+                                    var j = itens_dispensa.indexOf(id_lista);
+                                    listas_armazenadas.splice(j, 1);
+                                    this.props.navigator.push({ id: 'listas'});
+                                    }).catch(err => {
+                                    console.warn(err.message);
+                                    switch (err.name) {
+                                        case 'NotFoundError':
+                                        Alert.alert("Não foi possível excluir");
+                                        break;
+                                    }
+                                })
+                                }},
+                            ],
+                            { cancelable: false }
+                            )
+                            }}/>
+                     </View>
                 </View>
             </View>
 

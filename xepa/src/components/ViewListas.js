@@ -47,7 +47,7 @@ export default class ViewListas extends Component {
         syncInBackground: true
 
       }).then((ret) => {
-        listas_armazenadas[this.props.data] = [ret.nomeLista, ret.valorOrcamento, ret.supermercado];
+        listas_armazenadas[this.props.data] = [ret.nomeLista, ret.valorOrcamento, ret.supermercado, ret.status];
         listas_armazenadas.length = listas_armazenadas.length + 1;
         this.qtd_listas = listas_armazenadas.length;
         listas.push(this.props.data);

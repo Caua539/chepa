@@ -20,7 +20,7 @@ export default class ViewListasAdd extends Component {
             nomeLista: '',
             valorOrcamento: '',
             supermercado:'',
-            status: ''
+            status: 'aberta'
         };
     }
 
