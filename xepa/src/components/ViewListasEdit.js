@@ -32,6 +32,7 @@ export default class ViewListasEdit extends Component {
 
     render() {
         var id_lista;
+        var editavel = this.state.status == 'fechada' ? false : true;
         return (
             <View style={{ flex: 1, backgroundColor: '#fff', justifyContent: 'space-between', paddingTop: 20 }}>
                 <StatusBar
@@ -40,17 +41,20 @@ export default class ViewListasEdit extends Component {
                 <BarraNav navigator={this.props.navigator} />
                 <View style={{ flex: 1, backgroundColor: '#fff' }}>
                     <TextInput
+                        editable={editavel}
                         style={Estilo.texto}
                         placeholder= {this.state.nomeLista}
                         onChangeText={(nomeLista) => this.setState({ nomeLista: nomeLista })}
                     />
                     <TextInput keyboardType={'numeric'}
+                        editable={editavel}
                         style={Estilo.texto}
                         placeholder= {this.state.valorOrcamento}
                         onChangeText={(valorOrcamento) => this.setState(
                             { valorOrcamento: valorOrcamento })}
                     />
                     <TextInput
+                        editable={editavel}
                         style={Estilo.texto}
                         placeholder={this.state.supermercado}
                         onChangeText={(supermercado) => this.setState({ supermercado: supermercado })}
@@ -86,6 +90,8 @@ export default class ViewListasEdit extends Component {
                                                     status: this.state.status
                                                 }
                                             });
+                                            Keyboard.dismiss();
+                                            this.props.navigator.push({ id: 'listas', data: id_lista });
                                         }}])
                                 }else{
                                     id_lista = this.state.id
@@ -100,7 +106,6 @@ export default class ViewListasEdit extends Component {
                                             status: this.state.status
                                         }
                                     });
-                                     
                                     Keyboard.dismiss();
                                     this.props.navigator.push({ id: 'listas', data: id_lista });
                                 }
