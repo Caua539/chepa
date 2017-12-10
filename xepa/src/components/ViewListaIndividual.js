@@ -5,7 +5,9 @@ import {
   StyleSheet,
   AsyncStorage,
   Text,
+  TouchableHighlight,
   ScrollView,
+  Image,
   Alert
 } from 'react-native';
 
@@ -97,15 +99,9 @@ export default class ViewListaIndividual extends Component {
 
 listagemItens(id) {
     return <Card styles={{ card: { backgroundColor: '#FFF' }}}>
-    <CardTitle>
-        <Text style={styles.title}>{itens_lista[id][0]} x {itens_lista[id][1]}</Text>
-    </CardTitle>
-    <CardContent>
-        <Text style = {styles.orcamentoTexto}>Valor unitário: R$ {itens_lista[id][2]} </Text>
-        <Text style = {styles.orcamentoTexto}>Valor total: R$ {itens_lista[id][2] * itens_lista[id][1]} </Text>
-    </CardContent>
     <CardAction>
     <View style = {styles.botoesItem}>
+        <Text style={styles.orcamentoTexto}>{itens_lista[id][0]} x {itens_lista[id][1]}</Text>
           <Button onPress={() => {
             for (let item of ids_itens_lista){
               if (item == id){
@@ -117,6 +113,16 @@ listagemItens(id) {
             -
           </Button>
           <Button onPress={() => {
+            for (let item of ids_itens_lista) {
+              if (item == id) {
+                itens_lista[id][1]++;
+              }
+            }
+            this.forceUpdate();
+          }} style={styles.button}>
+            +
+          </Button>
+           <Button onPress={() => {
             for (let item of ids_itens_lista) {
               if (item == id) {
                 storage.remove({
@@ -138,20 +144,15 @@ listagemItens(id) {
               }
             }
           }} style={styles.button}>
-            Excluir
-          </Button>
-
-          <Button onPress={() => {
-            for (let item of ids_itens_lista) {
-              if (item == id) {
-                itens_lista[id][1]++;
-              }
-            }
-            this.forceUpdate();
-          }} style={styles.button}>
-            +
+            <Image source={require('xepa/resources/img/garbage-icon.png')}
+                   style={{width: 15, height: 15}} /> 
           </Button>
         </View>
+        <View>
+          
+        <Text style = {styles.orcamentoTexto}>Valor unitário: R$ {itens_lista[id][2]} </Text>
+        <Text style = {styles.orcamentoTexto}>Valor total: R$ {itens_lista[id][2] * itens_lista[id][1]} </Text>
+          </View>
     </CardAction>
   </Card>
 }
@@ -180,8 +181,8 @@ render() {
     <Text style = {styles.semlistas}>Não há itens na lista! Que tal adicionar agora?</Text>
     </View>
   }
-  
     return (
+    
       <View style={{ flex: 1, backgroundColor:'#CCC' }}>
         <StatusBar
           hidden
@@ -189,6 +190,17 @@ render() {
         <ScrollView>
           {exibicaoItens}
         </ScrollView>
+        <TouchableHighlight 
+            style={{width: 300}} 
+            onPress={() => {
+            this.props.navigator.push({ id: 'add_itens_lista', valorOrcamento: this.props.valorOrcamento})
+            }}>
+            <View style={styles.navBarLeftButton}>
+                <Image source={require('xepa/resources/img/add-icon.png')}
+                style={{width: 40, height: 40}} /> 
+                <Text style ={styles.botaoTexto}>Adicionar item</Text>  
+            </View>     
+        </TouchableHighlight>
         <BarraNav navigator={this.props.navigator} view = "add_itens_lista" 
         valorOrcamento = {orcamento} subTotal = {subTotal}/>
       </View>
@@ -202,12 +214,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   orcamentoTexto:{
-    fontSize: 20,
-    backgroundColor: 'transparent'
+    fontSize: 15,
+    backgroundColor: 'transparent',
+    marginRight: 10
   },
   button: {
     marginRight: 10,
-    width: 75,
+    width: 30,
+    height: 30,
     backgroundColor: '#056B05'
   },
   semlistas: {
@@ -225,5 +239,25 @@ const styles = StyleSheet.create({
   botoesItem: {
     flexDirection: 'row',
     justifyContent: 'space-between'
-}
+},
+  botaoTexto:{
+    fontSize: 15,
+    backgroundColor: 'transparent'
+  },
+   navBarLeftButton: {
+    backgroundColor: '#B9B9B9',
+    borderColor: '#5C5C5C',
+    borderWidth: 2,
+    borderRadius: 5,
+    shadowColor: '#fff',
+    marginTop: 0,
+    marginBottom: 20,
+    shadowOffset: { width: 2, height: 0 },
+    shadowOffset: { width: 2, height: 0 },
+    shadowOpacity: 0.4,
+    flexDirection: 'row',
+    marginLeft: 90,
+    width: 200,
+    alignItems: 'center'
+   }
 });

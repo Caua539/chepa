@@ -94,6 +94,13 @@ export default class ViewListas extends Component {
                       </View>     
                     </TouchableHighlight>
               </CardAction>
+               <Button 
+               style={{width: 200, backgroundColor: '#BAD6BA', marginLeft: 80}}
+                onPress = {() => {
+                  this.props.navigator.push({ id: 'lista_individual', valorOrcamento: listas_armazenadas[id][1]});
+                }}>
+                Ver itens da lista
+                </Button>
             </Card>
 }
 
