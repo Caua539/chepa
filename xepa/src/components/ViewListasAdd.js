@@ -19,7 +19,8 @@ export default class ViewListasAdd extends Component {
         this.state = {
             nomeLista: '',
             valorOrcamento: '',
-            supermercado:''
+            supermercado:'',
+            status: ''
         };
     }
 
@@ -34,6 +35,7 @@ export default class ViewListasAdd extends Component {
                 <StatusBar
                     hidden
                 />
+                <BarraNav navigator={this.props.navigator} />
                 <View style={{ flex: 1, backgroundColor: '#fff' }}>
                     <TextInput
                         style={Estilo.texto}
@@ -60,7 +62,8 @@ export default class ViewListasAdd extends Component {
                                     data: {
                                         nomeLista: this.state.nomeLista,
                                         valorOrcamento: this.state.valorOrcamento,
-                                        supermercado: this.state.supermercado
+                                        supermercado: this.state.supermercado,
+                                        status: 'aberta'
                                     }
                                 });
                                 Keyboard.dismiss();
@@ -69,9 +72,7 @@ export default class ViewListasAdd extends Component {
                             }
                         />
                     </View>
-                   
                 </View>
-                <BarraNav navigator={this.props.navigator} />
             </View>
 
 

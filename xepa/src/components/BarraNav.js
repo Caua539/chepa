@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text,View, StyleSheet,Button} from 'react-native';
+import {Text,View, StyleSheet,Button, Image, TouchableHighlight} from 'react-native';
 import PropTypes from 'prop-types';
 
 export default class BarraNav extends Component{
@@ -10,55 +10,69 @@ export default class BarraNav extends Component{
   
     
     render(){
-        if(this.props.view == "listasAdd"){
+        if(this.props.view == "principal"){
             return(
-                <View style = {estilo.barraTitulo}>
-                    <Button
-                    onPress = { () => { this.props.navigator.push({ id: 'listasAdd' }) }}
-                    title = "Adicionar lista">
-                    </Button>
-                    <Button
-                    onPress = { () => { this.props.navigator.push({ id: 'principal' }) }}
-                    title = "Home">
-                    </Button>
-                </View>
+            <TouchableHighlight 
+             onPress={() => {
+             this.props.navigator.push({ id: 'principal' })
+            }}>
+            <View>
+                <Image source={require('xepa/resources/img/arrow-back.png')}
+                   style={{width: 50, height: 50}} /> 
+            </View>     
+          </TouchableHighlight>
+            );
+        }else if(this.props.view == "listasAdd"){
+            return(
+            <TouchableHighlight 
+             onPress={() => {
+             this.props.navigator.push({ id: 'listasAdd' })
+            }}>
+            <View style={estilo.navBarLeftButton}>
+                <Image source={require('xepa/resources/img/add-icon.png')}
+                   style={{width: 40, height: 40}} /> 
+                <Text style ={estilo.botaoTexto}>Adicionar Lista</Text>  
+            </View>     
+          </TouchableHighlight>
             );
         }else if(this.props.view == "dispensa"){
             return(
-            <View style={estilo.barraTitulo}>
-                <Button
-                    onPress={() => { this.props.navigator.push({ id: 'dispensaAdd' }) }}
-                    title="Adicionar item">
-                </Button>
-                <Button
-                    onPress={() => { this.props.navigator.push({ id: 'principal' }) }}
-                    title="Home">
-                </Button>
-            </View>
+            <TouchableHighlight 
+             onPress={() => {
+             this.props.navigator.push({ id: 'dispensaAdd' })
+            }}>
+            <View style={estilo.navBarLeftButton}>
+                <Image source={require('xepa/resources/img/add-icon.png')}
+                   style={{width: 40, height: 40}} /> 
+                <Text style ={estilo.botaoTexto}>Adicionar item</Text>  
+            </View>     
+          </TouchableHighlight>
             );
         } else if(this.props.view == "add_itens_lista"){
             return(
                 <View style={estilo.barraTitulo}>
                     <Button
                         onPress={() => { this.props.navigator.push({ id: 'add_itens_lista', valorOrcamento: this.props.valorOrcamento}) }}
-                        title="Adicionar item">
+                        title="Adicionar item"
+                        style={estilo.botao}>
                     </Button>
                     <Text>R${this.props.valorOrcamento}</Text>
                     <Text>Subtotal: R${this.props.subTotal}</Text>
                     <Button
                         onPress={() => { this.props.navigator.push({ id: 'principal' }) }}
-                        title="Home">
+                        title="Inicio">
                     </Button>
                 </View>
                 );
         } else{
             return(
-                <View style = {estilo.barraTitulo}>
-                    <Button
-                    onPress = { () => {this.props.navigator.pop()}}
-                    title = "Voltar"></Button>
-                    <Text style ={estilo.estiloTexto}>Economize já!</Text>
-                </View>
+            <TouchableHighlight 
+                onPress = { () => {this.props.navigator.pop()}}>
+                <View>
+                    <Image source={require('xepa/resources/img/arrow-back.png')}
+                    style={{width: 40, height: 40}} /> 
+                </View>     
+            </TouchableHighlight>
             );
         }
         
@@ -77,5 +91,32 @@ const estilo = StyleSheet.create({
         paddingTop: 10,
         margin: 5,
         textAlign: 'center'
-    }
+    },
+    botaoTexto:{
+        color: '#01161E',
+        fontSize: 20,
+        fontFamily: 'sans-serif-light',
+        alignSelf: 'center',
+        textShadowColor: '#FFF',
+        marginLeft: 10
+    },
+    botao: {
+        width: '180'
+    },
+    navBarLeftButton: {
+    backgroundColor: '#B9B9B9',
+    borderColor: '#5C5C5C',
+    borderWidth: 2,
+    borderRadius: 5,
+    shadowColor: '#fff',
+    marginTop: 0,
+    marginBottom: 20,
+    shadowOffset: { width: 2, height: 0 },
+    shadowOffset: { width: 2, height: 0 },
+    shadowOpacity: 0.4,
+    flexDirection: 'row',
+    marginLeft: 90,
+    width: 200,
+    alignItems: 'center',
+}
 })

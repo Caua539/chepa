@@ -65,7 +65,7 @@ export default class App extends Component {
                 return(<ViewListaIndividual navigator = {navigator} data={route.data} valorOrcamento = {route.valorOrcamento}/>);
               case 'lista_editar':
                 return(<ViewListasEdit navigator = {navigator} data={route.data} valorOrcamento = {route.valorOrcamento} 
-                nomeLista = {route.nomeLista} supermercado = {route.supermercado} id_lista = {route.id_lista}/>);
+                nomeLista = {route.nomeLista} supermercado = {route.supermercado} id_lista = {route.id_lista} status = {route.status}/>);
               case 'add_itens_lista':
                 return(<ViewItensAdd navigator = {navigator} data={route.data} valorOrcamento = {route.valorOrcamento}/>);
               case 'listasAdd' :

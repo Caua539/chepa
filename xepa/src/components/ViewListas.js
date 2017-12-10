@@ -4,7 +4,10 @@ import {
   StatusBar,
   StyleSheet,
   AsyncStorage,
+  TouchableHighlight,
+  Image,
   Text,
+  Alert,
   ScrollView
 } from 'react-native';
 
@@ -45,7 +48,7 @@ export default class ViewListas extends Component {
         syncInBackground: true
 
       }).then((ret) => {
-        listas_armazenadas[this.props.data] = [ret.nomeLista, ret.valorOrcamento, ret.supermercado];
+        listas_armazenadas[this.props.data] = [ret.nomeLista, ret.valorOrcamento, ret.supermercado, ret.status];
         listas_armazenadas.length = listas_armazenadas.length + 1;
         this.qtd_listas = listas_armazenadas.length;
         listas.push(this.props.data);
@@ -75,50 +78,21 @@ export default class ViewListas extends Component {
 
   listagemListas(id) {
     return <Card styles={{ card: { backgroundColor: '#FFF' }}}>
-              <CardTitle>
-                  <Text style={styles.title}>{listas_armazenadas[id][0]}</Text>
-              </CardTitle>
-              <CardContent>
-                  <Text style = {styles.orcamentoTexto}>Orçamento: R${listas_armazenadas[id][1]}</Text>
-                  <Text>Supermercado: {listas_armazenadas[id][2]}</Text>
-              </CardContent>
               <CardAction>
-                    <Button onPress = {() => {
-                      this.props.navigator.push({ id: 'lista_individual', valorOrcamento: listas_armazenadas[id][1]});
-                    }} style={styles.button}>
-                      Ver
-                    </Button>
-                    <Button onPress = {() => {
+                <Text style={styles.title}>{listas_armazenadas[id][0]}</Text>
+                    
+                <Text style={styles.title}>{listas_armazenadas[id][3]}</Text>
+                <TouchableHighlight 
+                    style={{width: 40, height: 40}}
+                      onPress = {() => {
                       this.props.navigator.push({ id: 'lista_editar', id_lista: id, nomeLista: listas_armazenadas[id][0], 
-                      valorOrcamento: listas_armazenadas[id][1], supermercado: listas_armazenadas[id][2]});
-                    }} style={styles.button}>
-                      Editar
-                    </Button>
-                    <Button onPress = {() => {
-                        //this.forceUpdate();
-                        for (let lista of listas) {
-                          if (lista == id) {
-                            storage.remove({
-                              key: id
-                            }).then((ret) => {
-                              var i = listas.indexOf(id);
-                              listas.splice(i, 1);
-                              var j = itens_dispensa.indexOf(id);
-                              listas_armazenadas.splice(j, 1);
-                              this.forceUpdate();
-                            }).catch(err => {
-                              console.warn(err.message);
-                              switch (err.name) {
-                                case 'NotFoundError':
-                                  Alert.alert("Não foi possível excluir");
-                                  break;
-                              }
-                            })
-                          }
-                        }
-                    }} style={styles.button} >
-                      Excluir
-                    </Button>
+                      valorOrcamento: listas_armazenadas[id][1], supermercado: listas_armazenadas[id][2], status: listas_armazenadas[id][3]});
+                      }}>
+                      <View >
+                          <Image source={require('xepa/resources/img/forward-arrow-icon.png')}
+                       style={{width: 40, height: 40}} />   
+                      </View>     
+                    </TouchableHighlight>
               </CardAction>
             </Card>
 }
@@ -140,6 +114,7 @@ export default class ViewListas extends Component {
 
     return (
       <View style={{ flex: 1, backgroundColor:'#CCC' }}>
+        <BarraNav navigator={this.props.navigator} view = "principal" />
         <StatusBar
           hidden
         />
@@ -154,7 +129,8 @@ export default class ViewListas extends Component {
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 38,
+    fontSize: 20,
+    marginLeft: 50,
     backgroundColor: 'transparent'
   },
   orcamentoTexto:{

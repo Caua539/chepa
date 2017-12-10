@@ -5,6 +5,7 @@ import {
   StyleSheet,
   AsyncStorage,
   Text,
+  Image,
   ScrollView
 } from 'react-native';
 
@@ -68,14 +69,9 @@ export default class ViewDispensa extends Component {
 
   listagemItems(id) {
     return <Card styles={{ card: { backgroundColor: '#FFF' } }}>
-      <CardTitle>
-        <Text style={styles.title}>{itens_dispensa[id][0]}</Text>
-      </CardTitle>
-      <CardContent>
-        <Text style={styles.orcamentoTexto}>Quantidade: {itens_dispensa[id][1]}</Text>
-      </CardContent>
       <CardAction>
         <View style = {styles.botoesItem}>
+          <Text style={styles.title}>{itens_dispensa[id][0]}</Text>
           <Button onPress={() => {
             for (let item of itens) {
               if (item == id) {
@@ -86,7 +82,17 @@ export default class ViewDispensa extends Component {
           }} style={styles.button}>
             -
           </Button>
-
+          <Text style={styles.title}>{itens_dispensa[id][1]}</Text>
+          <Button onPress={() => {
+            for (let item of itens) {
+              if (item == id) {
+                itens_dispensa[id][1]++;
+              }
+            }
+            this.forceUpdate();
+          }} style={styles.button}>
+            +
+          </Button>
           <Button onPress={() => {
             this.forceUpdate();
             for (let item of itens) {
@@ -110,18 +116,8 @@ export default class ViewDispensa extends Component {
               }
             }
           }} style={styles.button}>
-            Excluir
-          </Button>
-
-          <Button onPress={() => {
-            for (let item of itens) {
-              if (item == id) {
-                itens_dispensa[id][1]++;
-              }
-            }
-            this.forceUpdate();
-          }} style={styles.button}>
-            +
+            <Image source={require('xepa/resources/img/garbage-icon.png')}
+                   style={{width: 15, height: 15}} /> 
           </Button>
         </View>
       </CardAction>
@@ -144,6 +140,7 @@ render() {
   }
     return (
       <View style={{ flex: 1, backgroundColor:'#CCC' }}>
+        <BarraNav navigator={this.props.navigator} view = "principal" />
         <StatusBar
           hidden
         />
@@ -158,16 +155,18 @@ render() {
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 38,
-    backgroundColor: 'transparent'
+    fontSize: 20,
+    backgroundColor: 'transparent',
+    paddingHorizontal: 20
   },
   orcamentoTexto:{
-    fontSize: 20,
+    fontSize: 15,
     backgroundColor: 'transparent'
   },
   button: {
     marginRight: 10,
-    width: 75,
+    width: 30,
+    height: 30,
     backgroundColor: '#056B05'
   },
   semlistas: {
