@@ -115,17 +115,19 @@ Não foram identificadas organizações com possíveis impactos.
 
 ### 12. Ferramentas
 **Ferramenta de Comunicação**   
-[Slack](https://trabalhoses20172.slack.com/)    
+[Slack](https://trabalhoses20172.slack.com/)     
+Whatsapp  
 
 **Ferramenta para Gerência da Configuração**    
 [Github](https://github.com/Caua539/chepa)  
 
 **Ferramenta para Gerenciamento do Projeto**  
-[Trello](https://trello.com/b/b9pFj8Gq)  
+[Trello](https://trello.com/b/b9pFj8Gq)    
+[Github](https://github.com/Caua539/chepa)
 
 **Ferramenta para desenvolvimento**  
-Atom  
-React  
+Visual Studio Code  
+React
 
 **Bibliotecas JS**  
 wow.js  
